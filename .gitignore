@@ -1,0 +1,4 @@
+videos/raw/*
+runs/*
+!videos/raw/.gitkeep
+!runs/.gitkeep

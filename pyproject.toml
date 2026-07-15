@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "step-aligner"
+version = "0.1.0"
+description = "Local-friendly procedural video step alignment pipeline using small visual embeddings and Gemini."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pillow>=10",
+  "opencv-python>=4.8",
+  "scikit-learn>=1.3",
+  "scipy>=1.10",
+  "pydantic>=2",
+  "google-genai>=1.0",
+]
+
+[project.optional-dependencies]
+vjepa = [
+  "torch",
+  "transformers",
+  "accelerate",
+]
+
+[project.scripts]
+step-align = "step_aligner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

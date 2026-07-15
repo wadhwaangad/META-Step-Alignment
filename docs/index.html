@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wearable AI Step Alignment Results</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Wearable AI Step Alignment Results</h1>
+      <p>Pipeline outputs for facebook/wearable-ai, optimized for review without hosting raw videos.</p>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search activity, id, issue">
+      <select id="configFilter" aria-label="Filter by config"></select>
+    </div>
+  </header>
+  <main>
+    <section class="metrics" id="metrics"></section>
+    <section class="layout">
+      <nav class="results" id="results"></nav>
+      <article class="detail" id="detail"></article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
