@@ -109,6 +109,28 @@ main { padding: 20px 32px 36px; }
   padding: 18px;
 }
 .detail h2 { margin: 0 0 8px; font-size: 22px; }
+.video-wrap {
+  margin: 14px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #05070a;
+}
+video {
+  display: block;
+  width: 100%;
+  max-height: 58vh;
+  background: #05070a;
+}
+.video-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--line);
+}
 .chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
 .chip {
   border: 1px solid var(--line);

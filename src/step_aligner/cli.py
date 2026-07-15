@@ -20,6 +20,7 @@ def build_parser() -> argparse.ArgumentParser:
     folder.add_argument("--out", default="runs", help="Batch output/cache root.")
     folder.add_argument("--site-dir", default="docs", help="Rebuild the static site here after processing. Use empty string to skip.")
     folder.add_argument("--site-title", default="Step Alignment Results")
+    folder.add_argument("--site-video-mode", choices=["copy", "link", "none"], default="copy", help="How generated site should reference source videos.")
     folder.add_argument("--recursive", action="store_true", help="Search nested video folders.")
     folder.add_argument("--limit", type=int, default=None, help="Maximum videos to process.")
     folder.add_argument("--skip-failed", action="store_true", help="Record failed videos and continue processing the rest.")
@@ -44,6 +45,7 @@ def build_parser() -> argparse.ArgumentParser:
     site.add_argument("--runs", required=True, help="Root containing completed run directories.")
     site.add_argument("--site-dir", required=True, help="Output directory for GitHub Pages files.")
     site.add_argument("--title", default="Wearable AI Step Alignment Results")
+    site.add_argument("--video-mode", choices=["copy", "link", "none"], default="copy", help="How the site should reference source videos.")
     site.set_defaults(func=_build_site)
     return parser
 

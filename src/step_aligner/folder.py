@@ -77,7 +77,16 @@ def run_video_folder(args) -> None:
             print(f"[skip-failed] {video_path}: {exc}", flush=True)
 
     if site_dir is not None:
-        build_args = type("BuildSiteArgs", (), {"runs": str(out_root), "site_dir": str(site_dir), "title": args.site_title})
+        build_args = type(
+            "BuildSiteArgs",
+            (),
+            {
+                "runs": str(out_root),
+                "site_dir": str(site_dir),
+                "title": args.site_title,
+                "video_mode": args.site_video_mode,
+            },
+        )
         build_site(build_args)
 
 

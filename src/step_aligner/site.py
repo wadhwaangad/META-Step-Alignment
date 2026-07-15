@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import json
+import re
 import shutil
 from pathlib import Path
 from typing import Any
@@ -11,9 +11,11 @@ from .io import read_json, write_json
 def build_site(args) -> None:
     runs_root = Path(args.runs)
     site_dir = Path(args.site_dir)
+    video_mode = getattr(args, "video_mode", "copy")
     site_dir.mkdir(parents=True, exist_ok=True)
     (site_dir / "assets").mkdir(exist_ok=True)
-    items = collect_runs(runs_root, site_dir)
+    (site_dir / "assets" / "videos").mkdir(exist_ok=True)
+    items = collect_runs(runs_root, site_dir, video_mode)
     write_json(site_dir / "data.json", {"title": args.title, "items": items})
     (site_dir / "index.html").write_text(INDEX_HTML, encoding="utf-8")
     (site_dir / "styles.css").write_text(STYLES_CSS, encoding="utf-8")
@@ -21,21 +23,23 @@ def build_site(args) -> None:
     (site_dir / ".nojekyll").write_text("", encoding="utf-8")
 
 
-def collect_runs(runs_root: Path, site_dir: Path) -> list[dict[str, Any]]:
+def collect_runs(runs_root: Path, site_dir: Path, video_mode: str) -> list[dict[str, Any]]:
     items = []
     for summary_path in runs_root.rglob("run_summary.json"):
         run_dir = summary_path.parent
+        summary = _maybe_json(run_dir / "run_summary.json")
         metadata = _maybe_json(run_dir / "metadata.json")
         qa = _maybe_json(run_dir / "qa.json")
         grouped = _maybe_json(run_dir / "grouped_steps.json")
         alignment = _maybe_json(run_dir / "alignment.json")
         dataset_row = _maybe_json(run_dir / "dataset_row.json")
         thumbnail = copy_thumbnail(run_dir, site_dir)
+        video = prepare_video(summary.get("video"), run_dir, site_dir, video_mode)
         items.append(
             {
                 "id": run_dir.name,
                 "config": run_dir.parent.name,
-                "activity": metadata.get("activity", run_dir.name),
+                "activity": metadata.get("activity", qa.get("inferred_activity", run_dir.name)),
                 "reference_steps": metadata.get("steps", []),
                 "score": qa.get("score"),
                 "coverage_score": qa.get("coverage_score"),
@@ -48,6 +52,7 @@ def collect_runs(runs_root: Path, site_dir: Path) -> list[dict[str, Any]]:
                 "alignment": alignment,
                 "dataset_row": compact_dataset_row(dataset_row),
                 "thumbnail": thumbnail,
+                "video": video,
             }
         )
     return sorted(items, key=lambda item: (item.get("config", ""), item.get("id", "")))
@@ -57,15 +62,44 @@ def copy_thumbnail(run_dir: Path, site_dir: Path) -> str | None:
     frames = sorted((run_dir / "frames").glob("*.jpg"))
     if not frames:
         return None
-    out_name = f"{run_dir.parent.name}_{run_dir.name}.jpg"
+    out_name = f"{safe_name(run_dir.parent.name)}_{safe_name(run_dir.name)}.jpg"
     out_path = site_dir / "assets" / out_name
     shutil.copyfile(frames[len(frames) // 2], out_path)
     return f"assets/{out_name}"
 
 
+def prepare_video(video_path_value: str | None, run_dir: Path, site_dir: Path, video_mode: str) -> dict[str, Any] | None:
+    if not video_path_value or video_mode == "none":
+        return None
+    video_path = Path(video_path_value)
+    video = {
+        "source_path": str(video_path),
+        "filename": video_path.name,
+        "size_mb": round(video_path.stat().st_size / (1024 * 1024), 2) if video_path.exists() else None,
+        "src": None,
+    }
+    if not video_path.exists():
+        return video
+    if video_mode == "link":
+        video["src"] = str(video_path)
+        return video
+
+    out_name = f"{safe_name(run_dir.parent.name)}_{safe_name(run_dir.name)}{video_path.suffix.lower()}"
+    out_path = site_dir / "assets" / "videos" / out_name
+    if not out_path.exists() or out_path.stat().st_size != video_path.stat().st_size:
+        shutil.copyfile(video_path, out_path)
+    video["src"] = f"assets/videos/{out_name}"
+    return video
+
+
 def compact_dataset_row(row: dict[str, Any]) -> dict[str, Any]:
     keep = ["video_path", "duration_in_sec", "task", "domain", "query", "category", "question", "answer", "mcq_answer"]
     return {key: row[key] for key in keep if key in row}
+
+
+def safe_name(value: str) -> str:
+    value = re.sub(r"[^a-zA-Z0-9._-]+", "-", str(value)).strip("-")
+    return value or "item"
 
 
 def _maybe_json(path: Path):
@@ -79,14 +113,14 @@ INDEX_HTML = """<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wearable AI Step Alignment Results</title>
+  <title>Step Alignment Results</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
     <div>
-      <h1>Wearable AI Step Alignment Results</h1>
-      <p>Pipeline outputs for facebook/wearable-ai, optimized for review without hosting raw videos.</p>
+      <h1>Step Alignment Results</h1>
+      <p>Review generated procedural transcripts, QA scores, and the corresponding source videos.</p>
     </div>
     <div class="controls">
       <input id="search" type="search" placeholder="Search activity, id, issue">
@@ -217,6 +251,28 @@ main { padding: 20px 32px 36px; }
   padding: 18px;
 }
 .detail h2 { margin: 0 0 8px; font-size: 22px; }
+.video-wrap {
+  margin: 14px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #05070a;
+}
+video {
+  display: block;
+  width: 100%;
+  max-height: 58vh;
+  background: #05070a;
+}
+.video-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--line);
+}
 .chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
 .chip {
   border: 1px solid var(--line);
@@ -305,7 +361,7 @@ function renderMetrics() {
     metric("Runs", state.filtered.length),
     metric("Avg score", avg),
     metric("Score >= 5", pass),
-    metric("Configs", new Set(state.filtered.map(item => item.config)).size)
+    metric("With video", state.filtered.filter(item => item.video?.src).length)
   ].join("");
 }
 
@@ -341,6 +397,7 @@ function renderDetail() {
   const segments = item.segments || [];
   document.getElementById("detail").innerHTML = `
     <h2>${escapeHtml(item.activity)}</h2>
+    ${renderVideo(item)}
     <p>${escapeHtml(item.reasoning || "No QA reasoning recorded.")}</p>
     <div class="chips">
       <span class="chip">${escapeHtml(item.config)}</span>
@@ -363,8 +420,23 @@ function renderDetail() {
         </div>
       `).join("")}
     </div>
-    <h3>Dataset Row</h3>
-    <pre>${escapeHtml(JSON.stringify(item.dataset_row || {}, null, 2))}</pre>
+    <h3>Source</h3>
+    <pre>${escapeHtml(JSON.stringify(item.dataset_row || item.video || {}, null, 2))}</pre>
+  `;
+}
+
+function renderVideo(item) {
+  if (!item.video?.src) {
+    return `<p>No playable video was copied for this run.</p>`;
+  }
+  return `
+    <div class="video-wrap">
+      <video controls preload="metadata" src="${escapeHtml(item.video.src)}"></video>
+      <div class="video-meta">
+        <span>${escapeHtml(item.video.filename || "source video")}</span>
+        <span>${item.video.size_mb ?? "?"} MB</span>
+      </div>
+    </div>
   `;
 }
 

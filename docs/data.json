@@ -1,5 +1,5 @@
 {
-  "title": "Step Alignment Results",
+  "title": "Wearable AI Step Alignment Results",
   "items": [
     {
       "id": "captaincook4d__10_6",
@@ -66,7 +66,13 @@
         6
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_captaincook4d__10_6.jpg"
+      "thumbnail": "assets/runs_captaincook4d__10_6.jpg",
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__10_6.mp4",
+        "filename": "captaincook4d__10_6.mp4",
+        "size_mb": 8.33,
+        "src": "assets/videos/runs_captaincook4d__10_6.mp4"
+      }
     },
     {
       "id": "captaincook4d__12_2",
@@ -145,7 +151,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_captaincook4d__12_2.jpg"
+      "thumbnail": "assets/runs_captaincook4d__12_2.jpg",
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__12_2.mp4",
+        "filename": "captaincook4d__12_2.mp4",
+        "size_mb": 9.89,
+        "src": "assets/videos/runs_captaincook4d__12_2.mp4"
+      }
     },
     {
       "id": "captaincook4d__4_2",
@@ -224,7 +236,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_captaincook4d__4_2.jpg"
+      "thumbnail": "assets/runs_captaincook4d__4_2.jpg",
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__4_2.mp4",
+        "filename": "captaincook4d__4_2.mp4",
+        "size_mb": 15.26,
+        "src": "assets/videos/runs_captaincook4d__4_2.mp4"
+      }
     },
     {
       "id": "captaincook4d__5_2",
@@ -318,7 +336,13 @@
         10
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_captaincook4d__5_2.jpg"
+      "thumbnail": "assets/runs_captaincook4d__5_2.jpg",
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__5_2.mp4",
+        "filename": "captaincook4d__5_2.mp4",
+        "size_mb": 14.16,
+        "src": "assets/videos/runs_captaincook4d__5_2.mp4"
+      }
     },
     {
       "id": "captaincook4d__7_1",
@@ -405,7 +429,13 @@
         9
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_captaincook4d__7_1.jpg"
+      "thumbnail": "assets/runs_captaincook4d__7_1.jpg",
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__7_1.mp4",
+        "filename": "captaincook4d__7_1.mp4",
+        "size_mb": 11.42,
+        "src": "assets/videos/runs_captaincook4d__7_1.mp4"
+      }
     },
     {
       "id": "egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2",
@@ -480,7 +510,13 @@
         7
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.jpg"
+      "thumbnail": "assets/runs_egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.jpg",
+      "video": {
+        "source_path": "videos\\raw\\egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.mp4",
+        "filename": "egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.mp4",
+        "size_mb": 3.48,
+        "src": "assets/videos/runs_egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.mp4"
+      }
     },
     {
       "id": "egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27",
@@ -563,7 +599,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.jpg"
+      "thumbnail": "assets/runs_egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.jpg",
+      "video": {
+        "source_path": "videos\\raw\\egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.mp4",
+        "filename": "egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.mp4",
+        "size_mb": 9.45,
+        "src": "assets/videos/runs_egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.mp4"
+      }
     },
     {
       "id": "egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2",
@@ -646,7 +688,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.jpg"
+      "thumbnail": "assets/runs_egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.jpg",
+      "video": {
+        "source_path": "videos\\raw\\egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.mp4",
+        "filename": "egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.mp4",
+        "size_mb": 6.76,
+        "src": "assets/videos/runs_egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.mp4"
+      }
     },
     {
       "id": "egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02",
@@ -731,7 +779,13 @@
         9
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.jpg"
+      "thumbnail": "assets/runs_egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.jpg",
+      "video": {
+        "source_path": "videos\\raw\\egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.mp4",
+        "filename": "egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.mp4",
+        "size_mb": 2.76,
+        "src": "assets/videos/runs_egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.mp4"
+      }
     },
     {
       "id": "howto100m__S77te5xuja0",
@@ -802,7 +856,13 @@
         6
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_howto100m__S77te5xuja0.jpg"
+      "thumbnail": "assets/runs_howto100m__S77te5xuja0.jpg",
+      "video": {
+        "source_path": "videos\\raw\\howto100m__S77te5xuja0.mp4",
+        "filename": "howto100m__S77te5xuja0.mp4",
+        "size_mb": 3.12,
+        "src": "assets/videos/runs_howto100m__S77te5xuja0.mp4"
+      }
     },
     {
       "id": "howto100m__Z-37OnNZpS4",
@@ -887,7 +947,13 @@
         9
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_howto100m__Z-37OnNZpS4.jpg"
+      "thumbnail": "assets/runs_howto100m__Z-37OnNZpS4.jpg",
+      "video": {
+        "source_path": "videos\\raw\\howto100m__Z-37OnNZpS4.mp4",
+        "filename": "howto100m__Z-37OnNZpS4.mp4",
+        "size_mb": 3.49,
+        "src": "assets/videos/runs_howto100m__Z-37OnNZpS4.mp4"
+      }
     },
     {
       "id": "howto100m__ap8KnA30ttU",
@@ -968,7 +1034,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_howto100m__ap8KnA30ttU.jpg"
+      "thumbnail": "assets/runs_howto100m__ap8KnA30ttU.jpg",
+      "video": {
+        "source_path": "videos\\raw\\howto100m__ap8KnA30ttU.mp4",
+        "filename": "howto100m__ap8KnA30ttU.mp4",
+        "size_mb": 2.79,
+        "src": "assets/videos/runs_howto100m__ap8KnA30ttU.mp4"
+      }
     },
     {
       "id": "howto100m__hn5BXeTVqYI",
@@ -1015,7 +1087,13 @@
         2
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_howto100m__hn5BXeTVqYI.jpg"
+      "thumbnail": "assets/runs_howto100m__hn5BXeTVqYI.jpg",
+      "video": {
+        "source_path": "videos\\raw\\howto100m__hn5BXeTVqYI.mp4",
+        "filename": "howto100m__hn5BXeTVqYI.mp4",
+        "size_mb": 2.06,
+        "src": "assets/videos/runs_howto100m__hn5BXeTVqYI.mp4"
+      }
     },
     {
       "id": "howto100m__iluOswaVEd4",
@@ -1074,7 +1152,13 @@
         4
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_howto100m__iluOswaVEd4.jpg"
+      "thumbnail": "assets/runs_howto100m__iluOswaVEd4.jpg",
+      "video": {
+        "source_path": "videos\\raw\\howto100m__iluOswaVEd4.mp4",
+        "filename": "howto100m__iluOswaVEd4.mp4",
+        "size_mb": 5.38,
+        "src": "assets/videos/runs_howto100m__iluOswaVEd4.mp4"
+      }
     },
     {
       "id": "wearable-ai__0bdbf1f4696f054f",
@@ -1121,7 +1205,13 @@
         2
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__0bdbf1f4696f054f.jpg"
+      "thumbnail": "assets/runs_wearable-ai__0bdbf1f4696f054f.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__0bdbf1f4696f054f.mp4",
+        "filename": "wearable-ai__0bdbf1f4696f054f.mp4",
+        "size_mb": 11.25,
+        "src": "assets/videos/runs_wearable-ai__0bdbf1f4696f054f.mp4"
+      }
     },
     {
       "id": "wearable-ai__13b5a5f93d33d93a",
@@ -1196,7 +1286,13 @@
         7
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__13b5a5f93d33d93a.jpg"
+      "thumbnail": "assets/runs_wearable-ai__13b5a5f93d33d93a.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__13b5a5f93d33d93a.mp4",
+        "filename": "wearable-ai__13b5a5f93d33d93a.mp4",
+        "size_mb": 3.98,
+        "src": "assets/videos/runs_wearable-ai__13b5a5f93d33d93a.mp4"
+      }
     },
     {
       "id": "wearable-ai__1b6e3fb5b4f5bf9a",
@@ -1259,7 +1355,13 @@
         5
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__1b6e3fb5b4f5bf9a.jpg"
+      "thumbnail": "assets/runs_wearable-ai__1b6e3fb5b4f5bf9a.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__1b6e3fb5b4f5bf9a.mp4",
+        "filename": "wearable-ai__1b6e3fb5b4f5bf9a.mp4",
+        "size_mb": 2.33,
+        "src": "assets/videos/runs_wearable-ai__1b6e3fb5b4f5bf9a.mp4"
+      }
     },
     {
       "id": "wearable-ai__1e719746365c0af7",
@@ -1328,7 +1430,13 @@
         6
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__1e719746365c0af7.jpg"
+      "thumbnail": "assets/runs_wearable-ai__1e719746365c0af7.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__1e719746365c0af7.mp4",
+        "filename": "wearable-ai__1e719746365c0af7.mp4",
+        "size_mb": 4.46,
+        "src": "assets/videos/runs_wearable-ai__1e719746365c0af7.mp4"
+      }
     },
     {
       "id": "wearable-ai__1f2fa2af1378221e",
@@ -1405,7 +1513,13 @@
         7
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__1f2fa2af1378221e.jpg"
+      "thumbnail": "assets/runs_wearable-ai__1f2fa2af1378221e.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__1f2fa2af1378221e.mp4",
+        "filename": "wearable-ai__1f2fa2af1378221e.mp4",
+        "size_mb": 1.26,
+        "src": "assets/videos/runs_wearable-ai__1f2fa2af1378221e.mp4"
+      }
     },
     {
       "id": "wearable-ai__440660c9d220f05f",
@@ -1487,7 +1601,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__440660c9d220f05f.jpg"
+      "thumbnail": "assets/runs_wearable-ai__440660c9d220f05f.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__440660c9d220f05f.mp4",
+        "filename": "wearable-ai__440660c9d220f05f.mp4",
+        "size_mb": 3.06,
+        "src": "assets/videos/runs_wearable-ai__440660c9d220f05f.mp4"
+      }
     },
     {
       "id": "wearable-ai__49b376b461bb8876",
@@ -1539,7 +1659,13 @@
         3
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__49b376b461bb8876.jpg"
+      "thumbnail": "assets/runs_wearable-ai__49b376b461bb8876.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__49b376b461bb8876.mp4",
+        "filename": "wearable-ai__49b376b461bb8876.mp4",
+        "size_mb": 0.61,
+        "src": "assets/videos/runs_wearable-ai__49b376b461bb8876.mp4"
+      }
     },
     {
       "id": "wearable-ai__4cdb8d625619386f",
@@ -1622,7 +1748,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__4cdb8d625619386f.jpg"
+      "thumbnail": "assets/runs_wearable-ai__4cdb8d625619386f.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__4cdb8d625619386f.mp4",
+        "filename": "wearable-ai__4cdb8d625619386f.mp4",
+        "size_mb": 3.59,
+        "src": "assets/videos/runs_wearable-ai__4cdb8d625619386f.mp4"
+      }
     },
     {
       "id": "wearable-ai__5e1ba77a7f73c84d",
@@ -1667,7 +1799,13 @@
         2
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__5e1ba77a7f73c84d.jpg"
+      "thumbnail": "assets/runs_wearable-ai__5e1ba77a7f73c84d.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__5e1ba77a7f73c84d.mp4",
+        "filename": "wearable-ai__5e1ba77a7f73c84d.mp4",
+        "size_mb": 4.72,
+        "src": "assets/videos/runs_wearable-ai__5e1ba77a7f73c84d.mp4"
+      }
     },
     {
       "id": "wearable-ai__6ce4e634e6294692",
@@ -1749,7 +1887,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__6ce4e634e6294692.jpg"
+      "thumbnail": "assets/runs_wearable-ai__6ce4e634e6294692.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__6ce4e634e6294692.mp4",
+        "filename": "wearable-ai__6ce4e634e6294692.mp4",
+        "size_mb": 2.23,
+        "src": "assets/videos/runs_wearable-ai__6ce4e634e6294692.mp4"
+      }
     },
     {
       "id": "wearable-ai__6de3fc66543533fa",
@@ -1785,7 +1929,13 @@
       "segments": [],
       "alignment": [],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__6de3fc66543533fa.jpg"
+      "thumbnail": "assets/runs_wearable-ai__6de3fc66543533fa.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__6de3fc66543533fa.mp4",
+        "filename": "wearable-ai__6de3fc66543533fa.mp4",
+        "size_mb": 5.19,
+        "src": "assets/videos/runs_wearable-ai__6de3fc66543533fa.mp4"
+      }
     },
     {
       "id": "wearable-ai__777459a083922176",
@@ -1846,7 +1996,13 @@
         5
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__777459a083922176.jpg"
+      "thumbnail": "assets/runs_wearable-ai__777459a083922176.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__777459a083922176.mp4",
+        "filename": "wearable-ai__777459a083922176.mp4",
+        "size_mb": 6.49,
+        "src": "assets/videos/runs_wearable-ai__777459a083922176.mp4"
+      }
     },
     {
       "id": "wearable-ai__7c8b228dd61b135f",
@@ -1917,7 +2073,13 @@
         6
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__7c8b228dd61b135f.jpg"
+      "thumbnail": "assets/runs_wearable-ai__7c8b228dd61b135f.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__7c8b228dd61b135f.mp4",
+        "filename": "wearable-ai__7c8b228dd61b135f.mp4",
+        "size_mb": 8.83,
+        "src": "assets/videos/runs_wearable-ai__7c8b228dd61b135f.mp4"
+      }
     },
     {
       "id": "wearable-ai__84bdfd2003c046f1",
@@ -2011,7 +2173,13 @@
         10
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__84bdfd2003c046f1.jpg"
+      "thumbnail": "assets/runs_wearable-ai__84bdfd2003c046f1.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__84bdfd2003c046f1.mp4",
+        "filename": "wearable-ai__84bdfd2003c046f1.mp4",
+        "size_mb": 7.43,
+        "src": "assets/videos/runs_wearable-ai__84bdfd2003c046f1.mp4"
+      }
     },
     {
       "id": "wearable-ai__8812f05ea4220629",
@@ -2047,7 +2215,13 @@
       "segments": [],
       "alignment": [],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__8812f05ea4220629.jpg"
+      "thumbnail": "assets/runs_wearable-ai__8812f05ea4220629.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__8812f05ea4220629.mp4",
+        "filename": "wearable-ai__8812f05ea4220629.mp4",
+        "size_mb": 10.6,
+        "src": "assets/videos/runs_wearable-ai__8812f05ea4220629.mp4"
+      }
     },
     {
       "id": "wearable-ai__89da98922957d8ff",
@@ -2096,7 +2270,13 @@
         1
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__89da98922957d8ff.jpg"
+      "thumbnail": "assets/runs_wearable-ai__89da98922957d8ff.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__89da98922957d8ff.mp4",
+        "filename": "wearable-ai__89da98922957d8ff.mp4",
+        "size_mb": 1.64,
+        "src": "assets/videos/runs_wearable-ai__89da98922957d8ff.mp4"
+      }
     },
     {
       "id": "wearable-ai__94e4220d406c1cca",
@@ -2185,7 +2365,13 @@
         9
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__94e4220d406c1cca.jpg"
+      "thumbnail": "assets/runs_wearable-ai__94e4220d406c1cca.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__94e4220d406c1cca.mp4",
+        "filename": "wearable-ai__94e4220d406c1cca.mp4",
+        "size_mb": 1.91,
+        "src": "assets/videos/runs_wearable-ai__94e4220d406c1cca.mp4"
+      }
     },
     {
       "id": "wearable-ai__9bee20d4cc3565da",
@@ -2258,7 +2444,13 @@
         7
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__9bee20d4cc3565da.jpg"
+      "thumbnail": "assets/runs_wearable-ai__9bee20d4cc3565da.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__9bee20d4cc3565da.mp4",
+        "filename": "wearable-ai__9bee20d4cc3565da.mp4",
+        "size_mb": 1.39,
+        "src": "assets/videos/runs_wearable-ai__9bee20d4cc3565da.mp4"
+      }
     },
     {
       "id": "wearable-ai__a5281e906025a240",
@@ -2322,7 +2514,13 @@
         5
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__a5281e906025a240.jpg"
+      "thumbnail": "assets/runs_wearable-ai__a5281e906025a240.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__a5281e906025a240.mp4",
+        "filename": "wearable-ai__a5281e906025a240.mp4",
+        "size_mb": 0.65,
+        "src": "assets/videos/runs_wearable-ai__a5281e906025a240.mp4"
+      }
     },
     {
       "id": "wearable-ai__a74d09fd1a2a1ab6",
@@ -2386,7 +2584,13 @@
         5
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__a74d09fd1a2a1ab6.jpg"
+      "thumbnail": "assets/runs_wearable-ai__a74d09fd1a2a1ab6.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__a74d09fd1a2a1ab6.mp4",
+        "filename": "wearable-ai__a74d09fd1a2a1ab6.mp4",
+        "size_mb": 12.71,
+        "src": "assets/videos/runs_wearable-ai__a74d09fd1a2a1ab6.mp4"
+      }
     },
     {
       "id": "wearable-ai__aba90d4060290a87",
@@ -2427,7 +2631,13 @@
         1
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__aba90d4060290a87.jpg"
+      "thumbnail": "assets/runs_wearable-ai__aba90d4060290a87.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__aba90d4060290a87.mp4",
+        "filename": "wearable-ai__aba90d4060290a87.mp4",
+        "size_mb": 36.31,
+        "src": "assets/videos/runs_wearable-ai__aba90d4060290a87.mp4"
+      }
     },
     {
       "id": "wearable-ai__b00c7a882446587f",
@@ -2509,7 +2719,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__b00c7a882446587f.jpg"
+      "thumbnail": "assets/runs_wearable-ai__b00c7a882446587f.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__b00c7a882446587f.mp4",
+        "filename": "wearable-ai__b00c7a882446587f.mp4",
+        "size_mb": 1.85,
+        "src": "assets/videos/runs_wearable-ai__b00c7a882446587f.mp4"
+      }
     },
     {
       "id": "wearable-ai__b76d10dcd8243a01",
@@ -2561,7 +2777,13 @@
         3
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__b76d10dcd8243a01.jpg"
+      "thumbnail": "assets/runs_wearable-ai__b76d10dcd8243a01.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__b76d10dcd8243a01.mp4",
+        "filename": "wearable-ai__b76d10dcd8243a01.mp4",
+        "size_mb": 8.21,
+        "src": "assets/videos/runs_wearable-ai__b76d10dcd8243a01.mp4"
+      }
     },
     {
       "id": "wearable-ai__cc4ac34272e4c3e4",
@@ -2626,7 +2848,13 @@
         5
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__cc4ac34272e4c3e4.jpg"
+      "thumbnail": "assets/runs_wearable-ai__cc4ac34272e4c3e4.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__cc4ac34272e4c3e4.mp4",
+        "filename": "wearable-ai__cc4ac34272e4c3e4.mp4",
+        "size_mb": 0.38,
+        "src": "assets/videos/runs_wearable-ai__cc4ac34272e4c3e4.mp4"
+      }
     },
     {
       "id": "wearable-ai__dcea581593204193",
@@ -2691,7 +2919,13 @@
         5
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__dcea581593204193.jpg"
+      "thumbnail": "assets/runs_wearable-ai__dcea581593204193.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__dcea581593204193.mp4",
+        "filename": "wearable-ai__dcea581593204193.mp4",
+        "size_mb": 2.88,
+        "src": "assets/videos/runs_wearable-ai__dcea581593204193.mp4"
+      }
     },
     {
       "id": "wearable-ai__e154915e636fc23f",
@@ -2773,7 +3007,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__e154915e636fc23f.jpg"
+      "thumbnail": "assets/runs_wearable-ai__e154915e636fc23f.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__e154915e636fc23f.mp4",
+        "filename": "wearable-ai__e154915e636fc23f.mp4",
+        "size_mb": 3.67,
+        "src": "assets/videos/runs_wearable-ai__e154915e636fc23f.mp4"
+      }
     },
     {
       "id": "wearable-ai__ef51015464812b8c",
@@ -2855,7 +3095,13 @@
         8
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__ef51015464812b8c.jpg"
+      "thumbnail": "assets/runs_wearable-ai__ef51015464812b8c.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__ef51015464812b8c.mp4",
+        "filename": "wearable-ai__ef51015464812b8c.mp4",
+        "size_mb": 6.81,
+        "src": "assets/videos/runs_wearable-ai__ef51015464812b8c.mp4"
+      }
     },
     {
       "id": "wearable-ai__ef75ac3d92198596",
@@ -2942,7 +3188,13 @@
         9
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__ef75ac3d92198596.jpg"
+      "thumbnail": "assets/runs_wearable-ai__ef75ac3d92198596.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__ef75ac3d92198596.mp4",
+        "filename": "wearable-ai__ef75ac3d92198596.mp4",
+        "size_mb": 10.12,
+        "src": "assets/videos/runs_wearable-ai__ef75ac3d92198596.mp4"
+      }
     },
     {
       "id": "wearable-ai__f23251d3b9037aec",
@@ -3012,7 +3264,13 @@
         6
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__f23251d3b9037aec.jpg"
+      "thumbnail": "assets/runs_wearable-ai__f23251d3b9037aec.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__f23251d3b9037aec.mp4",
+        "filename": "wearable-ai__f23251d3b9037aec.mp4",
+        "size_mb": 2.97,
+        "src": "assets/videos/runs_wearable-ai__f23251d3b9037aec.mp4"
+      }
     },
     {
       "id": "wearable-ai__f9ab736efee50387",
@@ -3088,7 +3346,13 @@
         7
       ],
       "dataset_row": {},
-      "thumbnail": "assets/runs_wearable-ai__f9ab736efee50387.jpg"
+      "thumbnail": "assets/runs_wearable-ai__f9ab736efee50387.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__f9ab736efee50387.mp4",
+        "filename": "wearable-ai__f9ab736efee50387.mp4",
+        "size_mb": 1.32,
+        "src": "assets/videos/runs_wearable-ai__f9ab736efee50387.mp4"
+      }
     }
   ]
 }

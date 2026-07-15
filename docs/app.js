@@ -39,7 +39,7 @@ function renderMetrics() {
     metric("Runs", state.filtered.length),
     metric("Avg score", avg),
     metric("Score >= 5", pass),
-    metric("Configs", new Set(state.filtered.map(item => item.config)).size)
+    metric("With video", state.filtered.filter(item => item.video?.src).length)
   ].join("");
 }
 
@@ -75,6 +75,7 @@ function renderDetail() {
   const segments = item.segments || [];
   document.getElementById("detail").innerHTML = `
     <h2>${escapeHtml(item.activity)}</h2>
+    ${renderVideo(item)}
     <p>${escapeHtml(item.reasoning || "No QA reasoning recorded.")}</p>
     <div class="chips">
       <span class="chip">${escapeHtml(item.config)}</span>
@@ -97,8 +98,23 @@ function renderDetail() {
         </div>
       `).join("")}
     </div>
-    <h3>Dataset Row</h3>
-    <pre>${escapeHtml(JSON.stringify(item.dataset_row || {}, null, 2))}</pre>
+    <h3>Source</h3>
+    <pre>${escapeHtml(JSON.stringify(item.dataset_row || item.video || {}, null, 2))}</pre>
+  `;
+}
+
+function renderVideo(item) {
+  if (!item.video?.src) {
+    return `<p>No playable video was copied for this run.</p>`;
+  }
+  return `
+    <div class="video-wrap">
+      <video controls preload="metadata" src="${escapeHtml(item.video.src)}"></video>
+      <div class="video-meta">
+        <span>${escapeHtml(item.video.filename || "source video")}</span>
+        <span>${item.video.size_mb ?? "?"} MB</span>
+      </div>
+    </div>
   `;
 }
 
