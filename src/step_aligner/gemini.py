@@ -184,9 +184,7 @@ Output ONLY a JSON object:
 
 
 def is_unlabeled_metadata(metadata: Metadata) -> bool:
-    return metadata.activity == "Unlabeled local video" and all(
-        step.startswith("Observed procedural phase ") for step in metadata.steps
-    )
+    return bool(metadata.steps) and all(step.startswith("Observed procedural phase ") for step in metadata.steps)
 
 
 def uniform_sample(paths: list[Path], max_items: int) -> list[Path]:

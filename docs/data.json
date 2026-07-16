@@ -1,10 +1,10 @@
 {
-  "title": "Wearable AI Step Alignment Results",
+  "title": "Step Alignment Results",
   "items": [
     {
       "id": "captaincook4d__10_6",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Captaincook4d 10 6",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -15,45 +15,52 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 10,
-      "coverage_score": 10,
-      "order_score": 10,
-      "relevance_score": 10,
-      "issues": [],
-      "reasoning": "The caption sequence is highly detailed, logically ordered, and describes a complete, actionable procedure from start to finish. It includes specific tools and methods (such as using dental floss to slice the pinwheels) and ends with plating and clean-up, making it an excellent procedural transcript.",
+      "score": 8,
+      "coverage_score": 8,
+      "order_score": 8,
+      "relevance_score": 9,
+      "issues": [
+        "Redundancy and method conflict between steps 3 and 4 regarding how the tortilla is sliced and secured."
+      ],
+      "reasoning": "The sequence is highly descriptive, actionable, and covers the complete procedure from preparation to plating and cleanup. However, there is a clear redundancy and logical overlap between steps 3 and 4, which both describe slicing the rolled tortilla but suggest different methods (slicing into portions with toothpicks vs. slicing cleanly with dental floss).",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Prepare the cutting board and place a tortilla on it.",
+          "caption": "Wipe down the cutting board and retrieve a tortilla from its package.",
           "start_ts": 0.0,
           "end_ts": 17.9
         },
         {
-          "caption": "Spread peanut butter evenly across the tortilla.",
+          "caption": "Spread peanut butter evenly across the surface of the tortilla.",
           "start_ts": 17.9,
           "end_ts": 127.6
         },
         {
-          "caption": "Roll up the tortilla and secure it with toothpicks.",
+          "caption": "Roll up the tortilla, insert toothpicks to secure it, and slice it into portions.",
           "start_ts": 127.6,
           "end_ts": 204.3
         },
         {
-          "caption": "Slice the rolled tortilla into individual pinwheels using dental floss.",
+          "caption": "Slice the rolled tortilla cleanly into pinwheels using dental floss.",
           "start_ts": 204.3,
-          "end_ts": 278.4
+          "end_ts": 277.1
         },
         {
-          "caption": "Retrieve a clean plate.",
-          "start_ts": 278.4,
+          "caption": "Retrieve a serving plate from the drying rack.",
+          "start_ts": 277.1,
           "end_ts": 292.0
         },
         {
-          "caption": "Arrange the pinwheels on the plate and wipe down the workspace.",
+          "caption": "Arrange the prepared pinwheels on the plate.",
           "start_ts": 292.0,
+          "end_ts": 310.2
+        },
+        {
+          "caption": "Clean the workspace by wiping down the cutting board and countertop.",
+          "start_ts": 310.2,
           "end_ts": 328.3
         }
       ],
@@ -63,7 +70,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__10_6.jpg",
@@ -77,7 +85,7 @@
     {
       "id": "captaincook4d__12_2",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Captaincook4d 12 2",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -93,49 +101,49 @@
       "order_score": 10.0,
       "relevance_score": 10.0,
       "issues": [],
-      "reasoning": "The caption sequence is exceptionally detailed, logical, and complete. It covers every practical step from retrieving and washing the ingredients to slicing, assembling, and seasoning, with zero redundancy or vague language.",
+      "reasoning": "The caption sequence is exceptionally high-quality. It depicts a complete, logical, and highly detailed step-by-step process of preparing a dish with tomatoes and mozzarella. There are no missing phases, the chronological order is perfect, and the captions are highly specific and actionable.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Check the recipe on the tablet and retrieve the tomato from the refrigerator.",
+          "caption": "Check the tablet and retrieve ingredients from the refrigerator",
           "start_ts": 0.0,
           "end_ts": 24.7
         },
         {
-          "caption": "Wash the tomato under running water.",
+          "caption": "Wash the tomato under running water",
           "start_ts": 24.7,
           "end_ts": 38.4
         },
         {
-          "caption": "Dry the tomato with a cloth and prepare the cutting board.",
+          "caption": "Dry the tomato with a cloth and prepare the cutting board",
           "start_ts": 38.4,
           "end_ts": 74.7
         },
         {
-          "caption": "Slice the tomato and arrange the slices on a plate.",
+          "caption": "Slice the tomato and arrange the slices on a plate",
           "start_ts": 74.7,
           "end_ts": 178.4
         },
         {
-          "caption": "Retrieve the mozzarella cheese from the refrigerator.",
+          "caption": "Retrieve mozzarella cheese from the refrigerator",
           "start_ts": 178.4,
           "end_ts": 189.7
         },
         {
-          "caption": "Open the package of mozzarella cheese.",
+          "caption": "Open the package of mozzarella cheese",
           "start_ts": 189.7,
           "end_ts": 202.7
         },
         {
-          "caption": "Place the mozzarella cheese onto the tomato slices.",
+          "caption": "Sprinkle the cheese over the tomato slices",
           "start_ts": 202.7,
           "end_ts": 220.2
         },
         {
-          "caption": "Season the tomato slices with salt and spices.",
+          "caption": "Season the tomatoes and cheese with salt and spices",
           "start_ts": 220.2,
           "end_ts": 428.6
         }
@@ -162,7 +170,7 @@
     {
       "id": "captaincook4d__4_2",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Captaincook4d 4 2",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -173,54 +181,51 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 10,
-      "coverage_score": 10,
+      "score": 9,
+      "coverage_score": 9,
       "order_score": 10,
       "relevance_score": 10,
-      "issues": [],
-      "reasoning": "The caption sequence is outstanding. It details a logical, step-by-step process of preparing ingredients (garlic, red onion), cooking the main component (ramen), prepping a final fresh herb (cilantro), and combining everything. The steps are highly specific, actionable, and in a perfect chronological order.",
+      "issues": [
+        "The chopped garlic from step 1 is not explicitly tracked or added to the bowl in subsequent steps."
+      ],
+      "reasoning": "The caption sequence is exceptionally clear, logical, and detailed. It covers the preparation of ingredients, cooking, and final assembly in a natural chronological order. The only minor omission is that the garlic chopped in step 1 is not explicitly mentioned when assembling or mixing, though it is likely grouped under 'toppings' in the final step.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Peel and chop garlic cloves.",
+          "caption": "Peel and chop the garlic.",
           "start_ts": 0.0,
           "end_ts": 159.8
         },
         {
-          "caption": "Peel a red onion.",
+          "caption": "Peel and slice the red onion.",
           "start_ts": 159.8,
-          "end_ts": 213.9
-        },
-        {
-          "caption": "Slice the red onion.",
-          "start_ts": 213.9,
           "end_ts": 267.7
         },
         {
-          "caption": "Transfer the sliced onion into a bowl.",
+          "caption": "Add the sliced onion and ramen noodles to a bowl.",
           "start_ts": 267.7,
-          "end_ts": 283.5
+          "end_ts": 299.4
         },
         {
-          "caption": "Place ramen noodles in a bowl and add water.",
-          "start_ts": 283.5,
-          "end_ts": 322.0
+          "caption": "Pour water into the bowl and microwave the ramen.",
+          "start_ts": 299.4,
+          "end_ts": 344.6
         },
         {
-          "caption": "Microwave the ramen noodles.",
-          "start_ts": 322.0,
+          "caption": "Carefully remove the cooked ramen from the microwave.",
+          "start_ts": 344.6,
           "end_ts": 683.2
         },
         {
-          "caption": "Prep and chop fresh cilantro.",
+          "caption": "Retrieve fresh cilantro from the refrigerator and chop it.",
           "start_ts": 683.2,
           "end_ts": 733.5
         },
         {
-          "caption": "Mix the ramen and toppings thoroughly.",
+          "caption": "Mix the ramen and toppings together in the bowl.",
           "start_ts": 733.5,
           "end_ts": 774.8
         }
@@ -232,8 +237,7 @@
         4,
         5,
         6,
-        7,
-        8
+        7
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__4_2.jpg",
@@ -247,7 +251,7 @@
     {
       "id": "captaincook4d__5_2",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Captaincook4d 5 2",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -260,60 +264,55 @@
       ],
       "score": 7,
       "coverage_score": 7,
-      "order_score": 8,
+      "order_score": 7,
       "relevance_score": 9,
       "issues": [
-        "Missing step: There is no mention of grinding the coffee beans between weighing them (Step 3) and pouring the grounds (Step 9).",
-        "Irrelevant steps: Preparing a tortilla and dumpling (Step 5) and organizing dishes (Steps 1 and 7) distract from the primary coffee-making procedure."
+        "The step of grinding the coffee beans is missing between weighing the beans (Step 3) and pouring the grounds (Step 8).",
+        "Step 5 ('Prepare the tortilla and food...') introduces an unrelated food preparation task that disrupts the narrative flow of making coffee."
       ],
-      "reasoning": "The sequence successfully captures the essential steps of making pour-over coffee (measuring beans, preparing the filter, checking water temperature, and brewing). The actions described are highly specific and relevant. However, the sequence is missing the grinding phase (moving from coffee beans to coffee grounds), and it contains a few unrelated/interrupted kitchen tasks such as preparing a tortilla/dumpling and putting away dishes.",
+      "reasoning": "The captions are highly specific, action-oriented, and easy to follow. However, the sequence is disjointed as it mixes two distinct activities: making pour-over coffee and preparing a tortilla. Additionally, a key step in the coffee-making process\u2014grinding the coffee beans\u2014is missing between weighing the beans (step 3) and pouring the grounds (step 8).",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Wash the glass and a cutting board.",
+          "caption": "Wash and rinse the glass and cutting board.",
           "start_ts": 0.0,
           "end_ts": 22.7
         },
         {
-          "caption": "Retrieve a mug and the coffee maker filter funnel.",
+          "caption": "Gather the mug and coffee maker components.",
           "start_ts": 22.7,
-          "end_ts": 43.2
+          "end_ts": 47.9
         },
         {
-          "caption": "Weigh coffee beans on a kitchen scale.",
-          "start_ts": 43.2,
+          "caption": "Weigh the coffee beans on the kitchen scale.",
+          "start_ts": 47.9,
           "end_ts": 123.4
         },
         {
-          "caption": "Take a coffee filter out of the drawer.",
+          "caption": "Retrieve a coffee filter from the drawer.",
           "start_ts": 123.4,
           "end_ts": 208.7
         },
         {
-          "caption": "Prepare a tortilla and a dumpling on a cutting board.",
+          "caption": "Prepare the tortilla and food on the cutting board.",
           "start_ts": 208.7,
           "end_ts": 286.6
         },
         {
-          "caption": "Check instructions on the tablet.",
+          "caption": "Check the recipe on the tablet and tidy up the workspace.",
           "start_ts": 286.6,
-          "end_ts": 345.8
-        },
-        {
-          "caption": "Place a glass dish in the dish rack.",
-          "start_ts": 345.8,
           "end_ts": 461.5
         },
         {
-          "caption": "Measure the water temperature in the kettle with a thermometer.",
+          "caption": "Measure the temperature of the water in the kettle.",
           "start_ts": 461.5,
           "end_ts": 526.7
         },
         {
-          "caption": "Pour coffee grounds into the filter and pour hot water onto them.",
+          "caption": "Pour the coffee grounds and hot water into the filter.",
           "start_ts": 526.7,
           "end_ts": 673.1
         },
@@ -332,8 +331,7 @@
         6,
         7,
         8,
-        9,
-        10
+        9
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__5_2.jpg",
@@ -347,7 +345,7 @@
     {
       "id": "captaincook4d__7_1",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Captaincook4d 7 1",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -358,61 +356,54 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 9.0,
+      "score": 10.0,
       "coverage_score": 10.0,
-      "order_score": 9.0,
+      "order_score": 10.0,
       "relevance_score": 10.0,
-      "issues": [
-        "Minor temporal inconsistency: Step 5 mentions mixing salsa into the eggs before Step 6 mentions opening the jar of salsa to add more."
-      ],
-      "reasoning": "The captions provide an excellent, detailed, and highly actionable step-by-step transcript for making a breakfast burrito. It covers everything from preparation (getting bowls, eggs, cheese) to cooking (microwave scrambled eggs), seasoning, assembly, and folding. There is a very minor logical hiccup between steps 5 and 6 regarding when the salsa jar is opened versus when it is mixed in, but otherwise the sequence flows perfectly.",
+      "issues": [],
+      "reasoning": "The caption sequence is exceptionally detailed, highly structured, and chronologically perfect. It starts with retrieving ingredients, details cooking the egg in the microwave, mixing in condiments, and assembling the burrito step-by-step. There are no redundant steps or gaps in the process.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Take a bowl out of the cabinet and place it on a cutting board.",
+          "caption": "Retrieve a bowl from the cabinet and eggs and cheese from the refrigerator.",
           "start_ts": 0.0,
-          "end_ts": 14.9
-        },
-        {
-          "caption": "Retrieve cheese and an egg from the refrigerator.",
-          "start_ts": 14.9,
           "end_ts": 21.4
         },
         {
-          "caption": "Crack the egg into the bowl, whisk it, and open a package of tortillas.",
+          "caption": "Crack the egg into the bowl and whisk it.",
           "start_ts": 21.4,
           "end_ts": 85.4
         },
         {
-          "caption": "Place a tortilla on the cutting board and cook the eggs in the microwave, stirring once.",
+          "caption": "Place a tortilla on a cutting board and microwave the whisked egg, stirring it halfway through.",
           "start_ts": 85.4,
           "end_ts": 236.4
         },
         {
-          "caption": "Get measuring spoons and mix salsa into the scrambled eggs.",
+          "caption": "Take measuring spoons out of a drawer and set them on the work surface.",
           "start_ts": 236.4,
-          "end_ts": 426.3
+          "end_ts": 331.3
         },
         {
-          "caption": "Open a jar of salsa and add more to the egg mixture.",
-          "start_ts": 426.3,
+          "caption": "Measure salsa and add it to the bowl of scrambled eggs, stirring to combine.",
+          "start_ts": 331.3,
           "end_ts": 459.2
         },
         {
-          "caption": "Spoon the scrambled eggs onto the tortilla.",
+          "caption": "Spoon the scrambled egg mixture onto the tortilla.",
           "start_ts": 459.2,
           "end_ts": 489.4
         },
         {
-          "caption": "Sprinkle shredded cheese over the eggs on the tortilla.",
+          "caption": "Measure out shredded cheese and sprinkle it onto the tortilla.",
           "start_ts": 489.4,
           "end_ts": 516.6
         },
         {
-          "caption": "Fold and roll the tortilla to wrap the burrito.",
+          "caption": "Fold and roll the tortilla to assemble the breakfast burrito.",
           "start_ts": 516.6,
           "end_ts": 540.8
         }
@@ -425,8 +416,7 @@
         5,
         6,
         7,
-        8,
-        9
+        8
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__7_1.jpg",
@@ -440,7 +430,7 @@
     {
       "id": "egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Egoschema 0293f655 83c1 40a2 886d 7ff2aa555ee2",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -451,51 +441,44 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 9.0,
-      "coverage_score": 8.0,
+      "score": 10.0,
+      "coverage_score": 10.0,
       "order_score": 10.0,
       "relevance_score": 10.0,
-      "issues": [
-        "Slight redundancy in the cutting phase (captions 4, 5, and 6 are very similar and could be consolidated)."
-      ],
-      "reasoning": "The sequence is highly coherent, following a logical step-by-step progress from arranging the fabric, marking, cutting, to sewing. The descriptions are highly specific, mentioning colors and actions ('snip off the excess thread'). There is some minor repetition/redundancy in the cutting steps (captions 4, 5, and 6 all describe cutting), which slightly lowers the coverage score, but overall it is an excellent procedural transcript.",
+      "issues": [],
+      "reasoning": "The sequence represents an exceptionally clear, detailed, and logical procedural transcript for a sewing project. It covers all the distinct phases: preparation (laying out/aligning), marking, cutting the main pieces, cutting the specific pattern pieces, trimming, and final assembly (sewing). The temporal flow is perfect, and the captions are highly descriptive and actionable.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Arrange the green fabric on top of the red fabric and fold it.",
+          "caption": "Lay out, smooth, and align the green and red fabrics.",
           "start_ts": 0.0,
-          "end_ts": 30.5
-        },
-        {
-          "caption": "Align and hold the green and red fabrics together.",
-          "start_ts": 30.5,
           "end_ts": 61.1
         },
         {
-          "caption": "Fold the fabric and mark the cutting pattern.",
+          "caption": "Fold the fabric and mark the measurements.",
           "start_ts": 61.1,
           "end_ts": 69.1
         },
         {
-          "caption": "Cut along the marked lines of the fabric using scissors.",
+          "caption": "Cut along the marked lines on the fabric with scissors.",
           "start_ts": 69.1,
           "end_ts": 81.6
         },
         {
-          "caption": "Carefully cut out the designated red fabric pattern.",
+          "caption": "Carefully cut out the pattern pieces from the red fabric.",
           "start_ts": 81.6,
           "end_ts": 105.2
         },
         {
-          "caption": "Fold and cut the red fabric to prepare it for assembly.",
+          "caption": "Fold the cut red fabric and trim the edges.",
           "start_ts": 105.2,
           "end_ts": 142.5
         },
         {
-          "caption": "Sew the pieces of red fabric together and snip off the excess thread.",
+          "caption": "Sew the red fabric pieces together and cut the excess thread.",
           "start_ts": 142.5,
           "end_ts": 179.9
         }
@@ -506,8 +489,7 @@
         3,
         4,
         5,
-        6,
-        7
+        6
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.jpg",
@@ -521,7 +503,7 @@
     {
       "id": "egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Egoschema 0461a8c2 dd83 4083 acc5 7c797f696d27",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -532,59 +514,58 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 4,
+      "score": 5,
       "coverage_score": 4,
-      "order_score": 3,
+      "order_score": 5,
       "relevance_score": 8,
       "issues": [
-        "High redundancy with nearly identical molding and demolding actions repeated across captions 1, 2, 4, 5, 6, and 8.",
-        "Out-of-order steps where preparation tasks (digging, shoveling, and kneading mud) occur after bricks have already been cast on the ground.",
-        "Lack of a clean, progressive structure for the brick-making process."
+        "Temporal order issue: Preparation of the clay (Caption 3) is listed after brick-making has already occurred (Captions 1 and 2).",
+        "Excessive repetition: Captions 1, 2, 4, 5, 6, 7, and 8 all essentially describe the same cycle of filling the mold and releasing the brick."
       ],
-      "reasoning": "While the captions are highly descriptive and contain specific, actionable details (good relevance), the sequence suffers from severe temporal disorder and redundancy. Preparation steps like digging, shoveling, and kneading clay are scattered in steps 3, 5, and 7, while the actual molding and releasing steps are repeated continuously starting from the very first caption. A logical procedural flow should start with mud/clay preparation before proceeding to the repetitive brick-casting steps.",
+      "reasoning": "The captions are highly descriptive and relevant to the task of manual brickmaking, but the transcript suffers from severe redundancy and a logical ordering issue. Caption 3 (digging and kneading clay to prepare it) is a preparatory step that occurs after bricks have already been cast in captions 1 and 2. Additionally, almost every single caption describes the exact same process of filling the mold and releasing the brick, making the transcript highly repetitive rather than capturing a progressive, multi-step procedure.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Fill the brick mold with clay and place it on the ground to form bricks.",
+          "caption": "Fill a brick mold with clay and place it on the ground to form a brick",
           "start_ts": 0.0,
           "end_ts": 63.1
         },
         {
-          "caption": "Prepare the clay, pack it into the mold, and carefully demold each brick.",
+          "caption": "Prepare the clay, fill the mold, and demold the brick",
           "start_ts": 63.1,
           "end_ts": 126.3
         },
         {
-          "caption": "Dig and level the mud, then knead the clay before filling the mold.",
+          "caption": "Dig dirt, level the mud, and knead the clay to prepare it for molding",
           "start_ts": 126.3,
           "end_ts": 135.4
         },
         {
-          "caption": "Fill the mold with clay, place it on the ground, and lift it to release the brick.",
+          "caption": "Fill the mold and lift it to release the newly made brick on the ground",
           "start_ts": 135.4,
           "end_ts": 144.0
         },
         {
-          "caption": "Clean the mold, knead a fresh lump of clay, and mold another brick.",
+          "caption": "Clean the mold, knead a lump of clay, and mold another brick",
           "start_ts": 144.0,
           "end_ts": 153.2
         },
         {
-          "caption": "Press the clay firmly into the mold and flip it to cast the brick onto the ground.",
+          "caption": "Press clay into the mold and flip it to cast the brick on the ground",
           "start_ts": 153.2,
-          "end_ts": 158.3
+          "end_ts": 163.3
         },
         {
-          "caption": "Shovel mud and prepare the wooden mold for the next batch.",
-          "start_ts": 158.3,
-          "end_ts": 164.7
+          "caption": "Shovel mud and mold clay into bricks using the wooden mold",
+          "start_ts": 163.3,
+          "end_ts": 172.3
         },
         {
-          "caption": "Shape the clay, press it into the mold, and release the completed bricks.",
-          "start_ts": 164.7,
+          "caption": "Shape the clay, press it into the mold, and release the brick",
+          "start_ts": 172.3,
           "end_ts": 179.9
         }
       ],
@@ -610,7 +591,7 @@
     {
       "id": "egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Egoschema 04d0e8d5 de94 4f28 b9c7 f58e3f83aea2",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -622,58 +603,59 @@
         "Observed procedural phase 8"
       ],
       "score": 6.0,
-      "coverage_score": 5.0,
-      "order_score": 7.0,
-      "relevance_score": 9.0,
+      "coverage_score": 6.0,
+      "order_score": 5.0,
+      "relevance_score": 8.0,
       "issues": [
-        "High level of redundancy with multiple overlapping steps (e.g., steps 1, 3, 5, and 7 all focus on the floor/interior; steps 4 and 8 both focus on the dashboard).",
-        "Step 3 ('Continue vacuuming...') is a filler transition rather than a distinct procedural phase.",
-        "The sequence lacks a linear progression, returning to previously completed areas multiple times."
+        "Redundancy between step 4 and step 8 (both vacuuming the dashboard).",
+        "Procedural error: Step 8 is performed after the 'final vacuuming pass' in step 7.",
+        "Poor top-down workflow: Floors and mats are vacuumed before the seats and dashboard are completed, risking re-soiling the floors.",
+        "Vague and repetitive steps such as 'Vacuum the general interior' (step 1) and 'Vacuum the inner surfaces' (step 3) overlap heavily with the more specific steps."
       ],
-      "reasoning": "The sequence provides a highly relevant and detailed breakdown of cleaning a car interior. However, it suffers from extreme redundancy and repetitive steps. The narrator repeatedly mentions vacuuming the floor, interior, and dashboard in a circular fashion rather than a clean step-by-step progression.",
+      "reasoning": "The captions successfully capture the activity of vacuuming a car interior, with clear and actionable descriptions of the target areas. However, the sequence suffers from significant redundancy and poor procedural order. A standard car cleaning procedure follows a top-down approach (dashboard and seats first, then floors and mats) to avoid dirtying already-cleaned areas. Here, the order is mixed, and step 8 (vacuuming the dashboard) occurs after a 'final vacuuming pass' (step 7), which is illogical and repetitive of step 4.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Vacuum the car interior",
+          "caption": "Vacuum the general interior of the car.",
           "start_ts": 0.0,
           "end_ts": 90.5
         },
         {
-          "caption": "Vacuum the car mat",
+          "caption": "Vacuum the car mats thoroughly.",
           "start_ts": 90.5,
-          "end_ts": 96.0
+          "end_ts": 101.3
         },
         {
-          "caption": "Continue vacuuming the car interior",
-          "start_ts": 96.0,
+          "caption": "Vacuum the inner surfaces and hard-to-reach areas.",
+          "start_ts": 101.3,
           "end_ts": 143.5
         },
         {
-          "caption": "Vacuum the car's dashboard",
+          "caption": "Vacuum dust and debris from the dashboard.",
           "start_ts": 143.5,
           "end_ts": 145.2
         },
         {
-          "caption": "Vacuum the car floor",
+          "caption": "Vacuum the car floor under and around the seats.",
           "start_ts": 145.2,
           "end_ts": 154.9
         },
         {
-          "caption": "Vacuum and wipe the car seats",
+          "caption": "Vacuum and wipe down the car seats.",
           "start_ts": 154.9,
           "end_ts": 164.7
         },
         {
-          "caption": "Vacuum the car's interior floor and upholstery",
+          "caption": "Perform a final vacuuming pass of the car interior.",
           "start_ts": 164.7,
-          "end_ts": 178.4
+          "end_ts": 176.9
         },
         {
-          "caption": "Vacuum the dashboard and steering wheel",
-          "start_ts": 178.4,
+          "caption": "Vacuum around the dashboard and steering wheel.",
+          "start_ts": 176.9,
           "end_ts": 179.9
         }
       ],
@@ -699,7 +681,7 @@
     {
       "id": "egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Egoschema 059f271d c302 462d bfad 2d7fee1c0c02",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -711,58 +693,60 @@
         "Observed procedural phase 8"
       ],
       "score": 9.0,
-      "coverage_score": 9.0,
-      "order_score": 9.0,
-      "relevance_score": 10.0,
-      "issues": [],
-      "reasoning": "The caption sequence is highly detailed, specific, and logical. It describes a clear, hands-on workflow of examining, wiping down, and sorting various books, notebooks, and booklets. The order of actions makes complete procedural sense for an archiving or cleaning task, and the descriptions are concrete and actionable.",
+      "coverage_score": 8.5,
+      "order_score": 9.5,
+      "relevance_score": 9.0,
+      "issues": [
+        "Minor repetitive actions of opening and wiping books, which is expected given the nature of a sorting/cleaning task but slightly repetitive to read."
+      ],
+      "reasoning": "The caption sequence is highly coherent and clearly describes a physical procedure of inspecting, cleaning (wiping), and organizing various books and documents. The steps follow a logical, chronological order where books are handled individually, cleaned, sorted, and stacked. The descriptions are specific and actionable.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Open the book and inspect its contents.",
+          "caption": "Open and inspect a book",
           "start_ts": 0.0,
           "end_ts": 62.8
         },
         {
-          "caption": "Flip through the pages of the book.",
+          "caption": "Pick up a book and flip through its pages",
           "start_ts": 62.8,
           "end_ts": 71.6
         },
         {
-          "caption": "Wipe the book clean with a cloth.",
+          "caption": "Wipe the book with a cloth and place it on a table",
           "start_ts": 71.6,
           "end_ts": 75.3
         },
         {
-          "caption": "Place the book down and open a different one.",
+          "caption": "Place the book on a box and pick up another one to open",
           "start_ts": 75.3,
           "end_ts": 86.5
         },
         {
-          "caption": "Close the book and put it down.",
+          "caption": "Close the book and put it down",
           "start_ts": 86.5,
           "end_ts": 97.6
         },
         {
-          "caption": "Flip through a notebook and inspect a piece of paper.",
+          "caption": "Flip through a notebook and inspect a piece of paper",
           "start_ts": 97.6,
           "end_ts": 132.8
         },
         {
-          "caption": "Sort books, pamphlets, and booklets.",
+          "caption": "Sort through various books and pamphlets",
           "start_ts": 132.8,
           "end_ts": 168.0
         },
         {
-          "caption": "Pick up and close a book.",
+          "caption": "Pick up and close a book",
           "start_ts": 168.0,
           "end_ts": 174.6
         },
         {
-          "caption": "Wipe the book with a cloth and place it on a stack.",
+          "caption": "Wipe a book with a cloth and place it on a stack",
           "start_ts": 174.6,
           "end_ts": 179.9
         }
@@ -790,7 +774,7 @@
     {
       "id": "howto100m__S77te5xuja0",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Howto100m S77te5xuja0",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -801,48 +785,46 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 7,
-      "coverage_score": 7,
-      "order_score": 7,
-      "relevance_score": 9,
+      "score": 9.0,
+      "coverage_score": 8.5,
+      "order_score": 10.0,
+      "relevance_score": 9.5,
       "issues": [
-        "Redundancy in steps 3 to 6, which over-explain the hydrometer measurement process.",
-        "Temporal out-of-order sequence (checking density in step 3 before inserting the hydrometer in step 4).",
-        "Inconsistent terminology ('liquid and oil' vs 'syrup')."
+        "Slight redundancy/high granularity during the density-checking phase (steps 3-5)."
       ],
-      "reasoning": "The captions are highly specific and describe a clear procedural activity (filtering and measuring the density of syrup). However, the sequence suffers from redundancy and minor ordering issues. Steps 3, 4, 5, and 6 are all parts of the same density-checking process, and Step 3 ('Check the density...') is positioned before Step 4 ('insert the hydrometer...'), which is temporally backward. There is also a slight inconsistency between 'liquid and oil' in step 1 and 'syrup' in step 2.",
+      "reasoning": "The sequence is highly coherent and follows a logical procedural flow, starting from pouring and filtering to a detailed, step-by-step density-checking process using a hydrometer and thermometer. The captions are exceptionally specific and actionable. There is slight redundancy/high granularity in the density-checking steps (steps 3, 4, and 5 all involve checking density or reading measurements), but they successfully capture distinct physical actions within that phase.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Pour the liquid and oil into a container.",
+          "caption": "Pour the liquid and oil into the container.",
           "start_ts": 0.0,
           "end_ts": 58.2
         },
         {
-          "caption": "Filter the syrup using the filter canister.",
+          "caption": "Operate the syrup filter canister.",
           "start_ts": 58.2,
           "end_ts": 75.2
         },
         {
-          "caption": "Check the density of the syrup with a hydrometer.",
+          "caption": "Check the density of the syrup using a hydrometer.",
           "start_ts": 75.2,
           "end_ts": 98.9
         },
         {
-          "caption": "Measure the liquid temperature and insert the hydrometer into the metal keg.",
+          "caption": "Insert the hydrometer and temperature probe into the metal keg and read the thermometer.",
           "start_ts": 98.9,
           "end_ts": 122.6
         },
         {
-          "caption": "Check the liquid density and read the hydrometer calibration chart.",
+          "caption": "Check the liquid density with the hydrometer and read the calibration chart.",
           "start_ts": 122.6,
           "end_ts": 142.8
         },
         {
-          "caption": "Consult the calibration table to determine the final density and remove the tools from the container.",
+          "caption": "Remove the hydrometer from the container and place the pipette on the container board.",
           "start_ts": 142.8,
           "end_ts": 187.5
         }
@@ -867,7 +849,7 @@
     {
       "id": "howto100m__Z-37OnNZpS4",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Howto100m Z 37OnNZpS4",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -878,59 +860,59 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 10.0,
-      "coverage_score": 10.0,
+      "score": 9.3,
+      "coverage_score": 9.5,
       "order_score": 10.0,
-      "relevance_score": 10.0,
+      "relevance_score": 9.0,
       "issues": [],
-      "reasoning": "The sequence of captions is exceptional. It describes a logical, step-by-step origami process for creating a face-changer. The steps begin with surface preparation, progress through very detailed pre-creasing stages, transition to collapsing the paper, and finish with assembling the final pieces. The language is highly specific and action-oriented.",
+      "reasoning": "The sequence is exceptionally clear, logical, and detailed. It covers prep work, step-by-step folding (grid creation, shaping), structural assembly of the mechanism, testing, and final neatening. The captions are specific and highly actionable.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Clean and wipe the working surface.",
+          "caption": "Wipe down and clean the workspace.",
           "start_ts": 0.0,
           "end_ts": 23.2
         },
         {
-          "caption": "Flatten the green sheet of paper and fold it diagonally, then unfold it.",
+          "caption": "Flatten the green paper, fold it diagonally, and unfold to create a crease.",
           "start_ts": 23.2,
           "end_ts": 39.7
         },
         {
-          "caption": "Fold the paper to create initial guide creases.",
+          "caption": "Fold the paper along the edges to start forming the base creases.",
           "start_ts": 39.7,
           "end_ts": 56.1
         },
         {
-          "caption": "Fold and unfold the paper horizontally and vertically to create crease lines.",
+          "caption": "Fold and unfold the paper repeatedly to define guide creases.",
           "start_ts": 56.1,
           "end_ts": 96.4
         },
         {
-          "caption": "Fold the corners inward and unfold to add more guidelines.",
+          "caption": "Continue folding and unfolding along the other sides to form a grid.",
           "start_ts": 96.4,
           "end_ts": 136.7
         },
         {
-          "caption": "Collapse the paper along the crease lines into a smaller square.",
+          "caption": "Fold the corners and sides inward to shape the origami.",
           "start_ts": 136.7,
           "end_ts": 171.9
         },
         {
-          "caption": "Fold the outer flaps of the green paper.",
+          "caption": "Fold the green paper structurally to build the face-changer mechanism.",
           "start_ts": 171.9,
           "end_ts": 209.6
         },
         {
-          "caption": "Assemble and integrate the white origami face-changer piece.",
+          "caption": "Finish folding and test the movement of the origami toy.",
           "start_ts": 209.6,
           "end_ts": 235.4
         },
         {
-          "caption": "Fold and flatten the final origami structure.",
+          "caption": "Flatten and neaten the final folds of the origami.",
           "start_ts": 235.4,
           "end_ts": 261.2
         }
@@ -958,7 +940,7 @@
     {
       "id": "howto100m__ap8KnA30ttU",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Howto100m ap8KnA30ttU",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -969,51 +951,56 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 7,
-      "coverage_score": 8,
-      "order_score": 6,
+      "score": 5,
+      "coverage_score": 7,
+      "order_score": 3,
       "relevance_score": 9,
       "issues": [
-        "Step 2 is out of order or redundant, as the inner pot must be heated on a stove before being placed into the thermal cooker in Step 6."
+        "Step 2 is out of order and redundant with Step 7, creating a confusing back-and-forth between stove cooking and thermal cooking."
       ],
-      "reasoning": "The captions are highly descriptive, specific, and cover the entire procedure from searing to serving. However, there is a clear logical and temporal issue with Step 2. In thermal cooking, the inner pot is heated on a stove first to bring the food to a boil, and only then is it transferred to the insulated outer thermal cooker (as correctly described in Step 6). Placing the inner pot inside the thermal cooker in Step 2, before saut\u00e9ing and adding liquids in Steps 3-5, does not make physical or procedural sense.",
+      "reasoning": "The individual captions are highly descriptive and actionable. However, the temporal/procedural order is highly flawed. Step 2 states that the inner pot is placed inside the thermal cooker, but Steps 3-6 continue with stove-top preparation (adding onions, seasonings, tomato paste). Then, Step 7 repeats the action of placing the inner pot into the thermal cooker. This indicates either a severe ordering issue or a major redundancy.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Sear and flip the sausages in the pot.",
+          "caption": "Flip the sausages in the pot using tongs.",
           "start_ts": 0.0,
           "end_ts": 21.4
         },
         {
-          "caption": "Prepare the thermal cooker by placing the inner pot inside.",
+          "caption": "Place the inner pot inside the thermal cooker container and cover it with the lid.",
           "start_ts": 21.4,
           "end_ts": 65.0
         },
         {
-          "caption": "Stir the sausages with tongs to brown them evenly.",
+          "caption": "Stir the ingredients in the pot with tongs.",
           "start_ts": 65.0,
           "end_ts": 84.2
         },
         {
-          "caption": "Add chopped onions to the pot and saut\u00e9 them.",
+          "caption": "Add chopped onions to the pot and stir.",
           "start_ts": 84.2,
           "end_ts": 106.7
         },
         {
-          "caption": "Pour in the liquids, seasonings, and tomato paste, then stir.",
+          "caption": "Pour in other ingredients and liquid, add seasonings, and stir everything together.",
           "start_ts": 106.7,
-          "end_ts": 146.7
+          "end_ts": 124.5
         },
         {
-          "caption": "Place the inner pot inside the thermal cooker and close the lid.",
-          "start_ts": 146.7,
+          "caption": "Add tomato paste to the pot and mix.",
+          "start_ts": 124.5,
+          "end_ts": 138.9
+        },
+        {
+          "caption": "Place the inner pot into the thermal cooker, pour in water, and close the lid.",
+          "start_ts": 138.9,
           "end_ts": 154.6
         },
         {
-          "caption": "Remove the cooked sausages from the pot and spoon the sauce over them.",
+          "caption": "Open the thermal cooker, remove the pot lid, transfer the meat to a plate, and spoon sauce over it.",
           "start_ts": 154.6,
           "end_ts": 220.5
         },
@@ -1031,7 +1018,8 @@
         5,
         6,
         7,
-        8
+        8,
+        9
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_howto100m__ap8KnA30ttU.jpg",
@@ -1045,7 +1033,7 @@
     {
       "id": "howto100m__hn5BXeTVqYI",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Howto100m hn5BXeTVqYI",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1056,28 +1044,28 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 3,
-      "coverage_score": 3,
-      "order_score": 3,
-      "relevance_score": 2,
+      "score": 2.0,
+      "coverage_score": 2.0,
+      "order_score": 8.0,
+      "relevance_score": 2.0,
       "issues": [
-        "Temporal order is incorrect: opening the application should logically occur before navigating within it.",
-        "Captions are extremely generic and lack specificity (e.g., 'use the mobile phone application' does not describe what the app is or what task is being performed).",
-        "Extremely low coverage of the actual task being performed on the phone."
+        "Captions are extremely vague and lack specificity.",
+        "The sequence is too short to represent a meaningful procedure.",
+        "Does not capture distinct, concrete hands-on phases of an actual task."
       ],
-      "reasoning": "The transcript is extremely brief, generic, and procedurally backward. It describes navigating a smartphone screen before actually opening the application. The descriptions are too vague to be useful for any specific procedural task.",
+      "reasoning": "The caption sequence is extremely brief and generic. It does not describe a specific procedural task, but rather generic interactions with a smartphone. Captions like 'Interact with the mobile application' are too vague to be useful or actionable.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Scroll and tap on the smartphone screen to navigate",
+          "caption": "Scroll and tap on your smartphone screen to navigate.",
           "start_ts": 0.0,
           "end_ts": 91.9
         },
         {
-          "caption": "Open and use the mobile phone application",
+          "caption": "Interact with the mobile application.",
           "start_ts": 91.9,
           "end_ts": 181.8
         }
@@ -1098,7 +1086,7 @@
     {
       "id": "howto100m__iluOswaVEd4",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Howto100m iluOswaVEd4",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1112,36 +1100,35 @@
       "score": 3,
       "coverage_score": 3,
       "order_score": 2,
-      "relevance_score": 5,
+      "relevance_score": 7,
       "issues": [
-        "Highly disjointed steps spanning unrelated domains (plumbing, carpentry, electrical)",
-        "No logical procedural flow or temporal connection between steps",
-        "Several passive observational steps ('inspect', 'examine')"
+        "The steps combine unrelated tasks (plumbing, carpentry, and electrical) rather than a single coherent procedure.",
+        "The order lacks logical flow (e.g., inspecting the pipe and tank occurs after wrapping a pipe fitting with tape, with an unrelated board inspection in between)."
       ],
-      "reasoning": "The sequence is highly fragmented and does not describe a coherent, single procedure. It jumps from plumbing (wrapping tape on a pipe fitting) to carpentry (inspecting trim on a board) back to plumbing (examining a water tank) and then to electrical work (threading a wire). This suggests either a compilation of unrelated clips or a very noisy captioning process.",
+      "reasoning": "The sequence of captions is highly disjointed and does not represent a single, coherent procedural task. It jumps from plumbing (wrapping tape on a pipe fitting) to woodworking/inspection (inspecting board trim), back to plumbing (inspecting a water tank), and finally to electrical work (threading a wire). While individual captions are descriptive and actionable, they do not form a logical workflow.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Wrap thread seal tape around the plastic pipe fitting",
+          "caption": "Wrap thread seal tape around the plastic pipe fitting.",
           "start_ts": 0.0,
           "end_ts": 81.6
         },
         {
-          "caption": "Inspect the black trim on the edge of the board",
+          "caption": "Inspect the black trim on the edge of the board.",
           "start_ts": 81.6,
           "end_ts": 123.9
         },
         {
-          "caption": "Examine the water pipe and the water tank",
+          "caption": "Inspect the water pipe and water tank.",
           "start_ts": 123.9,
-          "end_ts": 169.5
+          "end_ts": 208.1
         },
         {
-          "caption": "Thread the wire",
-          "start_ts": 169.5,
+          "caption": "Thread the wire.",
+          "start_ts": 208.1,
           "end_ts": 234.4
         }
       ],
@@ -1163,7 +1150,7 @@
     {
       "id": "wearable-ai__0bdbf1f4696f054f",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 0bdbf1f4696f054f",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1175,28 +1162,27 @@
         "Observed procedural phase 8"
       ],
       "score": 4.0,
-      "coverage_score": 3.0,
-      "order_score": 8.0,
-      "relevance_score": 4.0,
+      "coverage_score": 4.0,
+      "order_score": 9.0,
+      "relevance_score": 5.0,
       "issues": [
-        "Not a procedural or goal-oriented task",
-        "Extremely low coverage with only two simple steps",
-        "Includes passive/non-hands-on actions ('watch the parade')"
+        "The sequence describes a passive leisure activity rather than a structured hands-on procedure",
+        "The transcript is extremely short (only two captions) and lacks detailed steps"
       ],
-      "reasoning": "The sequence contains only two steps, and the inferred activity (watching a parade) is not a goal-oriented, hands-on procedural task. The actions described are largely passive or simple social behaviors ('watch the parade', 'wave', 'hold an umbrella') rather than instructional, manipulative steps. While there is no order violation, it lacks the depth and structure of a useful procedural transcript.",
+      "reasoning": "The caption sequence is extremely short and describes a passive leisure activity (watching a parade, holding an umbrella) rather than a structured, goal-oriented procedural task. While the steps are chronologically fine and describe egocentric actions, they lack the depth, complexity, and distinct phases necessary for a useful procedural transcript.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Watch the parade and wave at the crowd.",
+          "caption": "Watch the parade and wave your hand",
           "start_ts": 0.0,
-          "end_ts": 393.9
+          "end_ts": 291.7
         },
         {
-          "caption": "Hold up an umbrella for shade or protection.",
-          "start_ts": 393.9,
+          "caption": "Hold an umbrella to shield yourself",
+          "start_ts": 291.7,
           "end_ts": 600.3
         }
       ],
@@ -1216,7 +1202,7 @@
     {
       "id": "wearable-ai__13b5a5f93d33d93a",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 13b5a5f93d33d93a",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1227,51 +1213,51 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 7,
-      "coverage_score": 6,
+      "score": 9,
+      "coverage_score": 9,
       "order_score": 10,
-      "relevance_score": 9,
+      "relevance_score": 10,
       "issues": [
-        "Repetitive actions in captions 3, 4, and 5 (overlapping descriptions of wiping the stove, countertops, and knobs)."
+        "Minor overlap/redundancy between steps 2 and 3 (wiping the stove) and steps 4 and 5 (cleaning counters and surrounding surfaces)."
       ],
-      "reasoning": "The sequence follows a logical and chronological order for cleaning a stove and the surrounding kitchen surfaces. The captions are highly specific and actionable. However, there is significant redundancy in captions 3, 4, and 5, which repeatedly describe wiping down the stove and countertops.",
+      "reasoning": "The caption sequence is exceptionally clear, logical, and detailed. It describes a coherent procedural flow for cleaning a kitchen stovetop, moving outward to the surrounding counters, cabinets, and faucet, and finishing with a final tidy-up. The actions are highly relevant and specific, referencing particular tools (cleaning spray, paper towels, cloth) and parts of the environment (stove grates, knobs, faucet). There is only very minor redundancy in the wiping steps.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Remove the stove grates.",
+          "caption": "Remove the stove grates and spray the stovetop with cleaning spray.",
           "start_ts": 0.0,
-          "end_ts": 9.5
-        },
-        {
-          "caption": "Spray cleaning liquid on the stove.",
-          "start_ts": 9.5,
           "end_ts": 18.9
         },
         {
-          "caption": "Wipe the stovetop and the stove thoroughly.",
+          "caption": "Wipe the stovetop thoroughly using paper towels.",
           "start_ts": 18.9,
+          "end_ts": 85.5
+        },
+        {
+          "caption": "Continue wiping down the remaining parts of the stove.",
+          "start_ts": 85.5,
           "end_ts": 152.0
         },
         {
-          "caption": "Wipe the kitchen counters and stove knobs.",
+          "caption": "Wipe the kitchen counters and stove knobs clean.",
           "start_ts": 152.0,
           "end_ts": 204.1
         },
         {
-          "caption": "Wipe down the stove, countertops, and cabinets.",
+          "caption": "Clean the surrounding countertops and cabinet surfaces.",
           "start_ts": 204.1,
           "end_ts": 221.6
         },
         {
-          "caption": "Wipe the kitchen faucet with a cloth.",
+          "caption": "Wipe down the kitchen faucet with a cloth.",
           "start_ts": 221.6,
           "end_ts": 260.8
         },
         {
-          "caption": "Turn on the faucet and tidy up the kitchen.",
+          "caption": "Rinse and tidy up the stove and cabinet area.",
           "start_ts": 260.8,
           "end_ts": 300.0
         }
@@ -1297,7 +1283,7 @@
     {
       "id": "wearable-ai__1b6e3fb5b4f5bf9a",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 1b6e3fb5b4f5bf9a",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1308,26 +1294,32 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 8,
-      "coverage_score": 7,
-      "order_score": 9,
+      "score": 7,
+      "coverage_score": 6,
+      "order_score": 8,
       "relevance_score": 9,
       "issues": [
-        "The connection between assembling a Spikeball set and performing push-ups on a yoga mat is somewhat weak, representing potentially disjointed activities in the same session."
+        "Incoherent transition between assembling Spikeball and doing yoga mat push-ups",
+        "Minor redundancy between steps 1 and 2 regarding smartphone setup"
       ],
-      "reasoning": "The sequence follows a logical chronological order and uses highly specific, actionable captions. The only minor issue is the thematic shift from assembling a Spikeball set to doing push-ups on a yoga mat, which makes the overall session feel slightly disjointed, though still plausible as a multi-activity workout.",
+      "reasoning": "The captions are highly specific, actionable, and follow a logical chronological flow (preparing the tracking device, assembling equipment, setting up the mat, and exercising). However, the inclusion of 'Assemble the Spikeball set' followed immediately by yoga mat setup and push-ups feels highly disjointed, as if two unrelated activities are being combined. Steps 1 and 2 are also slightly redundant regarding the phone setup.",
       "local_checks": {
-        "has_full_coverage": true,
-        "gaps": []
+        "has_full_coverage": false,
+        "gaps": [
+          {
+            "start_ts": 232.5,
+            "end_ts": 300.2
+          }
+        ]
       },
       "segments": [
         {
-          "caption": "Use your smartphone to prepare for the session.",
+          "caption": "Use your mobile phone to prepare for your workout session.",
           "start_ts": 0.0,
           "end_ts": 55.5
         },
         {
-          "caption": "Place your smartphone on the ground.",
+          "caption": "Place your smartphone on the ground to track your workout.",
           "start_ts": 55.5,
           "end_ts": 114.3
         },
@@ -1337,14 +1329,14 @@
           "end_ts": 173.1
         },
         {
-          "caption": "Unroll a yoga mat to prepare your workout area.",
+          "caption": "Unroll your yoga mat.",
           "start_ts": 173.1,
           "end_ts": 202.8
         },
         {
           "caption": "Perform push-ups on the mat.",
           "start_ts": 202.8,
-          "end_ts": 300.0
+          "end_ts": 232.5
         }
       ],
       "alignment": [
@@ -1366,7 +1358,7 @@
     {
       "id": "wearable-ai__1e719746365c0af7",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 1e719746365c0af7",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1378,45 +1370,45 @@
         "Observed procedural phase 8"
       ],
       "score": 9.0,
-      "coverage_score": 8.0,
+      "coverage_score": 9.0,
       "order_score": 10.0,
       "relevance_score": 9.0,
       "issues": [
-        "Slight redundancy between step 4 and step 5, as both involve reading/consulting instructions and detaching the next set of parts from the sprue."
+        "Slightly repetitive structure in steps 4 and 5, though this accurately reflects the iterative nature of building a multi-part model."
       ],
-      "reasoning": "The sequence is highly logical, specific, and accurately describes the iterative process of building a model kit (reading instructions, detaching parts from a sprue, inspecting, and assembling). There is a slight redundancy between steps 4 and 5, which both describe consulting the manual/instructions and detaching the next set of parts, but this is typical for the repetitive nature of model building.",
+      "reasoning": "The caption sequence is exceptionally logical, detailing the realistic, iterative process of building a plastic model from a sprue (runner). It begins with reading instructions and detaching initial parts, moves to inspection and assembly, and flows naturally through subsequent iterations of cutting parts and assembling until completion. The steps are highly descriptive and action-oriented.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Read the instruction manual and detach the first parts from the plastic sprue.",
+          "caption": "Read the instruction manual and detach the initial parts from the plastic sprue.",
           "start_ts": 0.0,
           "end_ts": 48.5
         },
         {
-          "caption": "Inspect the detached plastic model parts to prepare them for assembly.",
+          "caption": "Inspect the detached plastic parts and the sprue to prepare for assembly.",
           "start_ts": 48.5,
           "end_ts": 87.5
         },
         {
-          "caption": "Assemble the initial parts of the plastic model.",
+          "caption": "Begin assembling the plastic model parts together.",
           "start_ts": 87.5,
           "end_ts": 163.5
         },
         {
-          "caption": "Consult the manual and detach additional parts from the plastic sprue.",
+          "caption": "Consult the instructions and detach additional parts from the sprue.",
           "start_ts": 163.5,
           "end_ts": 200.5
         },
         {
-          "caption": "Read the assembly instructions and remove the next set of parts from the sprue.",
+          "caption": "Review the assembly guide and remove the next set of parts from the sprue.",
           "start_ts": 200.5,
           "end_ts": 237.6
         },
         {
-          "caption": "Assemble the remaining parts to complete the model.",
+          "caption": "Place the sprue down, select the final parts, and complete the assembly of the model.",
           "start_ts": 237.6,
           "end_ts": 300.3
         }
@@ -1441,7 +1433,7 @@
     {
       "id": "wearable-ai__1f2fa2af1378221e",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 1f2fa2af1378221e",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1452,28 +1444,27 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 7.0,
-      "coverage_score": 7.0,
-      "order_score": 8.0,
-      "relevance_score": 7.0,
+      "score": 8.0,
+      "coverage_score": 8.0,
+      "order_score": 10.0,
+      "relevance_score": 8.0,
       "issues": [
-        "Step 1 mentions taking coffee beans out but does not state where they are put.",
-        "Step 5 mentions opening a spice jar but does not state if/when the spices are added to the mortar.",
-        "Ambiguous reference to 'the container' in step 4 when a mortar is already in use."
+        "Step 4 introduces 'cubes' without context, making it slightly vague.",
+        "Slight redundancy between Step 6 ('begin grinding') and Step 7 ('Grind all the ingredients thoroughly')."
       ],
-      "reasoning": "The sequence follows a logical progression of gathering ingredients, grinding them, and storing them. However, it lacks crucial linking steps, such as explaining where the coffee beans (step 1) or spices (step 5) are placed after being opened/taken out. This creates minor gaps in the procedural flow.",
+      "reasoning": "The sequence is highly chronological and describes a complete procedure from preparing the ingredients to grinding them and storing the final product. It flows logically without any temporal ordering issues. However, some captions are slightly vague, particularly the sudden mention of 'cubes' in step 4 without prior context, and there is a minor overlap in steps 6 and 7 regarding the start of the grinding process.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Open a bag of coffee beans and take some out.",
+          "caption": "Open the bag of coffee beans and take some beans out.",
           "start_ts": 0.0,
           "end_ts": 16.1
         },
         {
-          "caption": "Pour the ingredients from the packet into a mortar.",
+          "caption": "Pour the coffee beans and other ingredients from the packet into the mortar.",
           "start_ts": 16.1,
           "end_ts": 28.5
         },
@@ -1483,17 +1474,22 @@
           "end_ts": 41.1
         },
         {
-          "caption": "Place flavor cubes into the container.",
+          "caption": "Put the cubes into a container.",
           "start_ts": 41.1,
           "end_ts": 44.5
         },
         {
-          "caption": "Open the spice jar and unscrew the bottle lid.",
+          "caption": "Open a spice jar and packet to add more ingredients.",
           "start_ts": 44.5,
+          "end_ts": 52.5
+        },
+        {
+          "caption": "Unscrew the lid of a bottle to add the contents and begin grinding.",
+          "start_ts": 52.5,
           "end_ts": 60.5
         },
         {
-          "caption": "Grind the ingredients thoroughly in the mortar with a pestle.",
+          "caption": "Grind all the ingredients thoroughly with a mortar and pestle.",
           "start_ts": 60.5,
           "end_ts": 109.9
         },
@@ -1510,7 +1506,8 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__1f2fa2af1378221e.jpg",
@@ -1524,7 +1521,7 @@
     {
       "id": "wearable-ai__440660c9d220f05f",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 440660c9d220f05f",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1535,42 +1532,43 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 8,
-      "coverage_score": 8,
-      "order_score": 9,
+      "score": 7,
+      "coverage_score": 7,
+      "order_score": 7,
       "relevance_score": 8,
       "issues": [
-        "Step 4 (placing garlic into a plastic bag) is disconnected from the main recipe flow.",
-        "Step 7 mentions 'rolled food' which is inconsistent with the celery sticks being prepared in the previous steps."
+        "Inconsistency in ingredients: 'leek' is washed but not used, while 'green onions' are chopped but were not washed.",
+        "The garlic action in step 4 is a dead-end with no further integration into the recipe.",
+        "Sudden appearance of 'rolled food' in step 7 with no prior steps explaining its preparation."
       ],
-      "reasoning": "The sequence provides a clear, chronological, and mostly logical step-by-step guide for preparing stuffed celery. The actions described are highly detailed and actionable. There are only minor issues with coherence, specifically the sudden introduction of garlic in a bag and 'rolled food' near the end, which deviates slightly from the celery focus.",
+      "reasoning": "The sequence shows a clear, actionable progression of making a stuffed celery/vegetable dish. However, there are several logical gaps: leeks are washed in step 1 but never used, while green onions are chopped in step 3 without being washed. Garlic is placed in a bag in step 4 with no follow-up. Finally, 'rolled food' is introduced in step 7 without any prior preparation or rolling steps.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Wash the vegetables and dry them with a paper towel.",
+          "caption": "Wash and dry the leek and celery.",
           "start_ts": 0.0,
           "end_ts": 16.8
         },
         {
-          "caption": "Cut the celery stalks and place cream cheese in a bowl.",
+          "caption": "Chop the celery, place the pieces on a plate, and put cream cheese into a bowl.",
           "start_ts": 16.8,
           "end_ts": 68.7
         },
         {
-          "caption": "Chop the green onions, add them to the bowl with seasonings, and mix well.",
+          "caption": "Chop the green onions and mix them with seasonings and cream cheese in the bowl.",
           "start_ts": 68.7,
           "end_ts": 120.5
         },
         {
-          "caption": "Place garlic into a plastic bag.",
+          "caption": "Put garlic into a plastic bag.",
           "start_ts": 120.5,
           "end_ts": 152.7
         },
         {
-          "caption": "Mix the cream cheese filling again and arrange the celery on a plate.",
+          "caption": "Mix the cream cheese filling thoroughly and arrange the celery sticks on a plate.",
           "start_ts": 152.7,
           "end_ts": 183.5
         },
@@ -1580,12 +1578,12 @@
           "end_ts": 215.3
         },
         {
-          "caption": "Spread cream onto the rolled food and carry the plate to the refrigerator.",
+          "caption": "Spread cream on the rolled food.",
           "start_ts": 215.3,
           "end_ts": 247.2
         },
         {
-          "caption": "Place the plate inside the refrigerator and close the door.",
+          "caption": "Place the prepared dish in the refrigerator and close the door.",
           "start_ts": 247.2,
           "end_ts": 252.5
         }
@@ -1612,7 +1610,7 @@
     {
       "id": "wearable-ai__49b376b461bb8876",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 49b376b461bb8876",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1623,32 +1621,31 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 4.0,
-      "coverage_score": 5.0,
+      "score": 7.5,
+      "coverage_score": 7.0,
       "order_score": 9.0,
-      "relevance_score": 3.0,
+      "relevance_score": 7.0,
       "issues": [
-        "Captions are too generic and lack specific domain context.",
-        "The third caption is redundant and non-descriptive ('Continue using the laptop to complete your task')."
+        "The third caption ('finalize your work') is abstract and lacks concrete, hands-on description compared to the first two steps."
       ],
-      "reasoning": "The sequence describes generic laptop usage. While the temporal order is logical, the captions are extremely vague and lack the specificity needed for a useful procedural transcript. The third caption ('Continue using the laptop to complete your task') is essentially a placeholder and provides no actionable information.",
+      "reasoning": "The sequence presents a logical flow of actions for a laptop-based task (typing, browsing/scrolling, and completing the work). However, the final step is quite vague and lacks a specific, observable physical action.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Type and enter the required information on your laptop.",
+          "caption": "Type on the laptop to enter your text",
           "start_ts": 0.0,
-          "end_ts": 31.5
+          "end_ts": 68.3
         },
         {
-          "caption": "Scroll and browse through the website on your screen.",
-          "start_ts": 31.5,
+          "caption": "Scroll through a website on the laptop",
+          "start_ts": 68.3,
           "end_ts": 91.2
         },
         {
-          "caption": "Continue using the laptop to complete your task.",
+          "caption": "Use the laptop to finalize your work",
           "start_ts": 91.2,
           "end_ts": 100.3
         }
@@ -1670,7 +1667,7 @@
     {
       "id": "wearable-ai__4cdb8d625619386f",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 4cdb8d625619386f",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1683,57 +1680,62 @@
       ],
       "score": 4,
       "coverage_score": 4,
-      "order_score": 5,
-      "relevance_score": 6,
+      "order_score": 3,
+      "relevance_score": 5,
       "issues": [
-        "Excessive repetition of checking/retrieving the pizza box (steps 1-4)",
-        "Incomplete procedure (the food is never cooked or finished)",
-        "Illogical flow (getting oven mitts, then returning to inspect the freezer/refrigerator at the end)"
+        "Excessive repetition of retrieving and returning items to the freezer without progressing the task.",
+        "Illogical/confusing action pairings, such as opening the oven door only to return a box to the freezer in step 3.",
+        "Incomplete procedure; the oven is preheated and mitts are retrieved, but no actual cooking phase occurs."
       ],
-      "reasoning": "The sequence is highly repetitive in the beginning (checking the pizza box and instructions multiple times) and ultimately describes an abandoned task (switching from pizza to a pocket snack). Key procedural steps are missing: the food is never placed in the oven, cooked, or retrieved, despite preheating the oven and getting oven mitts. Additionally, returning to the freezer to inspect other boxes at the very end makes the flow illogical.",
+      "reasoning": "The sequence depicts a highly erratic and repetitive series of actions with multiple aborted attempts at cooking. The user repeatedly retrieves items from the freezer, reads the instructions, and puts them back. Although they preheat the oven and retrieve oven mitts, no food is ever put in the oven or cooked, leaving the procedure completely unfinished. Additionally, some steps are physically confusing (e.g., opening the oven door and then putting a box back in the freezer).",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Retrieve the pizza box from the freezer.",
+          "caption": "Search the freezer and retrieve a pizza box",
           "start_ts": 0.0,
           "end_ts": 58.9
         },
         {
-          "caption": "Read the cooking instructions on the pizza box.",
+          "caption": "Read the instructions on the pizza box",
           "start_ts": 58.9,
           "end_ts": 85.9
         },
         {
-          "caption": "Preheat the oven and retrieve the pizza box again.",
+          "caption": "Open the oven door and put the pizza box back in the freezer",
           "start_ts": 85.9,
+          "end_ts": 118.3
+        },
+        {
+          "caption": "Preheat the oven and take another box out of the freezer",
+          "start_ts": 118.3,
           "end_ts": 150.7
         },
         {
-          "caption": "Check the cooking instructions on the box one more time.",
+          "caption": "Read the cooking instructions on the box and put it back in the freezer",
           "start_ts": 150.7,
-          "end_ts": 163.7
+          "end_ts": 169.3
         },
         {
-          "caption": "Return the pizza box to the freezer and take out a pocket snack.",
-          "start_ts": 163.7,
-          "end_ts": 174.9
-        },
-        {
-          "caption": "Open the food packet.",
-          "start_ts": 174.9,
+          "caption": "Take a packet out of the freezer and open it",
+          "start_ts": 169.3,
           "end_ts": 212.7
         },
         {
-          "caption": "Get oven mitts from the drawer.",
+          "caption": "Retrieve oven mitts from the drawer",
           "start_ts": 212.7,
           "end_ts": 250.4
         },
         {
-          "caption": "Inspect other frozen food boxes and close the refrigerator.",
+          "caption": "Examine a frozen food box and return it to the freezer",
           "start_ts": 250.4,
+          "end_ts": 275.3
+        },
+        {
+          "caption": "Close the freezer and open the refrigerator to check inside",
+          "start_ts": 275.3,
           "end_ts": 300.3
         }
       ],
@@ -1745,7 +1747,8 @@
         5,
         6,
         7,
-        8
+        8,
+        9
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__4cdb8d625619386f.jpg",
@@ -1759,7 +1762,7 @@
     {
       "id": "wearable-ai__5e1ba77a7f73c84d",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 5e1ba77a7f73c84d",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1771,25 +1774,25 @@
         "Observed procedural phase 8"
       ],
       "score": 8,
-      "coverage_score": 7,
+      "coverage_score": 6,
       "order_score": 10,
       "relevance_score": 10,
       "issues": [
-        "Missing preparation steps (e.g., filing nails or applying base coat) and finishing steps (e.g., applying top coat) for a complete procedure, though the covered steps are highly accurate."
+        "The sequence is very brief and omits surrounding steps of a full manicure such as applying a base coat or top coat."
       ],
-      "reasoning": "The sequence is highly logical, specific, and actionable. While it contains only two steps and omits preparation (like shaping or base coat) and finishing (top coat), it perfectly captures the core loop of applying polish and cleaning up errors in the correct order.",
+      "reasoning": "The sequence is highly coherent, perfectly ordered, and descriptive. The actions are clear and actionable. The coverage is a bit low because a complete manicure usually involves other steps like nail preparation, a base coat, or a top coat, but for a short sequence, it captures the core process well.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Apply nail polish to your fingernails",
+          "caption": "Apply nail polish to your fingernails.",
           "start_ts": 0.0,
           "end_ts": 548.3
         },
         {
-          "caption": "Clean any excess nail polish from around your fingernails",
+          "caption": "Clean any excess nail polish from around your fingernails.",
           "start_ts": 548.3,
           "end_ts": 600.0
         }
@@ -1810,7 +1813,7 @@
     {
       "id": "wearable-ai__6ce4e634e6294692",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 6ce4e634e6294692",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1821,58 +1824,60 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 9.0,
-      "coverage_score": 9.5,
-      "order_score": 9.0,
+      "score": 10.0,
+      "coverage_score": 10.0,
+      "order_score": 10.0,
       "relevance_score": 10.0,
-      "issues": [
-        "Step 6 slightly interrupts the food preparation flow, though it is a realistic action.",
-        "Minor redundancy between 'stir' in step 7 and 'stir the fruit salad thoroughly' in step 8."
-      ],
-      "reasoning": "The caption sequence is exceptionally detailed, highly specific, and procedurally sound. It outlines the preparation of a fruit salad from washing the fruits to the final mix. The steps are actionable and use precise ingredient names. The only minor issues are a slight interruption in flow at step 6 (washing hands and retrieving a bottle, which is realistic but breaks the food prep flow) and a small redundancy between the stirring actions in steps 7 and 8.",
+      "issues": [],
+      "reasoning": "The caption sequence is exceptionally detailed, logical, and complete. It covers all phases from washing the ingredients to prepping individual fruits (apples, grapes, orange, ginger), mixing them, adding dressing elements (lemon, honey), and stirring the final salad. The order is procedurally flawless and highly actionable.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Wash the apple, orange, and green grapes under running water.",
+          "caption": "Wash the apple and orange and place them on the cutting board.",
           "start_ts": 0.0,
+          "end_ts": 13.9
+        },
+        {
+          "caption": "Wash the green grapes and place them on the cutting board.",
+          "start_ts": 13.9,
           "end_ts": 27.7
         },
         {
-          "caption": "Peel, slice, and chop the apple.",
+          "caption": "Slice and chop the apple, then place it in a bowl.",
           "start_ts": 27.7,
+          "end_ts": 67.7
+        },
+        {
+          "caption": "Peel and slice the remaining apple.",
+          "start_ts": 67.7,
           "end_ts": 109.3
         },
         {
-          "caption": "Slice the grapes and peel and cut the orange.",
+          "caption": "Slice the grapes, then peel and cut the orange.",
           "start_ts": 109.3,
           "end_ts": 165.7
         },
         {
-          "caption": "Peel and cut the ginger, and squeeze the orange juice.",
+          "caption": "Peel and cut the ginger, then squeeze the orange.",
           "start_ts": 165.7,
           "end_ts": 188.8
         },
         {
-          "caption": "Place the sliced fruits into a bowl and mix them.",
+          "caption": "Place the remaining fruit pieces into the bowl and mix them.",
           "start_ts": 188.8,
           "end_ts": 197.9
         },
         {
-          "caption": "Wash your hands and retrieve utensils and a bottle from the cabinet.",
+          "caption": "Squeeze lemon juice into the bowl.",
           "start_ts": 197.9,
-          "end_ts": 209.9
+          "end_ts": 211.5
         },
         {
-          "caption": "Squeeze lemon juice into the bowl, add honey, and stir.",
-          "start_ts": 209.9,
-          "end_ts": 240.3
-        },
-        {
-          "caption": "Stir the fruit salad thoroughly to combine.",
-          "start_ts": 240.3,
+          "caption": "Add honey to the bowl and stir the fruit salad thoroughly.",
+          "start_ts": 211.5,
           "end_ts": 269.1
         }
       ],
@@ -1884,7 +1889,8 @@
         5,
         6,
         7,
-        8
+        8,
+        9
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__6ce4e634e6294692.jpg",
@@ -1898,7 +1904,7 @@
     {
       "id": "wearable-ai__6de3fc66543533fa",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 6de3fc66543533fa",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1909,25 +1915,65 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 1.0,
-      "coverage_score": 1.0,
-      "order_score": 1.0,
-      "relevance_score": 1.0,
+      "score": 6.0,
+      "coverage_score": 9.0,
+      "order_score": 10.0,
+      "relevance_score": 4.0,
       "issues": [
-        "The caption sequence contains no captions."
+        "The captions are highly generic and lack specificity regarding the actual objects, tools, or fasteners involved.",
+        "Without specific object names, it is difficult to understand the actual hands-on task being performed."
       ],
-      "reasoning": "The provided caption sequence is completely empty (0 captions). It is impossible to evaluate any procedural steps, coverage, order, or relevance, as no information was provided.",
+      "reasoning": "The sequence follows a flawless chronological order for a generic assembly process, covering everything from preparation to cleanup. However, the relevance score is low because the captions are extremely generic. Phrases like 'main components', 'initial parts', 'appropriate fasteners', and 'secondary parts' act as placeholders and do not provide any specific, actionable details about what object is being assembled or what tools are being used.",
       "local_checks": {
-        "has_full_coverage": false,
-        "gaps": [
-          {
-            "start_ts": 0.0,
-            "end_ts": 287.53333333333336
-          }
-        ]
+        "has_full_coverage": true,
+        "gaps": []
       },
-      "segments": [],
-      "alignment": [],
+      "segments": [
+        {
+          "caption": "Prepare the workspace and gather all necessary tools and materials.",
+          "start_ts": 0.0,
+          "end_ts": 51.7
+        },
+        {
+          "caption": "Position the main components in preparation for assembly.",
+          "start_ts": 51.7,
+          "end_ts": 89.1
+        },
+        {
+          "caption": "Align and connect the initial parts of the assembly.",
+          "start_ts": 89.1,
+          "end_ts": 151.7
+        },
+        {
+          "caption": "Secure the connected components using the appropriate fasteners.",
+          "start_ts": 151.7,
+          "end_ts": 189.3
+        },
+        {
+          "caption": "Attach the secondary parts and accessories to the main body.",
+          "start_ts": 189.3,
+          "end_ts": 219.7
+        },
+        {
+          "caption": "Inspect the assembly for any loose parts or misalignment.",
+          "start_ts": 219.7,
+          "end_ts": 260.0
+        },
+        {
+          "caption": "Clean up the workspace and store the tools properly.",
+          "start_ts": 260.0,
+          "end_ts": 287.5
+        }
+      ],
+      "alignment": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__6de3fc66543533fa.jpg",
       "video": {
@@ -1940,7 +1986,7 @@
     {
       "id": "wearable-ai__777459a083922176",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 777459a083922176",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -1951,39 +1997,39 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 9.5,
-      "coverage_score": 9.0,
+      "score": 10.0,
+      "coverage_score": 10.0,
       "order_score": 10.0,
       "relevance_score": 10.0,
       "issues": [],
-      "reasoning": "The sequence is exceptionally coherent, logical, and highly descriptive. It flows perfectly from the planning phase (checking the map), to transit (riding a bicycle), exploring on foot, setting up the equipment, and finally capturing the sunset. Each step is actionable and clearly describes hands-on egocentric actions.",
+      "reasoning": "The sequence is exceptionally well-structured, logical, and highly detailed. It covers the entire progression of the activity from preparation (checking a map), transit (riding a bicycle and walking), setup (positioning the phone on a stand), to the final goal (taking a photo of the sunset). There are no missing phases, repetitions, or ordering issues.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Check the map to plan your route",
+          "caption": "Check a map to plan your route",
           "start_ts": 0.0,
           "end_ts": 118.8
         },
         {
-          "caption": "Ride a bicycle and take photos along the way",
+          "caption": "Ride your bicycle along the trail",
           "start_ts": 118.8,
           "end_ts": 227.2
         },
         {
-          "caption": "Walk along the path to explore the area",
+          "caption": "Walk along the pathway to find a good spot",
           "start_ts": 227.2,
           "end_ts": 553.9
         },
         {
-          "caption": "Set up your phone on a stand or support",
+          "caption": "Set up and position your phone on a stand",
           "start_ts": 553.9,
           "end_ts": 562.7
         },
         {
-          "caption": "Use your smartphone to take a photo of the sunset",
+          "caption": "Use your smartphone to capture a photo of the sunset",
           "start_ts": 562.7,
           "end_ts": 589.1
         }
@@ -2007,7 +2053,7 @@
     {
       "id": "wearable-ai__7c8b228dd61b135f",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 7c8b228dd61b135f",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2018,16 +2064,15 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 3,
-      "coverage_score": 3,
-      "order_score": 5,
-      "relevance_score": 4,
+      "score": 4.0,
+      "coverage_score": 3.0,
+      "order_score": 8.0,
+      "relevance_score": 4.0,
       "issues": [
-        "High repetition of reading/page-flipping actions across steps 1, 2, 3, 5, and 6",
-        "Anomalous and unrelated step ('Walk around the pickleball facility') breaks the sequence flow",
-        "Low procedural value of the main activity"
+        "High redundancy (multiple captions repeating 'reading' and 'flipping pages')",
+        "Lack of a clear procedural goal or progression"
       ],
-      "reasoning": "The transcript is highly redundant, repeating variations of reading and turning pages multiple times. Additionally, there is a jarring, unrelated step in the middle ('Walk around the pickleball facility') that disrupts any potential procedural cohesion. Reading a magazine itself is also a very low-utility procedural task.",
+      "reasoning": "The sequence is highly repetitive and lacks a clear, goal-oriented procedural structure. It mostly describes a passive activity of holding, reading, and flipping pages of various reading materials (magazine, booklet, brochure) while walking. There is significant redundancy, particularly between steps 1-3 and 6-7.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2049,17 +2094,22 @@
           "end_ts": 414.5
         },
         {
-          "caption": "Walk around the pickleball facility",
+          "caption": "Walk around the facility while holding a booklet",
           "start_ts": 414.5,
           "end_ts": 495.2
         },
         {
-          "caption": "Read and flip through the magazine",
+          "caption": "Hold a brochure",
           "start_ts": 495.2,
+          "end_ts": 498.9
+        },
+        {
+          "caption": "Read the magazine and flip its pages",
+          "start_ts": 498.9,
           "end_ts": 549.5
         },
         {
-          "caption": "Read and turn the pages of the booklet",
+          "caption": "Read a booklet and turn the pages",
           "start_ts": 549.5,
           "end_ts": 600.0
         }
@@ -2070,7 +2120,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__7c8b228dd61b135f.jpg",
@@ -2084,7 +2135,7 @@
     {
       "id": "wearable-ai__84bdfd2003c046f1",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 84bdfd2003c046f1",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2095,67 +2146,56 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 6,
-      "coverage_score": 6,
-      "order_score": 7,
-      "relevance_score": 7,
+      "score": 8,
+      "coverage_score": 9,
+      "order_score": 8,
+      "relevance_score": 9,
       "issues": [
-        "Redundancy in playing/practice descriptions (steps 7, 8, 9, 10)",
-        "Irrelevant actions included (e.g., 'Fold the table')"
+        "Slightly counter-intuitive ordering where an outdoor practice session occurs (step 2) before taping the stick and preparing the balls indoors (step 4)."
       ],
-      "reasoning": "The sequence captures a progression of activities related to hockey (playing outdoor, taping the stick, practicing control, and playing floor hockey). However, there is notable redundancy in the latter half ('Play floor hockey', 'Play with the hockey stick and ball', 'Continue playing...'). Additionally, some steps like 'Fold the table' and 'Walk downstairs' are low-value transitions or irrelevant to the core task of hockey practice.",
+      "reasoning": "The sequence provides a detailed and highly specific walkthrough of a hockey practice session, progressing from preparation to drills of increasing difficulty. The relevance is excellent with clear, actionable captions. The temporal order is mostly logical, though there is a slightly disjointed transition from practicing outside (step 2) to moving downstairs to tape the stick and practice indoors (steps 3-4).",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Fold the table.",
+          "caption": "Fold and put away the table",
           "start_ts": 0.0,
           "end_ts": 37.3
         },
         {
-          "caption": "Pick up a hockey stick.",
+          "caption": "Pick up your field hockey stick and practice outside",
           "start_ts": 37.3,
-          "end_ts": 53.3
-        },
-        {
-          "caption": "Play outdoor field hockey with an orange ball.",
-          "start_ts": 53.3,
           "end_ts": 69.3
         },
         {
-          "caption": "Walk downstairs.",
+          "caption": "Walk downstairs to the indoor practice area",
           "start_ts": 69.3,
           "end_ts": 96.0
         },
         {
-          "caption": "Tape the hockey stick.",
+          "caption": "Tape your hockey stick and gather your practice balls",
           "start_ts": 96.0,
-          "end_ts": 99.5
-        },
-        {
-          "caption": "Pick up the hockey stick and ball.",
-          "start_ts": 99.5,
           "end_ts": 103.2
         },
         {
-          "caption": "Play floor hockey.",
+          "caption": "Practice basic floor hockey stickhandling",
           "start_ts": 103.2,
           "end_ts": 220.3
         },
         {
-          "caption": "Practice controlling the ball with the hockey stick.",
+          "caption": "Work on control and coordination drills with the hockey ball",
           "start_ts": 220.3,
           "end_ts": 337.3
         },
         {
-          "caption": "Play with the hockey stick and ball.",
+          "caption": "Execute advanced maneuvers and stick tricks",
           "start_ts": 337.3,
           "end_ts": 468.7
         },
         {
-          "caption": "Continue playing floor hockey.",
+          "caption": "Finish the session with freestyle floor hockey practice",
           "start_ts": 468.7,
           "end_ts": 600.0
         }
@@ -2168,9 +2208,7 @@
         5,
         6,
         7,
-        8,
-        9,
-        10
+        8
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__84bdfd2003c046f1.jpg",
@@ -2184,7 +2222,7 @@
     {
       "id": "wearable-ai__8812f05ea4220629",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 8812f05ea4220629",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2200,9 +2238,9 @@
       "order_score": 1,
       "relevance_score": 1,
       "issues": [
-        "The caption sequence is empty, containing 0 captions."
+        "The transcript contains no captions."
       ],
-      "reasoning": "The caption sequence is completely empty. It is impossible to evaluate coverage, order, or relevance, as no steps are provided to describe any activity.",
+      "reasoning": "The provided caption sequence is completely empty. It is impossible to evaluate coverage, order, relevance, or infer the activity because there is no data to assess.",
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2226,7 +2264,7 @@
     {
       "id": "wearable-ai__89da98922957d8ff",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 89da98922957d8ff",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2237,15 +2275,15 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 1,
-      "coverage_score": 1,
-      "order_score": 10,
-      "relevance_score": 2,
+      "score": 1.5,
+      "coverage_score": 1.0,
+      "order_score": 5.0,
+      "relevance_score": 2.0,
       "issues": [
-        "The transcript contains only a single caption, which cannot cover a multi-step procedure.",
-        "The caption is too vague to be actionable or descriptive of a specific task."
+        "The transcript is too short and lacks detailed hands-on phases.",
+        "The single caption is extremely vague and not actionable."
       ],
-      "reasoning": "The sequence contains only a single, extremely vague caption ('Use the laptop'). It provides zero procedural detail, failing to break down the activity into any meaningful hands-on phases. While there are no order violations because there is only one step, the transcript is functionally useless for understanding a procedure.",
+      "reasoning": "The transcript consists of a single, highly generic caption ('Use the laptop'). It fails to capture any distinct hands-on phases, detailed actions, or specific steps of a procedure, making it insufficient to serve as a useful procedural transcript.",
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2261,7 +2299,7 @@
       },
       "segments": [
         {
-          "caption": "Use the laptop.",
+          "caption": "Use the laptop",
           "start_ts": 292.8,
           "end_ts": 324.5
         }
@@ -2281,7 +2319,7 @@
     {
       "id": "wearable-ai__94e4220d406c1cca",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 94e4220d406c1cca",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2292,63 +2330,57 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 5,
-      "coverage_score": 5,
-      "order_score": 4,
+      "score": 7,
+      "coverage_score": 7,
+      "order_score": 6,
       "relevance_score": 9,
       "issues": [
-        "Lack of a single, cohesive procedural goal",
-        "Disjointed and illogical temporal flow (e.g., cleaning hands in step 2 but finger painting again in step 9)",
-        "Repetitive actions across scattered mediums without logical transitions"
+        "Temporal flow is slightly illogical (wiping hands before dabbing wet paint).",
+        "The sequence jumps between multiple different mediums (canvas, paper, card) and back to fingerpainting, suggesting a lack of a single coherent procedure."
       ],
-      "reasoning": "The individual captions are highly specific, actionable, and clearly describe hands-on steps. However, as a sequence, it fails to form a cohesive procedural transcript. The steps jump randomly between different mediums (paper, canvas, card) and activities (finger painting, marker drawing, writing) without a unified goal. Furthermore, the temporal order is illogical; for example, the user wipes their hands clean in step 2 but does several other painting and drawing tasks afterward, ending with more finger painting in step 9.",
+      "reasoning": "The captions are highly descriptive and specific, making it easy to understand the individual actions. However, the sequence feels like a compilation of disjointed craft activities rather than a single cohesive procedural task. The order is also slightly illogical, such as wiping hands clean in step 2 before dabbing wet paint in step 3, and returning to fingerpainting at the very end (step 8) after already working on the final card design.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Finger paint on a sheet of paper",
+          "caption": "Fingerpaint and make fingerprints on a sheet of paper.",
           "start_ts": 0.0,
           "end_ts": 54.3
         },
         {
-          "caption": "Wipe your hands clean using a paper towel",
+          "caption": "Wipe your hands clean with a paper towel.",
           "start_ts": 54.3,
           "end_ts": 81.9
         },
         {
-          "caption": "Dab the paint on the paper with a paper towel",
+          "caption": "Dab the wet paint on the paper with a paper towel.",
           "start_ts": 81.9,
           "end_ts": 94.7
         },
         {
-          "caption": "Paint on a canvas",
+          "caption": "Paint on a canvas and sketch on a piece of paper.",
           "start_ts": 94.7,
-          "end_ts": 132.5
-        },
-        {
-          "caption": "Draw and paint on paper",
-          "start_ts": 132.5,
           "end_ts": 147.5
         },
         {
-          "caption": "Draw on a sheet of paper with a marker",
+          "caption": "Draw on a sheet of paper using a marker.",
           "start_ts": 147.5,
           "end_ts": 160.3
         },
         {
-          "caption": "Write on paper",
+          "caption": "Write a message on the piece of paper.",
           "start_ts": 160.3,
           "end_ts": 197.3
         },
         {
-          "caption": "Write and draw on a card",
+          "caption": "Write and draw a design on a card.",
           "start_ts": 197.3,
           "end_ts": 225.9
         },
         {
-          "caption": "Finger paint a heart on a piece of paper",
+          "caption": "Fingerpaint a heart shape on a piece of paper.",
           "start_ts": 225.9,
           "end_ts": 244.5
         }
@@ -2361,8 +2393,7 @@
         5,
         6,
         7,
-        8,
-        9
+        8
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__94e4220d406c1cca.jpg",
@@ -2376,7 +2407,7 @@
     {
       "id": "wearable-ai__9bee20d4cc3565da",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai 9bee20d4cc3565da",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2392,45 +2423,50 @@
       "order_score": 10.0,
       "relevance_score": 10.0,
       "issues": [],
-      "reasoning": "The caption sequence is exceptionally clear, logical, and complete. It covers all the essential steps of preparing nachos in a perfect chronological order\u2014including melting the cheese before adding cold toppings like fresh vegetables and sour cream. Each step is descriptive and highly actionable.",
+      "reasoning": "The sequence provides a flawless, step-by-step procedural guide for making microwave nachos. Every phase is logically ordered, highly detailed, and actionable, with no missing steps, redundancies, or vague descriptions.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Arrange tortilla chips on a plate and season them.",
+          "caption": "Arrange tortilla chips on a plate and sprinkle with seasoning.",
           "start_ts": 0.0,
           "end_ts": 20.8
         },
         {
-          "caption": "Spoon the cooked meat or warm mixture from the pot onto the chips.",
+          "caption": "Transfer the warm toppings from the pot onto the chips.",
           "start_ts": 20.8,
           "end_ts": 29.6
         },
         {
-          "caption": "Sprinkle shredded cheese over the toppings.",
+          "caption": "Sprinkle a generous amount of shredded cheese over the toppings.",
           "start_ts": 29.6,
           "end_ts": 41.3
         },
         {
-          "caption": "Microwave the plate of nachos to melt the cheese.",
+          "caption": "Place the plate of nachos in the microwave and set the timer.",
           "start_ts": 41.3,
+          "end_ts": 46.9
+        },
+        {
+          "caption": "Wait for the cheese to melt, then remove the plate from the microwave.",
+          "start_ts": 46.9,
           "end_ts": 87.5
         },
         {
-          "caption": "Add chopped vegetables and extra seasoning.",
+          "caption": "Top the nachos with chopped vegetables.",
           "start_ts": 87.5,
-          "end_ts": 103.7
+          "end_ts": 96.8
         },
         {
-          "caption": "Top the nachos with dollops of sour cream.",
-          "start_ts": 103.7,
-          "end_ts": 121.1
+          "caption": "Add seasoning and dollops of sour cream on top.",
+          "start_ts": 96.8,
+          "end_ts": 110.4
         },
         {
-          "caption": "Serve and enjoy the finished nachos.",
-          "start_ts": 121.1,
+          "caption": "Serve and enjoy the completed nachos.",
+          "start_ts": 110.4,
           "end_ts": 125.1
         }
       ],
@@ -2441,7 +2477,8 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__9bee20d4cc3565da.jpg",
@@ -2455,7 +2492,7 @@
     {
       "id": "wearable-ai__a5281e906025a240",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai a5281e906025a240",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2466,42 +2503,32 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 4.0,
-      "coverage_score": 3.0,
-      "order_score": 6.0,
-      "relevance_score": 4.0,
+      "score": 5,
+      "coverage_score": 5,
+      "order_score": 8,
+      "relevance_score": 6,
       "issues": [
-        "Contains multiple irrelevant/distracting steps that are not part of the core procedure (captions 2, 3, and 4)",
-        "Extremely poor coverage of the actual paper folding process, skipping directly from the start to completion"
+        "Contains irrelevant non-procedural actions (picking up a dropped object and using a computer mouse)",
+        "Lacks coverage of intermediate folding steps between initial creasing and final completion"
       ],
-      "reasoning": "The sequence is heavily interrupted by irrelevant or background actions (retrieving a dropped object, checking a screen, clearing a desk) which do not contribute to the actual procedure of folding origami. Only the first and last steps pertain to the actual task, leaving the actual folding process almost entirely uncovered.",
+      "reasoning": "The sequence starts and ends with the main procedural task of paper folding (origami). However, the second step is a completely unrelated, non-procedural distraction (picking up an object and using a mouse) which interrupts the flow and does not contribute to the procedural goal. The actual folding steps are also very coarsely detailed, skipping intermediate steps.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Begin folding the paper along the creased lines.",
+          "caption": "Fold the paper to create the initial creases.",
           "start_ts": 0.0,
           "end_ts": 24.7
         },
         {
-          "caption": "Retrieve the fallen object from the floor.",
+          "caption": "Pick up a dropped object from the floor and use the computer mouse.",
           "start_ts": 24.7,
-          "end_ts": 25.9
-        },
-        {
-          "caption": "Use the computer mouse to check the instructions on your screen.",
-          "start_ts": 25.9,
-          "end_ts": 29.1
-        },
-        {
-          "caption": "Slide the small object on the desk to clear your workspace.",
-          "start_ts": 29.1,
           "end_ts": 32.8
         },
         {
-          "caption": "Continue folding the paper to complete the origami figure.",
+          "caption": "Continue folding the paper to complete the origami shape.",
           "start_ts": 32.8,
           "end_ts": 128.5
         }
@@ -2509,9 +2536,7 @@
       "alignment": [
         1,
         2,
-        3,
-        4,
-        5
+        3
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__a5281e906025a240.jpg",
@@ -2525,7 +2550,7 @@
     {
       "id": "wearable-ai__a74d09fd1a2a1ab6",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai a74d09fd1a2a1ab6",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2536,15 +2561,16 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 7,
-      "coverage_score": 7,
-      "order_score": 9,
-      "relevance_score": 7,
+      "score": 6.0,
+      "coverage_score": 6.0,
+      "order_score": 9.0,
+      "relevance_score": 5.0,
       "issues": [
-        "Redundancy between steps 2 and 3",
-        "Low procedural relevance for 'Point at the dashboard'"
+        "Captions describe a continuous background state ('Drive the car') rather than discrete, hands-on procedural steps.",
+        "The step 'use a smartphone' is too vague and lacks actionability.",
+        "The sequence of actions does not clearly lead to a productive or constructive task completion."
       ],
-      "reasoning": "The chronological flow of the sequence makes sense, representing a driver who is driving, gets distracted by a phone, points at the dashboard, and then continues driving. However, there is direct redundancy between steps 2 and 3 ('Use a mobile phone while driving' and 'Operate the smartphone'). Additionally, 'Point at the dashboard' is not a very actionable or meaningful procedural step.",
+      "reasoning": "The sequence follows a logical temporal order, but it does not represent a clear, goal-oriented procedural task. 'Drive the car' acts more as an ongoing state than a discrete step, and the actions in between ('use a smartphone', 'point at the dashboard') are vague and lack context on what is actually being accomplished.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2556,13 +2582,8 @@
           "end_ts": 415.5
         },
         {
-          "caption": "Use a mobile phone while driving",
+          "caption": "Use a smartphone",
           "start_ts": 415.5,
-          "end_ts": 480.0
-        },
-        {
-          "caption": "Operate the smartphone",
-          "start_ts": 480.0,
           "end_ts": 544.5
         },
         {
@@ -2571,7 +2592,7 @@
           "end_ts": 547.7
         },
         {
-          "caption": "Resume driving the car",
+          "caption": "Continue driving the car",
           "start_ts": 547.7,
           "end_ts": 580.8
         }
@@ -2580,8 +2601,7 @@
         1,
         2,
         3,
-        4,
-        5
+        4
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__a74d09fd1a2a1ab6.jpg",
@@ -2595,7 +2615,7 @@
     {
       "id": "wearable-ai__aba90d4060290a87",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai aba90d4060290a87",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2606,23 +2626,22 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 1,
-      "coverage_score": 1,
-      "order_score": 1,
-      "relevance_score": 2,
+      "score": 2.0,
+      "coverage_score": 1.0,
+      "order_score": 10.0,
+      "relevance_score": 3.0,
       "issues": [
-        "Only one caption is present, which is insufficient to form a procedural sequence",
-        "The caption describes the overall activity rather than a specific, actionable step",
-        "Missing distinct hands-on phases"
+        "The transcript is too short to be useful, containing only one step.",
+        "The single step is too high-level and lacks actionable details or specific hands-on phases."
       ],
-      "reasoning": "The transcript consists of a single, high-level activity label rather than a sequence of detailed, hands-on procedural steps. It lacks any coverage of distinct phases (like mounting, pedaling, or steering) and is too generic to be useful as a procedural transcript.",
+      "reasoning": "The transcript consists of only a single, highly generic caption. It completely lacks the granularity and coverage of distinct steps required to form a useful procedural transcript.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Ride a bicycle",
+          "caption": "Ride the bicycle",
           "start_ts": 0.0,
           "end_ts": 597.6
         }
@@ -2642,7 +2661,7 @@
     {
       "id": "wearable-ai__b00c7a882446587f",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai b00c7a882446587f",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2653,22 +2672,22 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 7.0,
-      "coverage_score": 8.0,
-      "order_score": 9.0,
-      "relevance_score": 7.0,
+      "score": 6,
+      "coverage_score": 6,
+      "order_score": 6,
+      "relevance_score": 8,
       "issues": [
-        "Step 3 ('Lint roll a plush toy') is irrelevant to the overall procedure of cleaning a window.",
-        "Slight redundancy between Step 4 and Step 5, both involving wiping the window sill."
+        "Contains an irrelevant step: 'Use a lint roller on a plush toy' is unrelated to cleaning a window.",
+        "Redundancy and poor ordering in window sill cleaning (steps 4, 5, and 6), where wiping occurs before spraying."
       ],
-      "reasoning": "The sequence contains a highly logical and detailed set of steps for cleaning a window, starting with opening the curtain and finishing with drawing it closed. However, step 3 ('Lint roll a plush toy') is completely unrelated to the window cleaning process and represents a random interruption. Additionally, there is minor redundancy between step 4 and step 5 regarding cleaning the window sill.",
+      "reasoning": "The transcript mostly describes the process of cleaning a window, beginning with pulling the curtain aside and ending with opening it. However, it contains a completely unrelated step ('Use a lint roller on a plush toy') in the middle. Furthermore, the window sill cleaning steps (4, 5, and 6) are redundant and procedurally out of order, as wiping is done before spraying the cleaning solution.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Pull back the curtain",
+          "caption": "Pull the curtain aside",
           "start_ts": 0.0,
           "end_ts": 3.5
         },
@@ -2678,7 +2697,7 @@
           "end_ts": 6.9
         },
         {
-          "caption": "Lint roll a plush toy",
+          "caption": "Use a lint roller on a plush toy",
           "start_ts": 6.9,
           "end_ts": 8.0
         },
@@ -2688,8 +2707,13 @@
           "end_ts": 38.7
         },
         {
-          "caption": "Spray cleaning solution and thoroughly wipe the window sill",
+          "caption": "Spray cleaning solution and wipe the window sill",
           "start_ts": 38.7,
+          "end_ts": 46.1
+        },
+        {
+          "caption": "Wipe the window sill clean",
+          "start_ts": 46.1,
           "end_ts": 74.4
         },
         {
@@ -2698,12 +2722,12 @@
           "end_ts": 78.4
         },
         {
-          "caption": "Wipe down the window frame",
+          "caption": "Wipe the window frame",
           "start_ts": 78.4,
           "end_ts": 83.1
         },
         {
-          "caption": "Draw the curtain",
+          "caption": "Open the curtain",
           "start_ts": 83.1,
           "end_ts": 87.7
         }
@@ -2716,7 +2740,8 @@
         5,
         6,
         7,
-        8
+        8,
+        9
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__b00c7a882446587f.jpg",
@@ -2730,7 +2755,7 @@
     {
       "id": "wearable-ai__b76d10dcd8243a01",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai b76d10dcd8243a01",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2741,33 +2766,38 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 5.0,
-      "coverage_score": 4.0,
-      "order_score": 10.0,
-      "relevance_score": 5.0,
+      "score": 4,
+      "coverage_score": 3,
+      "order_score": 9,
+      "relevance_score": 3,
       "issues": [
-        "Redundancy between step 1 ('Walk down the street') and step 2 ('Continue walking along the sidewalk')",
-        "Low procedural complexity with minimal hands-on actions"
+        "Redundancy between step 1 and step 2",
+        "Highly generic and non-specific descriptions"
       ],
-      "reasoning": "The sequence is chronologically logical but has very low procedural value. Steps 1 and 2 are highly redundant, describing the same continuous action of walking. The final step of checking a phone is extremely simple, making this sequence less of a structured procedural transcript and more of a basic activity log.",
+      "reasoning": "The sequence is extremely simple and contains high redundancy between the first two steps ('Walk down the street' and 'Walk along the sidewalk'). Furthermore, the captions are very generic and lack the specificity needed to describe a meaningful procedural task.",
       "local_checks": {
-        "has_full_coverage": true,
-        "gaps": []
+        "has_full_coverage": false,
+        "gaps": [
+          {
+            "start_ts": 44.8,
+            "end_ts": 490.7
+          }
+        ]
       },
       "segments": [
         {
           "caption": "Walk down the street",
           "start_ts": 0.0,
-          "end_ts": 490.7
+          "end_ts": 44.8
         },
         {
-          "caption": "Continue walking along the sidewalk",
+          "caption": "Walk along the sidewalk",
           "start_ts": 490.7,
-          "end_ts": 515.7
+          "end_ts": 509.3
         },
         {
-          "caption": "Check your phone",
-          "start_ts": 515.7,
+          "caption": "Use your phone",
+          "start_ts": 509.3,
           "end_ts": 557.3
         }
       ],
@@ -2788,7 +2818,7 @@
     {
       "id": "wearable-ai__cc4ac34272e4c3e4",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai cc4ac34272e4c3e4",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2799,43 +2829,42 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 3,
-      "coverage_score": 4,
-      "order_score": 8,
-      "relevance_score": 2,
+      "score": 5,
+      "coverage_score": 6,
+      "order_score": 10,
+      "relevance_score": 3,
       "issues": [
-        "Captions are highly vague and generic (e.g., 'input the required information', 'finish the task').",
-        "Excessive repetition and redundancy in describing general smartphone navigation ('navigate through apps', 'continue browsing', 'resume using').",
-        "Lacks actionable details to understand the specific procedure being executed."
+        "Captions are highly generic and lack concrete details about the specific app or actions.",
+        "Phrasing like 'desired application' or 'required information' feels like a template rather than an actual transcript of observed events."
       ],
-      "reasoning": "The sequence has a logical temporal flow, but the captions are extremely vague, repetitive, and lack the specificity required to be useful as a procedural transcript. Phrases like 'input the required information', 'continue browsing', and 'finish the task' do not describe actionable steps, making it impossible to understand what actual task is being performed.",
+      "reasoning": "The sequence has a flawless logical order, tracking a complete workflow from unlocking the phone to finishing a task. However, the relevance is very low because the captions use extremely vague, placeholder-like terminology ('desired application', 'required information', 'necessary computations'). This lacks the specificity required to understand what actually happened in the video.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Open and unlock your smartphone to begin.",
+          "caption": "Unlock your smartphone and navigate the home screen.",
           "start_ts": 0.0,
           "end_ts": 17.9
         },
         {
-          "caption": "Navigate through apps and input the required information.",
+          "caption": "Open the desired application and browse its content.",
           "start_ts": 17.9,
           "end_ts": 50.1
         },
         {
-          "caption": "Continue browsing and interacting with the phone's interface.",
+          "caption": "Input the required information or interact with the app features.",
           "start_ts": 50.1,
           "end_ts": 102.1
         },
         {
-          "caption": "Use a calculator to perform calculations.",
+          "caption": "Use the calculator app to perform necessary computations.",
           "start_ts": 102.1,
           "end_ts": 104.0
         },
         {
-          "caption": "Resume using the smartphone to finish the task.",
+          "caption": "Return to the main application to finalize and complete your task.",
           "start_ts": 104.0,
           "end_ts": 145.9
         }
@@ -2859,7 +2888,7 @@
     {
       "id": "wearable-ai__dcea581593204193",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai dcea581593204193",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2870,19 +2899,22 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 6.0,
-      "coverage_score": 5.0,
-      "order_score": 9.0,
-      "relevance_score": 7.0,
+      "score": 8.0,
+      "coverage_score": 7.0,
+      "order_score": 10.0,
+      "relevance_score": 9.0,
       "issues": [
-        "Excessive repetition of the same action ('Pick a flower', 'Pick another flower', 'Pick more flowers')",
-        "Low coverage of a broader, more meaningful procedure",
-        "Inclusion of a passive holding step ('Hold the picked flower') that lacks procedural utility"
+        "Repetitive actions (picking/gathering flowers is mentioned in three out of four captions, which reduces coverage of other unique steps)."
       ],
-      "reasoning": "The sequence follows a logical temporal order, but it suffers from significant redundancy. Out of five steps, three are variations of picking flowers (steps 1, 2, and 5), which limits the overall coverage of a complete procedural task. Step 3 ('Hold the picked flower') is also a passive transitional action rather than a distinct procedural milestone.",
+      "reasoning": "The sequence is highly logical and describes specific, actionable hands-on tasks. However, it is slightly repetitive, with three out of the four captions describing the act of picking or gathering flowers, which limits the coverage of other potential steps in the procedure (like arranging or processing them).",
       "local_checks": {
-        "has_full_coverage": true,
-        "gaps": []
+        "has_full_coverage": false,
+        "gaps": [
+          {
+            "start_ts": 192.8,
+            "end_ts": 300.3333333333333
+          }
+        ]
       },
       "segments": [
         {
@@ -2896,27 +2928,21 @@
           "end_ts": 107.5
         },
         {
-          "caption": "Hold the picked flower",
+          "caption": "Pluck petals from the flower",
           "start_ts": 107.5,
-          "end_ts": 123.2
-        },
-        {
-          "caption": "Pluck the petals from the flower",
-          "start_ts": 123.2,
           "end_ts": 138.9
         },
         {
-          "caption": "Pick more flowers",
+          "caption": "Gather more flowers",
           "start_ts": 138.9,
-          "end_ts": 300.3
+          "end_ts": 192.8
         }
       ],
       "alignment": [
         1,
         2,
         3,
-        4,
-        5
+        4
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__dcea581593204193.jpg",
@@ -2930,7 +2956,7 @@
     {
       "id": "wearable-ai__e154915e636fc23f",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai e154915e636fc23f",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -2941,57 +2967,57 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 8,
-      "coverage_score": 8,
-      "order_score": 7,
-      "relevance_score": 9,
+      "score": 6,
+      "coverage_score": 6,
+      "order_score": 5,
+      "relevance_score": 8,
       "issues": [
-        "Repetitive and slightly confusing sequence regarding the sink strainers: step 4 mentions placing the strainer on the dish rack, but steps 6 and 7 continue with scrubbing and rinsing a strainer/basket.",
-        "Slight delay in tying the trash bag (step 5) relative to when the waste was emptied (step 1), though not procedurally incorrect."
+        "Redundancy and confusion regarding the cleaning of the strainer/basket (washed and put away in Step 4, then scrubbed again in Steps 6 and 7).",
+        "Suboptimal temporal order (e.g., sealing the food waste bag in Step 5 after already conducting multiple washing steps)."
       ],
-      "reasoning": "The captions are highly descriptive, specific, and actionable. They cover the entire process of emptying food waste, scrubbing multiple parts of the sink, washing the basin, and wiping the faucet. However, there is some confusion and redundancy in the middle of the sequence: step 4 describes placing the strainer on the dish rack, but subsequent steps (6 and 7) describe further scrubbing and rinsing of a strainer/basket, which disrupts the logical flow.",
+      "reasoning": "The captions describe a highly specific and actionable procedure for cleaning a sink, but there is significant redundancy and procedural confusion. The sequence of washing, rinsing, and placing the strainer on the rack (Step 4) happens before further scrubbing and washing of the strainer/basket in Steps 6 and 7, which breaks logical flow. Additionally, the trash bag is sealed quite late in the process.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Empty the food waste from the sink strainer into a plastic bag and rinse it under running water",
+          "caption": "Empty the food waste from the sink strainer into a plastic bag and rinse the strainer under running water.",
           "start_ts": 0.0,
           "end_ts": 38.1
         },
         {
-          "caption": "Apply soap to a toothbrush and thoroughly scrub the sink strainer",
+          "caption": "Apply soap to a toothbrush and thoroughly wash the sink strainer.",
           "start_ts": 38.1,
           "end_ts": 100.8
         },
         {
-          "caption": "Pour cleaning powder into the metal sink strainer",
+          "caption": "Pour cleaning powder into the strainer and scrub a small metal bowl with a toothbrush.",
           "start_ts": 100.8,
-          "end_ts": 118.1
+          "end_ts": 120.5
         },
         {
-          "caption": "Scrub and rinse the metal drain strainer and place it on the dish rack",
-          "start_ts": 118.1,
-          "end_ts": 135.5
+          "caption": "Rinse the metal drain strainer under the faucet and place it on the dish rack.",
+          "start_ts": 120.5,
+          "end_ts": 150.4
         },
         {
-          "caption": "Tie and seal the plastic bag containing the food waste",
-          "start_ts": 135.5,
+          "caption": "Close and seal the plastic bag containing the food waste.",
+          "start_ts": 150.4,
           "end_ts": 159.5
         },
         {
-          "caption": "Scrub the metal basket in the sink using a toothbrush",
+          "caption": "Scrub the metal basket with a toothbrush in the sink.",
           "start_ts": 159.5,
           "end_ts": 223.7
         },
         {
-          "caption": "Rinse the cleaned strainer and wash the sink basin",
+          "caption": "Wash and rinse the strainer, and wipe clean the sink basin.",
           "start_ts": 223.7,
           "end_ts": 288.0
         },
         {
-          "caption": "Wipe the faucet, squeeze the cloth dry, and place it on the edge of the sink",
+          "caption": "Wipe the sink and faucet head, then squeeze and store the cleaning cloth.",
           "start_ts": 288.0,
           "end_ts": 296.3
         }
@@ -3018,7 +3044,7 @@
     {
       "id": "wearable-ai__ef51015464812b8c",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai ef51015464812b8c",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -3029,58 +3055,58 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 5.0,
-      "coverage_score": 6.0,
-      "order_score": 9.5,
-      "relevance_score": 4.5,
+      "score": 8,
+      "coverage_score": 7,
+      "order_score": 10,
+      "relevance_score": 7,
       "issues": [
-        "High repetition of identical steps (consulting manual, searching for pieces, assembling)",
-        "Lack of specificity (no mention of brick types, colors, or structural components)"
+        "Repetitive steps describing the same actions (selecting pieces, consulting manual, assembling) multiple times.",
+        "Lack of specificity regarding which parts of the Lego model are being built (very generic descriptions)."
       ],
-      "reasoning": "The sequence follows a logical chronological flow from starting the build to finishing it. However, the captions are highly repetitive and extremely generic. They repeatedly describe the cycle of checking the manual, picking pieces, and attaching them without any specific details about the types of bricks, colors, or the specific parts of the model being built, making the transcript less useful as a procedural guide.",
+      "reasoning": "The sequence perfectly captures the chronological flow of assembling a Lego set, starting from the initial pieces and instructions to the final assembly and sorting. However, because Lego building is an iterative process, the captions are highly repetitive, describing the same cycle of looking at instructions, selecting pieces, and assembling them without identifying specific sub-assemblies or unique components.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Consult the instruction manual and assemble the initial LEGO pieces.",
+          "caption": "Consult the instruction manual and assemble the starting Lego pieces.",
           "start_ts": 0.0,
           "end_ts": 102.4
         },
         {
-          "caption": "Search through the LEGO pieces and select the ones needed for the next step.",
+          "caption": "Search through the LEGO pieces and select the next components as indicated in the manual.",
           "start_ts": 102.4,
           "end_ts": 174.1
         },
         {
-          "caption": "Assemble the selected LEGO pieces onto the main structure.",
+          "caption": "Assemble the Lego toy blocks according to the manual's directions.",
           "start_ts": 174.1,
           "end_ts": 233.9
         },
         {
-          "caption": "Check the manual and proceed with building the next part of the LEGO model.",
+          "caption": "Follow the instructions to continue building the Lego model.",
           "start_ts": 233.9,
           "end_ts": 295.5
         },
         {
-          "caption": "Read the instructions and pick up the required bricks to assemble.",
+          "caption": "Pick up the required Lego bricks and assemble them.",
           "start_ts": 295.5,
           "end_ts": 357.1
         },
         {
-          "caption": "Follow the assembly instructions to attach the bricks to the LEGO structure.",
+          "caption": "Review the instruction booklet to attach the next pieces to the model.",
           "start_ts": 357.1,
+          "end_ts": 395.2
+        },
+        {
+          "caption": "Gather specific Lego pieces from the pile and attach them to the structure.",
+          "start_ts": 395.2,
           "end_ts": 440.3
         },
         {
-          "caption": "Flip the instruction page and sort the needed LEGO bricks.",
+          "caption": "Sort the remaining Lego bricks and complete the assembly process.",
           "start_ts": 440.3,
-          "end_ts": 500.4
-        },
-        {
-          "caption": "Find the remaining LEGO bricks and finish the assembly.",
-          "start_ts": 500.4,
           "end_ts": 554.7
         }
       ],
@@ -3106,7 +3132,7 @@
     {
       "id": "wearable-ai__ef75ac3d92198596",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai ef75ac3d92198596",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -3117,61 +3143,57 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 8,
-      "coverage_score": 9,
-      "order_score": 8,
-      "relevance_score": 9,
+      "score": 6.5,
+      "coverage_score": 7.0,
+      "order_score": 5.0,
+      "relevance_score": 9.0,
       "issues": [
-        "Step 7 (cleaning up the kitchen counter) occurs before the final molding and assembly steps (8 and 9) are completed, which is slightly out of logical procedural order."
+        "Temporal order issue: Cleaning the workspace (Step 6) is positioned before the final steps of preparing and assembling the feeder (Steps 7 and 8).",
+        "Redundancy: Step 7 (packing seed into a cup) heavily overlaps with Step 5 (filling cups or cones with the mixture)."
       ],
-      "reasoning": "The caption sequence is highly detailed, specific, and covers the complete process of preparing the liquid binder, mixing it with bird seeds, and molding them into feeders. The actions are highly descriptive and relevant. The only minor flow issue is that the cleanup step (7) occurs before the molding and assembly are fully completed (steps 8 and 9), which slightly disrupts the typical procedural order, but the overall sequence is still very easy to follow.",
+      "reasoning": "The captions are highly specific, descriptive, and actionable. However, there are significant logical order and redundancy issues in the latter half of the sequence. Cleaning the workspace (Step 6) occurs before the final bird feeder preparation and assembly steps are completed (Steps 7 and 8). Additionally, Step 7 ('pack it into a cup') is redundant with Step 5 ('Fill cups or cones').",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Dissolve the solid ingredients in a pot of liquid and stir well.",
+          "caption": "Heat and stir the liquid ingredients in a pot.",
           "start_ts": 0.0,
           "end_ts": 116.3
         },
         {
-          "caption": "Add more liquid ingredients from a jar into the pot and stir.",
+          "caption": "Add remaining ingredients and stir the mixture in the pot.",
           "start_ts": 116.3,
-          "end_ts": 223.2
-        },
-        {
-          "caption": "Pour the remaining liquid ingredients into the pot and mix.",
-          "start_ts": 223.2,
           "end_ts": 246.1
         },
         {
-          "caption": "Combine the liquid mixture with bird seeds and grains in a bowl and mix thoroughly.",
+          "caption": "Combine the liquid mixture with seeds and grains in a bowl.",
           "start_ts": 246.1,
           "end_ts": 334.1
         },
         {
-          "caption": "Prepare waffle cones or molds to hold the bird food.",
+          "caption": "Thoroughly mix the bird food ingredients.",
           "start_ts": 334.1,
           "end_ts": 400.9
         },
         {
-          "caption": "Pack the bird food mixture into a cup.",
+          "caption": "Fill cups or cones with the mixed bird food.",
           "start_ts": 400.9,
           "end_ts": 467.7
         },
         {
-          "caption": "Clean up the kitchen counter with a wet sponge and paper towel.",
+          "caption": "Clean the workspace with a sponge and paper towel.",
           "start_ts": 467.7,
           "end_ts": 476.0
         },
         {
-          "caption": "Press the bird seed mixture onto a tray and pack it tightly.",
+          "caption": "Spread bird seed on a tray and pack it into a cup.",
           "start_ts": 476.0,
           "end_ts": 529.3
         },
         {
-          "caption": "Finish assembling the bird feeders.",
+          "caption": "Finish assembling the bird feeder.",
           "start_ts": 529.3,
           "end_ts": 600.0
         }
@@ -3184,8 +3206,7 @@
         5,
         6,
         7,
-        8,
-        9
+        8
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__ef75ac3d92198596.jpg",
@@ -3199,7 +3220,7 @@
     {
       "id": "wearable-ai__f23251d3b9037aec",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai f23251d3b9037aec",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -3210,47 +3231,47 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 7,
-      "coverage_score": 8,
-      "order_score": 6,
+      "score": 6,
+      "coverage_score": 6,
+      "order_score": 5,
       "relevance_score": 7,
       "issues": [
-        "Potential chronological mismatch: payment authorization (Step 3) occurs before document upload and data entry (Steps 5-6).",
-        "Step 4 is a bit generic and lacks specific actionable details."
+        "Temporal order issue: Payment authorization and confirmation (Step 3) is placed before entering details and taking a photo (Step 5).",
+        "Redundancy: Steps 2, 4, and 6 genericize 'using/typing on the smartphone' rather than identifying distinct, progression-based actions."
       ],
-      "reasoning": "The sequence covers a complete flow of transferring a task from a tablet to a smartphone. However, the chronological order is slightly confusing: the payment is 'confirmed and authorized' in Step 3, but then the user is asked to upload a document and type details in Steps 5 and 6 to 'complete the task'. Typically, document verification precedes authorization. Additionally, Step 4 is somewhat vague ('follow on-screen instructions').",
+      "reasoning": "The sequence outlines a multi-device setup or payment task. However, the chronological order is procedurally incorrect: authorizing the payment and verifying the confirmation screen (Step 3) occurs before taking a photo of a document/card and entering details (Step 5). Additionally, several steps are highly repetitive, describing general smartphone usage without specifying distinct actions.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Use the tablet to navigate and set up the transaction.",
+          "caption": "Interact with the tablet to start the setup or navigation process.",
           "start_ts": 0.0,
           "end_ts": 168.0
         },
         {
-          "caption": "Switch to the smartphone to proceed with the payment process.",
+          "caption": "Use a smartphone alongside the tablet to coordinate the task.",
           "start_ts": 168.0,
           "end_ts": 298.4
         },
         {
-          "caption": "Confirm and authorize the payment on the smartphone.",
+          "caption": "Authorize the payment and verify the confirmation screen on your smartphone.",
           "start_ts": 298.4,
           "end_ts": 331.7
         },
         {
-          "caption": "Follow the on-screen instructions on the mobile phone to continue.",
+          "caption": "Continue using the mobile phone to proceed with the transaction steps.",
           "start_ts": 331.7,
           "end_ts": 478.7
         },
         {
-          "caption": "Take a photo of the required document and type the details on the phone.",
+          "caption": "Take a photo and type any required details on the phone.",
           "start_ts": 478.7,
           "end_ts": 535.6
         },
         {
-          "caption": "Finish typing the remaining information on the smartphone to complete the task.",
+          "caption": "Type on the smartphone to complete and finalize the task.",
           "start_ts": 535.6,
           "end_ts": 600.0
         }
@@ -3275,7 +3296,7 @@
     {
       "id": "wearable-ai__f9ab736efee50387",
       "config": "runs",
-      "activity": "Unlabeled local video",
+      "activity": "Wearable ai f9ab736efee50387",
       "reference_steps": [
         "Observed procedural phase 1",
         "Observed procedural phase 2",
@@ -3286,52 +3307,51 @@
         "Observed procedural phase 7",
         "Observed procedural phase 8"
       ],
-      "score": 6.0,
-      "coverage_score": 5.0,
-      "order_score": 8.0,
-      "relevance_score": 9.0,
+      "score": 7.0,
+      "coverage_score": 6.0,
+      "order_score": 9.0,
+      "relevance_score": 10.0,
       "issues": [
-        "The sequence is incomplete and cuts off before the sandwich is assembled or cooked.",
-        "Chocolate chips are opened in step 1 but are never actually incorporated into any of the subsequent steps."
+        "The transcript is incomplete as it lacks the actual cooking, assembly, and completion steps for the sandwich."
       ],
-      "reasoning": "The sequence starts off logically by preparing a sweet filling (peanut butter and honey) and getting the egg wash and sandwich maker ready. The captions themselves are highly specific and descriptive. However, the transcript abruptly cuts off after prepping the bread with egg wash. It completely misses the actual assembly of the sandwich (adding the filling and chocolate chips) and the cooking phase in the sandwich maker.",
+      "reasoning": "The captions are highly specific, descriptive, and follow a logical chronological order. However, the sequence cuts off abruptly; it covers the preparation steps (making the filling, preparing the egg wash, prepping the sandwich maker, and coating the bread) but completely misses the assembly, cooking/pressing, and final serving phases.",
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
       },
       "segments": [
         {
-          "caption": "Open the packages of chocolate chips and other ingredients.",
+          "caption": "Open the ingredient packages.",
           "start_ts": 0.0,
           "end_ts": 6.7
         },
         {
-          "caption": "Pour the honey and add peanut butter into a bowl.",
+          "caption": "Add honey and peanut butter to a bowl.",
           "start_ts": 6.7,
           "end_ts": 32.3
         },
         {
-          "caption": "Stir the ingredients in the bowl to combine them.",
+          "caption": "Stir the ingredients in the bowl.",
           "start_ts": 32.3,
           "end_ts": 57.9
         },
         {
-          "caption": "Retrieve a plate from the kitchen cabinet.",
+          "caption": "Take a plate from the cabinet.",
           "start_ts": 57.9,
           "end_ts": 61.3
         },
         {
-          "caption": "Whisk the eggs in a bowl using a fork.",
+          "caption": "Whisk eggs in a bowl with a fork.",
           "start_ts": 61.3,
           "end_ts": 99.9
         },
         {
-          "caption": "Prepare the sandwich maker for use.",
+          "caption": "Prepare the sandwich maker.",
           "start_ts": 99.9,
           "end_ts": 138.4
         },
         {
-          "caption": "Spread the egg wash onto a slice of bread.",
+          "caption": "Spread egg wash on a slice of bread.",
           "start_ts": 138.4,
           "end_ts": 173.3
         }

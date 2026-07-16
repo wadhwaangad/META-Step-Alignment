@@ -100,7 +100,7 @@ def iter_videos(videos_dir: Path, recursive: bool) -> Iterable[Path]:
 def infer_metadata(video_path: Path, args, gemini: GeminiClient | None) -> Metadata:
     activity = safe_ascii(args.default_activity or title_from_filename(video_path), "Wearable task")
     if args.metadata_source == "none":
-        return neutral_metadata(args.target_steps)
+        return neutral_metadata(activity, args.target_steps)
     if args.metadata_source == "gemini_plan":
         if gemini is None:
             raise ValueError("gemini_plan metadata requires a Gemini client")
@@ -110,10 +110,10 @@ def infer_metadata(video_path: Path, args, gemini: GeminiClient | None) -> Metad
     return Metadata(activity=activity, steps=[activity])
 
 
-def neutral_metadata(target_steps: int) -> Metadata:
+def neutral_metadata(activity: str, target_steps: int) -> Metadata:
     n_steps = max(1, target_steps)
     return Metadata(
-        activity="Unlabeled local video",
+        activity=activity,
         steps=[f"Observed procedural phase {idx + 1}" for idx in range(n_steps)],
     )
 
