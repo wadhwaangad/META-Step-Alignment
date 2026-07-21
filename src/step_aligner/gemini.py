@@ -10,7 +10,9 @@ from typing import Any
 from .models import CaptionedSegment, GroupedStep, Metadata, Segment
 
 
-VLM_PROMPT = """These frames are from an egocentric (first-person) video of someone performing a hands-on task. Describe what you see, with an emphasis on any action the person is performing. If no action is visible, say "No active task".
+VLM_PROMPT = """These frames are from an egocentric (first-person) video of someone performing a hands-on task. Describe what you see with emphasis on hands, tools, objects, containers, ingredients/materials, and visible state changes.
+Write detailed but concise activity descriptions. Include the object being acted on and the motion or manipulation when visible.
+If no action is visible, say "No active task".
 If there are multiple distinct actions (different tool, object, or motion), list each on a separate line.
 Output ONLY the activity description(s), one per line."""
 
@@ -53,7 +55,9 @@ Raw observations:
 {activities_text}
 
 Rules:
-- Write each caption as a clear instruction someone could follow, not a description of what was observed.
+- Write each caption as a clear, detailed instruction someone could follow, not a description of what was observed.
+- Include important objects, tools, ingredients/materials, hand motions, and visible state changes when they are supported by the observations.
+- Prefer one sentence of 12-30 words per step. Avoid vague captions such as "prepare the item" unless the observations are genuinely ambiguous.
 - Merge adjacent observations that describe the same continuous action.
 - Keep distinct actions as separate steps when the object, tool, or motion changes.
 - Absorb "No active task" segments into the nearest active group when appropriate.
@@ -73,7 +77,9 @@ Raw observations:
 
 Rules:
 - Use the activity name and reference steps to understand what the task is about. Map generic visual descriptions to the correct task-specific terms.
-- Write each caption as a clear instruction someone could follow to perform the task, not a description of what was observed.
+- Write each caption as a clear, detailed instruction someone could follow to perform the task, not a description of what was observed.
+- Include important objects, tools, ingredients/materials, hand motions, and visible state changes when they are supported by the observations.
+- Prefer one sentence of 12-30 words per step. Avoid overly terse captions unless the action is very simple.
 - Merge adjacent observations that describe the same continuous action.
 - Target approximately {len(metadata.steps)} groups; it is OK to have a few more or fewer if the video content warrants it.
 - Reference steps annotated with (mistake, ...), (interruption, ...), or (fix) MUST each appear as their own separate segment.

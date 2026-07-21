@@ -155,6 +155,7 @@ def pipeline_args_from_folder_args(args, video_path: Path, metadata_path: Path, 
     pipeline_args.device = args.device
     pipeline_args.oversegment = args.oversegment
     pipeline_args.min_segment_frames = args.min_segment_frames
+    pipeline_args.adaptive_steps = args.adaptive_steps
     pipeline_args.gemini_model = args.gemini_model
     pipeline_args.caption_frames = args.caption_frames
     pipeline_args.max_caption_splits = args.max_caption_splits

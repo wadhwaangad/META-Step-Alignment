@@ -4,7 +4,13 @@ from pathlib import Path
 
 import numpy as np
 
-from .cluster import temporal_segments
+from .cluster import (
+    build_temporal_dendrogram,
+    dendrogram_child_segments,
+    expected_steps_from_duration,
+    partition_dendrogram,
+    target_segment_count,
+)
 from .features import extract_features
 from .gemini import GeminiClient
 from .io import load_metadata, read_json, write_json, write_jsonl
@@ -46,11 +52,23 @@ def run_pipeline(args) -> None:
         )
         np.savez_compressed(features_path, features=features)
 
+    expected_steps = len(metadata.steps)
+    if getattr(args, "adaptive_steps", False):
+        expected_steps = expected_steps_from_duration(duration, fallback=max(1, len(metadata.steps)))
+    target_count = target_segment_count(expected_steps, args.oversegment, len(frame_infos))
+
+    dendrogram_path = out_dir / "dendrogram.json"
+    if dendrogram_path.exists() and not args.force:
+        dendrogram = read_json(dendrogram_path)
+    else:
+        dendrogram = build_temporal_dendrogram(features, frame_infos)
+        write_json(dendrogram_path, dendrogram)
+
     segments_path = out_dir / "segments.json"
     if segments_path.exists() and not args.force:
         segments = _segments_from_json(read_json(segments_path))
     else:
-        segments = temporal_segments(features, frame_infos, len(metadata.steps), args.oversegment, args.min_segment_frames)
+        segments = partition_dendrogram(dendrogram, frame_infos, target_count, args.min_segment_frames)
         write_json(segments_path, segments)
 
     gemini = GeminiClient(args.gemini_model)
@@ -59,7 +77,7 @@ def run_pipeline(args) -> None:
     if captions_path.exists() and not args.force:
         captions = _captions_from_json(read_json(captions_path))
     else:
-        captions = caption_segments_recursive(gemini, segments, args.caption_frames, args.max_caption_splits)
+        captions = caption_segments_recursive(gemini, segments, args.caption_frames, args.max_caption_splits, dendrogram, frame_infos)
         write_json(captions_path, captions)
 
     grouped_path = out_dir / "grouped_steps.json"
@@ -82,6 +100,7 @@ def run_pipeline(args) -> None:
     else:
         qa = gemini.score_coherence(metadata, grouped)
         qa["local_checks"] = local_checks(grouped, duration)
+        qa["segmentation"] = {"expected_steps": expected_steps, "target_segments": target_count}
         write_json(qa_path, qa)
 
     rows = []
@@ -95,7 +114,16 @@ def run_pipeline(args) -> None:
             }
         )
     write_jsonl(out_dir / "transcript.jsonl", rows)
-    write_json(out_dir / "run_summary.json", {"video": str(video_path), "metadata": str(metadata_path), "out": str(out_dir), "qa": qa})
+    write_json(
+        out_dir / "run_summary.json",
+        {
+            "video": str(video_path),
+            "metadata": str(metadata_path),
+            "out": str(out_dir),
+            "qa": qa,
+            "segmentation": {"expected_steps": expected_steps, "target_segments": target_count},
+        },
+    )
 
 
 def caption_segments_recursive(
@@ -103,6 +131,8 @@ def caption_segments_recursive(
     segments: list[Segment],
     caption_frames: int,
     max_splits: int,
+    dendrogram: dict,
+    frames,
 ) -> list[CaptionedSegment]:
     captions: list[CaptionedSegment] = []
     next_id = 0
@@ -124,25 +154,19 @@ def caption_segments_recursive(
             next_id += 1
             return
 
-        midpoint = len(segment.frame_paths) // 2
-        left = Segment(
-            id=segment.id,
-            start_index=segment.start_index,
-            end_index=segment.start_index + midpoint - 1,
-            start_ts=segment.start_ts,
-            end_ts=(segment.start_ts + segment.end_ts) / 2.0,
-            frame_paths=segment.frame_paths[:midpoint],
-        )
-        right = Segment(
-            id=segment.id,
-            start_index=segment.start_index + midpoint,
-            end_index=segment.end_index,
-            start_ts=(segment.start_ts + segment.end_ts) / 2.0,
-            end_ts=segment.end_ts,
-            frame_paths=segment.frame_paths[midpoint:],
-        )
-        visit(left, depth + 1)
-        visit(right, depth + 1)
+        for child in dendrogram_child_segments(dendrogram, segment, frames):
+            if child.start_index == segment.start_index and child.end_index == segment.end_index:
+                captions.append(
+                    CaptionedSegment(
+                        id=next_id,
+                        start_ts=captioned.start_ts,
+                        end_ts=captioned.end_ts,
+                        caption=captioned.caption,
+                    )
+                )
+                next_id += 1
+                return
+            visit(child, depth + 1)
 
     for segment in segments:
         visit(segment, 0)

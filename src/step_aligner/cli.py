@@ -62,6 +62,8 @@ def _add_pipeline_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--oversegment", type=float, default=1.3)
     parser.add_argument("--min-segment-frames", type=int, default=4)
+    parser.add_argument("--adaptive-steps", dest="adaptive_steps", action="store_true", default=True, help="Estimate segment count from video duration when metadata is weak or absent.")
+    parser.add_argument("--no-adaptive-steps", dest="adaptive_steps", action="store_false", help="Use metadata/target step count directly instead of duration-based estimate.")
     parser.add_argument("--gemini-model", default="gemini-3.5-flash")
     parser.add_argument("--caption-frames", type=int, default=8)
     parser.add_argument("--max-caption-splits", type=int, default=1, help="Recursively split multi-action captions up to this depth.")
