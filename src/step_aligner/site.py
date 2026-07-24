@@ -30,6 +30,7 @@ def collect_runs(runs_root: Path, site_dir: Path, video_mode: str) -> list[dict[
         summary = _maybe_json(run_dir / "run_summary.json")
         metadata = _maybe_json(run_dir / "metadata.json")
         qa = _maybe_json(run_dir / "qa.json")
+        plan = _maybe_json(run_dir / "plan.json")
         grouped = _maybe_json(run_dir / "grouped_steps.json")
         alignment = _maybe_json(run_dir / "alignment.json")
         dataset_row = _maybe_json(run_dir / "dataset_row.json")
@@ -47,6 +48,7 @@ def collect_runs(runs_root: Path, site_dir: Path, video_mode: str) -> list[dict[
                 "relevance_score": qa.get("relevance_score"),
                 "issues": qa.get("issues", []),
                 "reasoning": qa.get("reasoning", ""),
+                "plan": plan,
                 "local_checks": qa.get("local_checks", {}),
                 "segments": grouped,
                 "alignment": alignment,
@@ -304,6 +306,33 @@ video {
 }
 .step time { color: var(--accent-2); font-size: 12px; }
 .issues { color: var(--bad); }
+.plan {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+.plan-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0b0f15;
+  padding: 12px;
+}
+.plan-panel h3 {
+  margin-top: 0;
+}
+.plan-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 0;
+  list-style: none;
+}
+.plan-list li {
+  line-height: 1.45;
+  border-left: 3px solid var(--accent);
+  padding: 8px 10px;
+  background: var(--panel);
+  border-radius: 0 6px 6px 0;
+}
 pre {
   overflow: auto;
   background: #07090d;
@@ -411,6 +440,7 @@ function renderDetail() {
       ${subscore("Relevance", item.relevance_score)}
     </div>
     ${renderIssues(item.issues)}
+    ${renderPlan(item.plan)}
     <h3>Grouped Transcript</h3>
     <div class="steps">
       ${segments.map((segment, index) => `
@@ -437,6 +467,32 @@ function renderVideo(item) {
         <span>${item.video.size_mb ?? "?"} MB</span>
       </div>
     </div>
+  `;
+}
+
+function renderPlan(plan) {
+  const outline = plan?.outline || plan?.plan_steps?.map(step => step.instruction) || [];
+  if (!plan || !outline.length) return "";
+  const materials = plan.materials?.length
+    ? `<div class="chips">${plan.materials.map(item => `<span class="chip">${escapeHtml(item)}</span>`).join("")}</div>`
+    : "";
+  const cautions = plan.cautions?.length
+    ? `<p class="issues">${plan.cautions.map(escapeHtml).join(" · ")}</p>`
+    : "";
+  return `
+    <section class="plan">
+      <div class="plan-panel">
+        <h3>${escapeHtml(plan.title || "Plan")}</h3>
+        <p>${escapeHtml(plan.overview || "")}</p>
+        ${materials}
+        ${cautions}
+        <ul class="plan-list">
+          ${outline.map(item => `
+            <li>${escapeHtml(item || "")}</li>
+          `).join("")}
+        </ul>
+      </div>
+    </section>
   `;
 }
 

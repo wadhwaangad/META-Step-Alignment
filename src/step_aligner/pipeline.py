@@ -103,6 +103,13 @@ def run_pipeline(args) -> None:
         qa["segmentation"] = {"expected_steps": expected_steps, "target_segments": target_count}
         write_json(qa_path, qa)
 
+    plan_path = out_dir / "plan.json"
+    if plan_path.exists() and not args.force:
+        plan = read_json(plan_path)
+    else:
+        plan = gemini.summarize_plan(metadata, grouped)
+        write_json(plan_path, plan)
+
     rows = []
     for idx, item in enumerate(grouped):
         rows.append(
@@ -121,6 +128,7 @@ def run_pipeline(args) -> None:
             "metadata": str(metadata_path),
             "out": str(out_dir),
             "qa": qa,
+            "plan": plan,
             "segmentation": {"expected_steps": expected_steps, "target_segments": target_count},
         },
     )

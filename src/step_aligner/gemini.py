@@ -174,6 +174,41 @@ Output ONLY a JSON object:
 {{"score": ..., "coverage_score": ..., "order_score": ..., "relevance_score": ..., "reasoning": "...", "issues": [...]}}"""
         return dict(_parse_json(self._call_text([{"type": "text", "text": prompt}])))
 
+    def summarize_plan(self, metadata: Metadata, grouped: list[GroupedStep]) -> dict[str, Any]:
+        steps_text = "\n".join(
+            f"{i + 1}. [{item.start_ts:.1f}-{item.end_ts:.1f}s] {item.caption}" for i, item in enumerate(grouped)
+        )
+        prompt = f"""You are converting ground-truth procedural video steps into a conversational user-facing task outline.
+
+Treat the provided steps as the authoritative evidence for what happens in the task. Your job is to summarize them into a friendly, practical overview someone can read before starting. This should feel like a helpful person explaining the flow of the task, not a rigid numbered instruction manual.
+
+ACTIVITY TITLE:
+{metadata.activity}
+
+GROUND-TRUTH STEPS, IN ORDER:
+{steps_text}
+
+INSTRUCTIONS:
+- Preserve the broad order and essential actions from the ground-truth steps.
+- Summarize into a general outline, not a step-by-step procedure.
+- Use a conversational, reassuring tone. It should sound natural, like: "You'll start by...", "Once that's ready...", "From there...".
+- Keep the outline practical and grounded in the observed steps.
+- Use enough detail to explain the task flow, but avoid frame-by-frame detail.
+- If tools, ingredients, containers, or materials are clearly implied, list them.
+- If safety or quality cautions are clearly implied, list them; otherwise use an empty array.
+- Do not invent objects, tools, ingredients, temperatures, measurements, or timing that are not supported by the steps.
+- The outline should usually contain 3-6 short paragraphs or bullets, each describing a phase of the task.
+
+Output ONLY this JSON object:
+{{
+  "title": "short task title",
+  "overview": "one conversational sentence describing the overall task flow",
+  "materials": ["item/tool/material", ...],
+  "outline": ["conversational phase summary", ...],
+  "cautions": ["caution", ...]
+}}"""
+        return dict(_parse_json(self._call_text([{"type": "text", "text": prompt}])))
+
     def _call_text(self, input_parts: list[dict[str, Any]]) -> str:
         last_error: Exception | None = None
         for attempt in range(self.retries):

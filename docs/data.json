@@ -21,6 +21,33 @@
       "relevance_score": 10.0,
       "issues": [],
       "reasoning": "The caption sequence is exceptionally detailed, logical, and complete. It covers every phase of the process from preparation to clean-up, uses highly specific and actionable language (including tools like dental floss for clean cuts), and follows a flawless chronological order.",
+      "plan": {
+        "title": "Preparing Peanut Butter and Honey Pinwheels",
+        "overview": "You'll make simple and delicious peanut butter and honey pinwheels by spreading fillings on a tortilla, rolling it tightly, slicing it into neat rounds, and cleaning up your workspace.",
+        "materials": [
+          "Wooden cutting board",
+          "Tortilla",
+          "Peanut butter",
+          "Butter knife",
+          "Honey",
+          "Spoon",
+          "Toothpicks",
+          "Knife",
+          "Dental floss",
+          "Serving plate",
+          "Paper towels"
+        ],
+        "outline": [
+          "You'll start by prepping your workspace with a wooden cutting board and laying out a fresh tortilla. Next, use a butter knife to spread a smooth, even layer of peanut butter across the surface, then spread a layer of honey on top using a spoon.",
+          "Once your fillings are ready, use both hands to roll the tortilla tightly into a wrap, securing it with toothpicks so it holds its shape.",
+          "From there, slice the roll into individual pinwheel pieces using a knife and dental floss to ensure clean cuts, then arrange the finished pinwheels neatly on a serving plate.",
+          "Finally, wrap things up by wiping down the cutting board and your counter with a paper towel to leave your kitchen clean."
+        ],
+        "cautions": [
+          "Handle the knife carefully when slicing the roll.",
+          "Slice gently using the dental floss and knife to avoid squishing the roll and losing the fillings."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -73,7 +100,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__10_6.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__10_6.mp4",
+        "filename": "captaincook4d__10_6.mp4",
+        "size_mb": 8.33,
+        "src": "assets/videos/runs_captaincook4d__10_6.mp4"
+      }
     },
     {
       "id": "captaincook4d__12_2",
@@ -95,6 +127,35 @@
       "relevance_score": 10.0,
       "issues": [],
       "reasoning": "The sequence provides an exceptionally detailed, logical, and highly actionable step-by-step guide for preparing seasoned tomato slices. Every phase of the process, from washing and prep to seasoning and plating, is captured with great precision and clarity without any unnecessary repetition.",
+      "plan": {
+        "title": "Seasoned Tomato and Mozzarella Prep",
+        "overview": "In this task, you'll wash and slice a fresh tomato, layer it with mozzarella cheese and a blend of seasonings, and set the plate on the stove.",
+        "materials": [
+          "Fresh tomato",
+          "Clean blue towel",
+          "Wooden cutting board",
+          "Kitchen knife",
+          "Clean plate",
+          "Shredded mozzarella cheese",
+          "Iodized salt",
+          "Powdered seasoning",
+          "Spice bottle seasoning",
+          "Cooking oil",
+          "Measuring spoons",
+          "Small brush",
+          "Stove"
+        ],
+        "outline": [
+          "You'll start by grabbing a fresh tomato from the refrigerator, washing it under the tap, and drying it with a clean blue towel before slicing it up on a wooden cutting board and arranging the slices on a clean plate.",
+          "Once the tomatoes are sliced, grab the shredded mozzarella cheese from the fridge to sprinkle over them, followed by a measured spoonful of iodized salt from the cabinet.",
+          "Next, enhance the flavors by dusting the slices with some extra powdered seasoning, gently brushing the tomatoes, and adding another shake of seasoning from a spice bottle.",
+          "To finish things up, measure out some cooking oil to drizzle over your seasoned tomatoes, then place the prepared plate safely on the stove."
+        ],
+        "cautions": [
+          "Take care when using the kitchen knife to slice the tomato safely.",
+          "Brush the tomato slices gently to avoid disrupting the cheese and seasoning toppings."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -164,7 +225,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__12_2.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__12_2.mp4",
+        "filename": "captaincook4d__12_2.mp4",
+        "size_mb": 9.89,
+        "src": "assets/videos/runs_captaincook4d__12_2.mp4"
+      }
     },
     {
       "id": "captaincook4d__4_2",
@@ -188,6 +254,35 @@
         "Chopping fresh cilantro in step 9 occurs after the ramen is microwaved, which is slightly inefficient as the cutting board and knife were already used and prep was mostly completed in steps 3-5."
       ],
       "reasoning": "The sequence provides an exceptionally detailed, clear, and highly actionable step-by-step procedure for making elevated microwave ramen. Every step describes specific hands-on interactions with ingredients and kitchen tools. The chronological flow is highly logical, with only a minor sequencing inefficiency regarding ingredient prep.",
+      "plan": {
+        "title": "Elevated Microwave Ramen",
+        "overview": "Upgrading standard instant ramen by cooking it in the microwave with freshly chopped garlic and red onion, then finishing it with cilantro and spices.",
+        "materials": [
+          "Garlic cloves",
+          "Paper towel",
+          "Instant ramen package (with seasoning packet)",
+          "Cutting board",
+          "Kitchen knife",
+          "Red onion",
+          "Bowl",
+          "Tap water",
+          "Plate",
+          "Microwave",
+          "Spices",
+          "Fresh cilantro",
+          "Fork"
+        ],
+        "outline": [
+          "You'll start by prepping your fresh garlic: peel several cloves using your fingers and set them aside on a paper towel. At this point, you can also grab your instant ramen package from the cabinet, tear it open, and take out the dry noodle block.",
+          "Next, get your cutting board and kitchen knife ready. Place the garlic cloves on the board to smash and finely chop them, then peel a red onion and slice it into pieces.",
+          "Once your fresh ingredients are ready, grab a bowl and transfer the chopped garlic and red onions into it. Crumble the dry ramen block right into the bowl, fill it with tap water, cover it with a plate, and pop it into the microwave to cook.",
+          "After cooking, carefully remove the hot bowl of noodles from the microwave and place it on the counter. To finish the dish, chop up some fresh cilantro, add your spices and the ramen seasoning packet, and give everything a thorough stir with a fork to blend all the flavors."
+        ],
+        "cautions": [
+          "Use caution when handling the knife to smash and chop the garlic and slice the onion.",
+          "The bowl and plate will be very hot when removing them from the microwave; handle with care to avoid burns."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -275,7 +370,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__4_2.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__4_2.mp4",
+        "filename": "captaincook4d__4_2.mp4",
+        "size_mb": 15.26,
+        "src": "assets/videos/runs_captaincook4d__4_2.mp4"
+      }
     },
     {
       "id": "captaincook4d__5_2",
@@ -299,6 +399,40 @@
         "Step 7 contains potentially irrelevant actions ('fold a dough wrapper', 'cupcake liner') that do not align with the rest of the coffee-making process."
       ],
       "reasoning": "The sequence is highly detailed and covers the entire pipeline of making pour-over coffee: prepping the kitchenware, weighing coffee beans, grinding, preparing the filter/mug setup, measuring water temperature, brewing, and finishing. The temporal flow is perfectly logical. The only minor issue is in step 7, which mentions 'fold a dough wrapper' and 'cupcake liner'\u2014these actions seem unrelated to coffee brewing and are likely misidentifications or a brief unrelated multitasking segment, but they do not disrupt the overall procedural quality.",
+      "plan": {
+        "title": "Preparing Ginger-Infused Pour-Over Coffee",
+        "overview": "You will prep your kitchenware, weigh and grind fresh coffee beans, prepare a ginger-infused mug setup, and brew a hot cup of pour-over coffee.",
+        "materials": [
+          "Glass",
+          "Cup",
+          "Cutting board",
+          "Bowl",
+          "White mug",
+          "Metal coffee filter pieces",
+          "Digital scale",
+          "Coffee beans",
+          "Coffee grinder",
+          "Cupcake liner",
+          "Dough wrapper",
+          "Ginger pieces",
+          "Coffee filter paper",
+          "Digital thermometer",
+          "Kettle",
+          "Hot water"
+        ],
+        "outline": [
+          "You'll start by rinsing and washing your essential kitchenware\u2014including a glass, cup, cutting board, and bowl\u2014under the tap. Once cleaned, grab a white mug from the cabinet and assemble the metal coffee filter pieces on your counter.",
+          "Next, set a small bowl on a digital scale to weigh out your coffee beans. Adjust the amount as needed, plug in your grinder, pour the beans in, and secure the lid to grind them. Be sure to check the fresh grounds when you're done.",
+          "From there, prep your mug by placing fresh ginger pieces inside. At this stage, you'll also prepare a cupcake liner and fold a dough wrapper on your cutting board. Then, separate a paper coffee filter and set it inside the dripper on top of your mug.",
+          "To get ready for brewing, insert a digital thermometer into your kettle to carefully monitor the temperature of your hot water. Once ready, add your freshly ground coffee into the filter basket.",
+          "Finally, slowly pour the hot water over the coffee grounds to brew. Let the coffee drip completely into the mug, then carefully remove the filter dripper and set it aside."
+        ],
+        "cautions": [
+          "Ensure the grinder lid is securely fastened before operating the appliance.",
+          "Be careful when handling the hot kettle and monitoring the water temperature with the thermometer.",
+          "Pour the hot water slowly and carefully to avoid splashes and ensure a safe, even brew."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -381,7 +515,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__5_2.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__5_2.mp4",
+        "filename": "captaincook4d__5_2.mp4",
+        "size_mb": 14.16,
+        "src": "assets/videos/runs_captaincook4d__5_2.mp4"
+      }
     },
     {
       "id": "captaincook4d__7_1",
@@ -406,6 +545,34 @@
         "Microwaving eggs while 'stirring them occasionally' in step 5 is slightly ambiguous, as it typically requires pausing the microwave to stir."
       ],
       "reasoning": "The caption sequence is exceptionally detailed, logical, and highly actionable. It covers the entire process of preparing a breakfast burrito from scratch, including retrieving tools, cooking the eggs in the microwave, seasoning, and assembling. The chronological flow makes perfect sense. The only minor drawbacks are a loose end involving an unused ingredient (onion) and a slightly ambiguous cooking step (stirring while microwaving).",
+      "plan": {
+        "title": "Microwaved Egg Burrito Prep",
+        "overview": "You'll prepare and microwave scrambled eggs, season them with flavorful spices, and wrap them up in a tortilla with cheese for a quick and easy burrito.",
+        "materials": [
+          "Blue bowl",
+          "Cutting board",
+          "Onion",
+          "Eggs",
+          "Hand whisk",
+          "Tortilla (and packaging)",
+          "Microwave",
+          "Spatula",
+          "Measuring spoons",
+          "Salsa",
+          "Spices",
+          "Fork",
+          "Shredded cheese"
+        ],
+        "outline": [
+          "You'll start by gathering your prep materials, grabbing a blue bowl, a cutting board, and an onion. From there, crack your eggs into the bowl, throw away the shells, and whisk them thoroughly until they are nice and blended.",
+          "Next, prep your tortilla by taking it out of its package and placing it on your cutting board, making sure to reseal the bag. Then, you'll microwave the eggs to scramble them, stirring occasionally with a spatula, and grab some measuring spoons while they cook.",
+          "Once the eggs are done, carefully bring the hot bowl over to your cutting board. You'll then season the scrambled eggs with salsa and a variety of spices retrieved from your cabinet and refrigerator.",
+          "Finally, use a fork to mix the seasonings evenly into the eggs. To build the burrito, scoop the mixture onto the center of your tortilla, sprinkle some shredded cheese on top, and roll it up tightly."
+        ],
+        "cautions": [
+          "Use caution when removing the bowl of eggs from the microwave, as it will be hot."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -470,7 +637,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_captaincook4d__7_1.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\captaincook4d__7_1.mp4",
+        "filename": "captaincook4d__7_1.mp4",
+        "size_mb": 11.42,
+        "src": "assets/videos/runs_captaincook4d__7_1.mp4"
+      }
     },
     {
       "id": "egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2",
@@ -495,6 +667,30 @@
         "The order of template preparation in Step 3 (folding edges over cardboard) and Step 5 (cutting fabric along the template) seems reversed or slightly out of order."
       ],
       "reasoning": "The captions are highly descriptive, specific, and provide actionable steps for a fabric crafting task. However, there are some minor temporal inconsistencies: Step 1 refers to trimming 'stitched edges' before any stitching has been shown in the sequence, and Step 3 mentions folding fabric edges over a cardboard template before the fabric is actually cut along the template in Step 5.",
+      "plan": {
+        "title": "Fabric Prep, Template Cutting, and Sewing",
+        "overview": "You will be aligning, templating, cutting, and sewing colored fabric pieces to precisely shape and assemble your project.",
+        "materials": [
+          "Teal fabric",
+          "Red fabric",
+          "Green fabric",
+          "Scissors",
+          "White cardboard template",
+          "White paper backing",
+          "Chalk",
+          "Sewing machine"
+        ],
+        "outline": [
+          "You'll start by aligning your teal, red, and green fabric pieces, trimming down any stitched edges with scissors, and smoothing the seams. Once that is done, you'll sort through the red fabric pieces to prepare them for shaping.",
+          "Next, you'll flatten the red fabric, place a white cardboard template on top, and fold the fabric edges over it. Take some time to stretch and align both the red and green fabrics to ensure everything is completely even.",
+          "From there, you'll carefully cut the red fabric along your template lines, smoothing it out as you go. Afterward, inspect your cut pieces, align them onto a white paper backing, and trim off any excess fabric.",
+          "To finish up, you'll use chalk to mark your guidelines and carefully guide the red fabric under the sewing machine needle to stitch the pieces together."
+        ],
+        "cautions": [
+          "Take care when cutting along the template to ensure the fabric doesn't shift and ruin the alignment.",
+          "Keep your fingers a safe distance from the sewing machine needle while guiding the fabric."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -547,7 +743,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.mp4",
+        "filename": "egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.mp4",
+        "size_mb": 3.48,
+        "src": "assets/videos/runs_egoschema__0293f655-83c1-40a2-886d-7ff2aa555ee2.mp4"
+      }
     },
     {
       "id": "egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27",
@@ -572,6 +773,29 @@
         "Inconsistency in step 6, which introduces cement mixing and clay sculpting into a brick-making sequence"
       ],
       "reasoning": "The captions describe the highly repetitive process of making clay bricks by hand. While the individual descriptions are very detailed, specific, and actionable, the sequence is extremely redundant, essentially repeating the same molding cycle (kneading, filling, pressing, and releasing) in almost every step. Furthermore, step 6 abruptly introduces an unrelated task (mixing cement and sculpting clay), which disrupts the procedural flow of brick making.",
+      "plan": {
+        "title": "Handmade Clay Brick Making and Sculpting",
+        "overview": "You will be hand-crafting a batch of clay bricks using a wooden mold and sand, while also taking a brief detour to work on a detailed clay and cement sculpture.",
+        "materials": [
+          "Wet clay",
+          "Dry sand",
+          "Wooden brick mold",
+          "Wooden float tool",
+          "Cement",
+          "Trowel",
+          "Sculpting hand tools"
+        ],
+        "outline": [
+          "You'll start by prepping your workspace on the ground, kneading your wet clay, and pressing it firmly into the brick mold. To ensure a clean release, you'll smooth the ground, prep the mold with a coating of dry sand, and carefully lift it to reveal your first formed bricks.",
+          "Once that's rolling, you'll keep the workflow going by using a wooden float tool to level the sandy ground, continuing to knead the clay, and flipping the mold to release and organize the newly made bricks.",
+          "From there, you'll take a quick break from brick-making to mix some cement on the ground with a trowel, using your hands and fine hand tools to shape and carve details into a wet clay sculpture.",
+          "Finally, you'll finish up the batch of bricks by coating the inside of the wooden mold with dry sand once more, pressing in the remaining wet clay, and lifting the mold to set the last bricks out to dry."
+        ],
+        "cautions": [
+          "Ensure the inside of the wooden mold is thoroughly coated with dry sand so the wet clay releases cleanly without sticking.",
+          "Lift and flip the mold gently to avoid warping or cracking the freshly shaped wet bricks."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -630,7 +854,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.mp4",
+        "filename": "egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.mp4",
+        "size_mb": 9.45,
+        "src": "assets/videos/runs_egoschema__0461a8c2-dd83-4083-acc5-7c797f696d27.mp4"
+      }
     },
     {
       "id": "egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2",
@@ -656,6 +885,24 @@
         "Implicit action gap: step 8 mentions reassembling the hose and nozzle without a prior step indicating they were disassembled or fell apart"
       ],
       "reasoning": "The captions provide a highly detailed and specific description of detailing a car interior using a vacuum. However, the sequence suffers from significant redundancy, as vacuuming the dashboard, center console, and seats are repeated across multiple steps throughout the sequence. Additionally, there are minor procedural inconsistencies: coiling the hose in step 5 suggests wrapping up, but vacuuming continues for several more steps, and 'reassembling' the nozzle in step 8 occurs without any prior mention of disassembly.",
+      "plan": {
+        "title": "Deep Cleaning a Car Interior with a Vacuum",
+        "overview": "You will thoroughly vacuum your car's interior, moving the seats and using a vacuum hose attachment to reach every corner from the dashboard to the tight spots between the seats.",
+        "materials": [
+          "Vacuum cleaner with hose",
+          "Vacuum nozzle attachment"
+        ],
+        "outline": [
+          "You'll start by clearing the car's interior floors and using the seat levers to slide the seats around, giving you plenty of room to access all the tight spaces.",
+          "Once you've got good access, attach the nozzle to your vacuum hose and start cleaning the center console area, making sure to plunge deep into the gaps between the front seats and the cushions.",
+          "From there, you'll tackle the dashboard and driver's side area\u2014including the steering wheel column and the footwell\u2014taking a quick moment to step out and adjust your vacuum hose so it doesn't get tangled.",
+          "Finally, wrap things up by vacuuming the passenger side, the door frames, and giving the seats, dashboard shelf, and center console a thorough final pass to make sure all the dust and debris are gone."
+        ],
+        "cautions": [
+          "Be careful when adjusting the seat levers to avoid pinching your hands or fingers.",
+          "Keep an eye on the vacuum hose to ensure it doesn't snag on the door frames or gear shift as you move around the cabin."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -732,7 +979,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.mp4",
+        "filename": "egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.mp4",
+        "size_mb": 6.76,
+        "src": "assets/videos/runs_egoschema__04d0e8d5-de94-4f28-b9c7-f58e3f83aea2.mp4"
+      }
     },
     {
       "id": "egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02",
@@ -756,6 +1008,29 @@
         "The sequence is repetitive, though this is likely a constraint of the repetitive nature of the task itself rather than a fault of the transcription."
       ],
       "reasoning": "The captions are exceptionally detailed, specific, and descriptive of a clear, hands-on procedure (likely book preservation, archiving, or prepping books for sale/shelving). While the steps are repetitive, this reflects the inherent nature of the task (cleaning and inspecting multiple items in sequence). The actions are highly relevant, the temporal flow makes complete sense, and the descriptions of objects (pink cloth, paintbrush, cardboard box) are concrete.",
+      "plan": {
+        "title": "Cleaning and Inspecting Books and Booklets",
+        "overview": "You'll be carefully wiping down, inspecting, and organizing a variety of books and booklets to make sure they are clean and in good condition.",
+        "materials": [
+          "Pink cloth",
+          "Paintbrush",
+          "Books (including pink, green, and colorful covers)",
+          "Notebooks and booklets",
+          "Paper insert",
+          "Cardboard box",
+          "Table",
+          "Shelf"
+        ],
+        "outline": [
+          "You'll start by picking up your first few books, wiping the covers with a pink cloth, and flipping through the pages to inspect the condition of the interior.",
+          "Next, you'll clean and check some notebooks and booklets, carefully wiping them down before placing them onto a cardboard box or organizing them on the table.",
+          "From there, you'll continue inspecting more colorful books and booklets\u2014sometimes holding a paintbrush alongside your cloth\u2014and make sure to check for any inserts, like a yellow card inside a book or folded papers.",
+          "To finish up, you'll wipe down the last few items, organize the sorted booklets on the table, fold your cloth, and grab any final books from the shelf."
+        ],
+        "cautions": [
+          "Handle the book pages and any paper inserts gently to avoid tearing them while inspecting."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -826,7 +1101,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.mp4",
+        "filename": "egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.mp4",
+        "size_mb": 2.76,
+        "src": "assets/videos/runs_egoschema__059f271d-c302-462d-bfad-2d7fee1c0c02.mp4"
+      }
     },
     {
       "id": "howto100m__S77te5xuja0",
@@ -848,6 +1128,32 @@
       "relevance_score": 10.0,
       "issues": [],
       "reasoning": "The sequence is exceptionally detailed, highly specific, and procedurally logical. It walks through checking bulk consistency, sampling, transferring, conducting a hydrometer density test with reference chart calibration, and finally taking a lab sample with a pipette. There are no redundant steps or vague descriptions.",
+      "plan": {
+        "title": "Testing and Measuring Syrup Density",
+        "overview": "This guide walks you through checking the consistency of your syrup, transferring it safely, and taking precise density measurements using a hydrometer before saving a sample.",
+        "materials": [
+          "Metal vat and container with a tap",
+          "Cup and metal cup",
+          "Flexible hose",
+          "Target container",
+          "Metal testing cylinder",
+          "Hydrometer",
+          "Container of dark liquid",
+          "Printed reference chart",
+          "Pipette",
+          "Glass vial"
+        ],
+        "outline": [
+          "You'll start by checking the consistency of the syrup directly from the metal vat, scooping a cupful and pouring it back in to see how it flows. After that, carefully dispense a fresh sample from the container's tap into a metal cup for a closer look.",
+          "Once that's ready, you'll use a flexible hose to transfer the syrup into your target container. During this process, fill up a metal cylinder with the flowing syrup so you can prepare for density testing.",
+          "Next, gently place your hydrometer into the metal cylinder to read the density of the floating liquid. To ensure accuracy, you'll also place the hydrometer in a container of dark liquid and compare your observations with a printed reference chart.",
+          "Finally, use a pipette to draw a small, clean sample of the syrup and transfer it into a glass vial for safekeeping or further testing."
+        ],
+        "cautions": [
+          "Handle the fragile glass hydrometer, pipette, and vials with care to avoid breakage.",
+          "Take care when dispensing and transferring the liquid to prevent accidental spills."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -900,7 +1206,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_howto100m__S77te5xuja0.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\howto100m__S77te5xuja0.mp4",
+        "filename": "howto100m__S77te5xuja0.mp4",
+        "size_mb": 3.12,
+        "src": "assets/videos/runs_howto100m__S77te5xuja0.mp4"
+      }
     },
     {
       "id": "howto100m__Z-37OnNZpS4",
@@ -922,6 +1233,24 @@
       "relevance_score": 10,
       "issues": [],
       "reasoning": "The captions describe a highly logical and complete step-by-step process of crafting an origami toy (specifically, a face-changing puzzle with a green outer frame and a white inner panel). The instructions are highly detailed, specifying colors, crease types, assembly, and the final interactive use of the toy. The flow from individual component preparation to final assembly and operation is seamless.",
+      "plan": {
+        "title": "How to Make a Changing Face Origami Toy",
+        "overview": "In this project, you'll fold green and white origami paper to create a hollow frame and an adjustable face panel that transitions between different expressions.",
+        "materials": [
+          "Green square origami paper",
+          "White square origami paper",
+          "Flat surface"
+        ],
+        "outline": [
+          "You'll start by laying your green origami paper on a flat surface and making diagonal and corner folds, pressing them firmly to create distinct crease lines before unfolding the sheet.",
+          "Next, you'll prepare your white paper by folding it in half to make a center guideline, then fold and crease the edges and corners of both the green and white sheets to form precise guide creases.",
+          "From there, you'll begin assembling the outer frame by folding the green paper's corners and side flaps inward, then tucking the edges in to form a sturdy, hollow square frame.",
+          "Finally, you'll place the white paper face next to your finished green frame, folding the panels to smoothly transition between different facial expressions."
+        ],
+        "cautions": [
+          "Make sure your folds and creases are sharp and precise so the finished pieces align and transition smoothly."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -980,7 +1309,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_howto100m__Z-37OnNZpS4.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\howto100m__Z-37OnNZpS4.mp4",
+        "filename": "howto100m__Z-37OnNZpS4.mp4",
+        "size_mb": 3.49,
+        "src": "assets/videos/runs_howto100m__Z-37OnNZpS4.mp4"
+      }
     },
     {
       "id": "howto100m__ap8KnA30ttU",
@@ -1004,6 +1338,33 @@
         "Step 1 mentions placing the inner pot into the thermal cooker container, but in step 2 it is used on the stove to sear meat, indicating it had to be removed, which is a slightly redundant or circular step sequence."
       ],
       "reasoning": "The caption sequence is exceptionally detailed, highly specific, and procedurally accurate. It covers all the essential steps of preparing a stew using a thermal cooker, from searing the meat to deglazing, slow-cooking, and plating. The only minor logical quirk is placing the inner pot into the thermal container in step 1, only to use it on the stove in step 2, but this is a very minor detail in an otherwise flawless transcript.",
+      "plan": {
+        "title": "Slow-Cooking a Savory Meat Stew with a Thermal Cooker",
+        "overview": "You will prepare a rich, slow-cooked meat stew by searing the meat, building a flavorful wine-infused sauce, and letting a thermal cooker gently bring it to perfection.",
+        "materials": [
+          "Thermal cooker (inner metal pot and outer insulated container with lids)",
+          "Tongs",
+          "Spatula or spoon",
+          "Ladle",
+          "Meat",
+          "Chopped onions",
+          "Red wine",
+          "Tomato paste",
+          "Seasonings",
+          "Mashed potatoes (for serving)",
+          "Plates or serving dishes"
+        ],
+        "outline": [
+          "You'll start by prepping your thermal cooker, making sure both the inner pot and the outer container are ready to go. From there, get your pot hot and use tongs to sear the meat, turning it occasionally so it gets beautifully browned on all sides.",
+          "Once the meat is seared, you will cook the chopped onions in the same pot until they are soft and translucent. Next, pour in some red wine to deglaze the bottom of the pan, scraping up all those tasty bits.",
+          "To finish the base, stir in the tomato paste and your seasonings, then return the seared meat to the sauce. Cover the pot with its lid and transfer the entire inner pot into the larger thermal cooker container so it can slow cook to tender perfection.",
+          "When the stew is done, carefully lift the tender meat out of the cooker using your tongs. Plate it up, ladle the rich, warm sauce over the top, and enjoy your meal alongside some comforting mashed potatoes."
+        ],
+        "cautions": [
+          "Take care when searing the meat in the hot pot to avoid hot grease splatters.",
+          "Ensure the inner pot lid is securely closed before transferring it to the thermal cooker to maintain heat."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -1075,7 +1436,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_howto100m__ap8KnA30ttU.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\howto100m__ap8KnA30ttU.mp4",
+        "filename": "howto100m__ap8KnA30ttU.mp4",
+        "size_mb": 2.79,
+        "src": "assets/videos/runs_howto100m__ap8KnA30ttU.mp4"
+      }
     },
     {
       "id": "howto100m__hn5BXeTVqYI",
@@ -1099,6 +1465,19 @@
         "The sequence is very short, which may only capture a brief snippet of a larger task."
       ],
       "reasoning": "The caption sequence is very short (only two steps), but it describes a highly specific, logical, and actionable procedure for navigating a coin collection app. The details ('Lincoln Pennies', 'back button') make it highly relevant and easy to follow.",
+      "plan": {
+        "title": "Browsing Your Coin Collection on a Mobile App",
+        "overview": "This guide shows you how to easily navigate your digital coin collection app to view your Lincoln Pennies and check out individual coin details.",
+        "materials": [
+          "Smartphone",
+          "Coin collection mobile app"
+        ],
+        "outline": [
+          "You'll start by scrolling through your main coin collection categories on your smartphone and tapping on 'Lincoln Pennies' to view your collected items.",
+          "From there, you can select any individual coin from the list to look at its specific details, and simply use the back button to return and continue browsing through your collection."
+        ],
+        "cautions": []
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1121,7 +1500,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_howto100m__hn5BXeTVqYI.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\howto100m__hn5BXeTVqYI.mp4",
+        "filename": "howto100m__hn5BXeTVqYI.mp4",
+        "size_mb": 2.06,
+        "src": "assets/videos/runs_howto100m__hn5BXeTVqYI.mp4"
+      }
     },
     {
       "id": "howto100m__iluOswaVEd4",
@@ -1145,6 +1529,28 @@
         "Step 2 (examining staples on a wooden board) is slightly less relevant to the core plumbing activity, though it may relate to the mounting structure."
       ],
       "reasoning": "The captions are highly specific, detailed, and capture a logical sequence of hands-on steps for installing/inspecting a water filtration system. The flow goes from physical connections (screwing connectors), mounting preparation (examining boards/beams), tank alignment, inspecting plumbing joints, checking electrical wires, to locating the main control valve. Only step 2 (pointing to staples) feels slightly tangential but still plausible as part of the surrounding workspace setup.",
+      "plan": {
+        "title": "Installing and Checking a Water Filtration System",
+        "overview": "You will assemble, align, and inspect a water filtration system to ensure all plumbing and electrical components are properly set up.",
+        "materials": [
+          "Water filtration system with blue tank",
+          "White plastic connector",
+          "Socket wrench",
+          "Blue pipes and connection joints",
+          "Black hose",
+          "Electrical wire"
+        ],
+        "outline": [
+          "You'll start by making the initial connections, which involves screwing the white plastic connector onto the black valve of the water filtration system and checking the staples secured along the edge of the adjacent wooden board.",
+          "Next, you'll focus on positioning and alignment. You will use a socket wrench near the wooden beam by the blue tank and adjust the tank's alignment while holding the black hose and checking the plumbing layout.",
+          "Once everything is positioned, you'll do a quality check on the plumbing by inspecting the newly assembled blue pipes and their connection joints.",
+          "To finish up, you will check the electrical wire next to the system and locate the water control valve on top of the blue filtration tank to ensure everything is ready to run safely."
+        ],
+        "cautions": [
+          "Ensure the white plastic connector is threaded correctly on the valve to avoid leaks.",
+          "Carefully inspect all connection joints and the alignment of the filtration tank to prevent plumbing issues."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -1214,7 +1620,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_howto100m__iluOswaVEd4.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\howto100m__iluOswaVEd4.mp4",
+        "filename": "howto100m__iluOswaVEd4.mp4",
+        "size_mb": 5.38,
+        "src": "assets/videos/runs_howto100m__iluOswaVEd4.mp4"
+      }
     },
     {
       "id": "wearable-ai__0bdbf1f4696f054f",
@@ -1238,6 +1649,21 @@
         "Very short sequence that misses earlier preparation/cooking phases"
       ],
       "reasoning": "The sequence is logically ordered and highly specific. However, it is extremely brief (only two steps) and omits any prior preparation steps, such as cooking the hot dog or adding condiments, which limits its coverage as a complete procedural transcript.",
+      "plan": {
+        "title": "Serving a Fresh Hot Dog",
+        "overview": "In this quick task, you'll prepare a hot dog for serving by wrapping it in a slice of bread and handing it over to be enjoyed.",
+        "materials": [
+          "Freshly prepared hot dog",
+          "Slice of bread"
+        ],
+        "outline": [
+          "You'll start by carefully placing the freshly prepared hot dog inside a slice of bread, holding it securely so it's neat and ready for serving.",
+          "Once that's ready, simply hand the completed hot dog over to the waiting person so they can enjoy their food."
+        ],
+        "cautions": [
+          "The freshly prepared hot dog may be hot, so handle it carefully to avoid any burns."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -1269,7 +1695,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__0bdbf1f4696f054f.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__0bdbf1f4696f054f.mp4",
+        "filename": "wearable-ai__0bdbf1f4696f054f.mp4",
+        "size_mb": 11.25,
+        "src": "assets/videos/runs_wearable-ai__0bdbf1f4696f054f.mp4"
+      }
     },
     {
       "id": "wearable-ai__13b5a5f93d33d93a",
@@ -1293,6 +1724,25 @@
         "Slight redundancy between captions 3 and 4 regarding wiping the stovetop, though caption 4 indicates a more thorough cleaning phase."
       ],
       "reasoning": "The sequence of captions is exceptionally logical and detailed. It covers the preparation (removing the grate), cleaning (spraying, wiping, cleanings knobs), wiping down surrounding areas (countertops, faucet, sink), and restoring the kitchen to order (putting away spray, organizing cabinets, placing a pot back). The steps are highly relevant, specific, and actionable.",
+      "plan": {
+        "title": "Cleaning and Organizing the Stovetop and Counters",
+        "overview": "You will be giving your kitchen a quick refresh by deep-cleaning the stovetop, wiping down the countertops and sink, and organizing some of your kitchen storage.",
+        "materials": [
+          "Spray bottle with cleaner",
+          "Paper towels",
+          "Cleaning cloths",
+          "Small pot"
+        ],
+        "outline": [
+          "You'll start by removing the stove grate and placing it in the sink so you have a clear surface. From there, spray down the stovetop and use paper towels and cloths to thoroughly wipe it clean, making sure to put the burner cap back in its proper place.",
+          "Next, you'll tidy up the countertops, wiping them down along with the stove's knobs and front panel to get rid of any grease or dust.",
+          "Once the surfaces are clean, focus on wiping down the kitchen faucet and sink area before putting your cleaning spray away.",
+          "To finish up, take a moment to organize the items in your kitchen cabinets and drawers, and then place a small pot back onto the freshly cleaned stove burner."
+        ],
+        "cautions": [
+          "Make sure the stove and burners are completely cool to the touch before you begin cleaning."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1351,7 +1801,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__13b5a5f93d33d93a.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__13b5a5f93d33d93a.mp4",
+        "filename": "wearable-ai__13b5a5f93d33d93a.mp4",
+        "size_mb": 3.98,
+        "src": "assets/videos/runs_wearable-ai__13b5a5f93d33d93a.mp4"
+      }
     },
     {
       "id": "wearable-ai__1b6e3fb5b4f5bf9a",
@@ -1377,6 +1832,30 @@
         "Repetitive and formulaic mentions of smartphone interaction in nearly every caption."
       ],
       "reasoning": "The caption sequence is extremely disjointed and does not describe a single coherent procedural task. It jumps randomly between completely unrelated actions, including yoga, vacuuming, skateboarding, setting up Halloween decorations, wall climbing, and spray painting. Additionally, almost every caption repetitively mentions interacting with a smartphone, which is highly unnatural and suggests either a stitched-together video of random clips or a severely hallucinating captioning model.",
+      "plan": {
+        "title": "Multi-Activity Smartphone Interaction",
+        "overview": "This walkthrough guides you through a variety of indoor and outdoor physical tasks while interacting with your smartphone along the way.",
+        "materials": [
+          "Smartphone",
+          "Yoga mat",
+          "Vacuum cleaner",
+          "Skateboard",
+          "Decorative tombstone prop",
+          "Stencil",
+          "Spray paint"
+        ],
+        "outline": [
+          "You'll start on the yoga mat, interacting with your smartphone first before stepping onto the mat and transitioning to placing your hands flat on it.",
+          "From there, you'll transition to some quick housework and active movement. Check your phone again, clap your hands, vacuum the floor, and then take a quick ride on a skateboard.",
+          "Next, head outdoors to the grass where you will use your phone and press a decorative tombstone prop into the ground, followed by climbing up a wall to touch its surface.",
+          "Finally, you'll work on a quick stencil painting project on the ground, return to the yoga mat to place your hands down, and finish by adjusting the gravestone prop and retrieving your phone."
+        ],
+        "cautions": [
+          "Use caution while climbing the wall to prevent slips or falls.",
+          "Carefully lift the stencil after spray painting to avoid smudging the design.",
+          "Ensure you have a clear, safe path when riding the skateboard."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1441,7 +1920,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__1b6e3fb5b4f5bf9a.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__1b6e3fb5b4f5bf9a.mp4",
+        "filename": "wearable-ai__1b6e3fb5b4f5bf9a.mp4",
+        "size_mb": 2.33,
+        "src": "assets/videos/runs_wearable-ai__1b6e3fb5b4f5bf9a.mp4"
+      }
     },
     {
       "id": "wearable-ai__1e719746365c0af7",
@@ -1465,6 +1949,24 @@
         "The steps are naturally iterative (detach, assemble, detach, assemble), which could be perceived as slightly repetitive, but it accurately represents the procedural workflow of this activity."
       ],
       "reasoning": "The caption sequence is exceptionally clear, logical, and highly descriptive. It captures the natural iterative process of assembling a plastic model (reading instructions, identifying parts on the sprue, detaching them, and assembling them). The descriptions are highly detailed, mentioning specific colors (green and grey) and methods (snapping off with fingers). The slight repetition of detaching and assembling is faithful to the actual task of model building.",
+      "plan": {
+        "title": "Assembling a Plastic Model",
+        "overview": "In this guide, you'll construct a plastic model by referencing the instructions, carefully removing pieces from their plastic frames, and pressing them together by hand.",
+        "materials": [
+          "Plastic model kit (runner sheets/sprues containing green and grey parts)",
+          "Instruction manual"
+        ],
+        "outline": [
+          "You'll start by flipping through the instruction manual to familiarize yourself with the assembly steps, then locate the correct pieces on your plastic runner sheets by referencing the diagrams.",
+          "Once that's ready, you'll carefully snap the initial green and grey plastic parts off the runner sheets with your fingers and begin assembling the first set of green pieces by pressing them together firmly with your hands.",
+          "From there, you'll reference the manual again to find, inspect, and detach the remaining green parts and small components from the sprues.",
+          "Finally, you'll finish the task by securely joining the newly detached green model parts together to complete the assembly."
+        ],
+        "cautions": [
+          "Be careful when snapping the small plastic components off the runner sheets to prevent them from breaking or bending.",
+          "Ensure you press the parts together securely but gently to avoid damaging the plastic joints."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1517,7 +2019,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__1e719746365c0af7.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__1e719746365c0af7.mp4",
+        "filename": "wearable-ai__1e719746365c0af7.mp4",
+        "size_mb": 4.46,
+        "src": "assets/videos/runs_wearable-ai__1e719746365c0af7.mp4"
+      }
     },
     {
       "id": "wearable-ai__1f2fa2af1378221e",
@@ -1543,6 +2050,28 @@
         "Confusing progression between different containers (bowl, mortar, jar) without clear transitions."
       ],
       "reasoning": "While the individual captions are descriptive and detailed, they do not form a coherent procedural transcript. The sequence of actions is highly disjointed: coffee beans are prepped in step 1 but never used again; a jar is introduced in step 4 with a vague instruction ('add the ingredient'); and it is unclear how the mortar, jar, and various ingredients (coffee, seasoning, garlic, powder) come together into a single mixture.",
+      "plan": {
+        "title": "Preparing a Ground Ingredient Mixture",
+        "overview": "You will prep and blend a variety of ingredients\u2014including coffee beans, garlic, and seasonings\u2014by grinding them together in a mortar.",
+        "materials": [
+          "Bag of coffee beans",
+          "Scissors",
+          "Small bowl",
+          "Small packet of seasoning",
+          "Bag of peeled garlic cloves",
+          "Mortar and pestle",
+          "Glass jar with a red lid",
+          "Measuring cup with powder",
+          "Measuring spoon"
+        ],
+        "outline": [
+          "You'll start by prepping your dry ingredients. Use scissors to open your bag of coffee beans, pouring them into a small bowl, and tear or cut open your packet of seasoning so it's ready to use.",
+          "Next, move on to the fresh ingredients. Place several peeled garlic cloves from their bag into your mortar. You'll also open a glass jar with a red lid to add an ingredient, then screw the lid back on.",
+          "Now it's time to blend. Use your pestle to thoroughly grind and crush the ingredients in the mortar until the mixture is well combined.",
+          "To finish up, use a measuring spoon to scrape any remaining powder out of a measuring cup and incorporate it into your mixture."
+        ],
+        "cautions": []
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1589,7 +2118,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__1f2fa2af1378221e.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__1f2fa2af1378221e.mp4",
+        "filename": "wearable-ai__1f2fa2af1378221e.mp4",
+        "size_mb": 1.26,
+        "src": "assets/videos/runs_wearable-ai__1f2fa2af1378221e.mp4"
+      }
     },
     {
       "id": "wearable-ai__440660c9d220f05f",
@@ -1614,6 +2148,37 @@
         "Procedural incoherence at the end of the sequence."
       ],
       "reasoning": "The sequence starts off very strong, describing the preparation of stuffed celery sticks with detailed, actionable steps (1-7). However, there is a severe logical contradiction in steps 8 and 9. Step 8 suddenly instructs to 'roll the filled wraps' and step 9 refers to 'food rolls', which completely contradicts the previous steps of preparing rigid celery sticks. Celery sticks cannot be rolled into wraps.",
+      "plan": {
+        "title": "Cream Cheese Stuffed Celery Rolls",
+        "overview": "Prepare a fresh, savory snack by stuffing crisp celery sticks with a seasoned cream cheese mixture, rolling them up, and chilling them before serving.",
+        "materials": [
+          "Celery stalk",
+          "Paper towel",
+          "Cream cheese",
+          "Green onions",
+          "Seasonings",
+          "Knife",
+          "Cutting board",
+          "Mixing bowl",
+          "Small bowl",
+          "Spoon",
+          "Plastic bag",
+          "Scissors",
+          "Plates or baking dish",
+          "Refrigerator"
+        ],
+        "outline": [
+          "You'll start by preparing the celery. Give the stalk a thorough wash under running water, dry it completely with a paper towel, and then slice it into stick-sized pieces and set them aside on a plate.",
+          "Next, get your filling ready. Unwrap the cream cheese into a mixing bowl, chop up some fresh green onions, and combine the onions and seasonings into the cream cheese, stirring everything together with a spoon until it is smooth and well blended.",
+          "To easily fill the celery, transfer the mixture into a plastic bag, squeeze it toward one corner, and snip the tip with scissors to create a simple DIY piping bag.",
+          "Now for the assembly: pipe a generous amount of the cream cheese filling onto your celery sticks. From there, roll the filled wraps using your hands and arrange them neatly on a plate or in a baking dish.",
+          "Finally, place the prepared rolls into the refrigerator to chill thoroughly so they are set and refreshing when you are ready to serve."
+        ],
+        "cautions": [
+          "Make sure to dry the celery completely with a paper towel so the cream cheese filling adheres properly.",
+          "Use caution when slicing the celery and chopping the green onions with a sharp knife."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1678,7 +2243,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__440660c9d220f05f.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__440660c9d220f05f.mp4",
+        "filename": "wearable-ai__440660c9d220f05f.mp4",
+        "size_mb": 3.06,
+        "src": "assets/videos/runs_wearable-ai__440660c9d220f05f.mp4"
+      }
     },
     {
       "id": "wearable-ai__49b376b461bb8876",
@@ -1702,6 +2272,18 @@
         "The transcript contains only a single caption, which is insufficient to represent a multi-step procedure."
       ],
       "reasoning": "While the single provided caption is highly descriptive and relevant, a single-step sequence cannot constitute a useful procedural transcript as it lacks multiple phases, setup, or a conclusion.",
+      "plan": {
+        "title": "Using a Laptop Keyboard",
+        "overview": "You will be typing continuously on your laptop to get some digital work or text entry done.",
+        "materials": [
+          "Laptop"
+        ],
+        "outline": [
+          "To begin, make sure you are comfortably positioned in front of your laptop.",
+          "From there, you'll use both hands to type continuously on the keyboard, entering your text to complete your digital task."
+        ],
+        "cautions": []
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -1723,7 +2305,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__49b376b461bb8876.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__49b376b461bb8876.mp4",
+        "filename": "wearable-ai__49b376b461bb8876.mp4",
+        "size_mb": 0.61,
+        "src": "assets/videos/runs_wearable-ai__49b376b461bb8876.mp4"
+      }
     },
     {
       "id": "wearable-ai__4cdb8d625619386f",
@@ -1749,6 +2336,28 @@
         "Excessive focus on organizing/reorganizing the freezer and cabinets rather than progressing the main task."
       ],
       "reasoning": "The sequence is highly repetitive and fails to capture a complete procedure. The actor repeatedly retrieves the pizza box, reads the instructions, and puts it back in the freezer, never actually opening the pizza, preparing it, or cooking it, despite preheating the oven. While individual captions are detailed and descriptive, the overall sequence is too redundant and incomplete to serve as a useful procedural transcript.",
+      "plan": {
+        "title": "Preparing to Bake a Frozen Pizza",
+        "overview": "You'll prepare to bake a frozen pizza by reading the instructions, preheating your oven, and keeping your kitchen workspace and freezer organized.",
+        "materials": [
+          "Frozen pizza box",
+          "Other frozen food packages",
+          "Stove/oven control panel",
+          "Oven mitts",
+          "Kitchen cabinet drawer and sliding rack",
+          "Freezer and refrigerator"
+        ],
+        "outline": [
+          "You'll start by heading to the freezer to locate your frozen pizza. Take a quick moment to organize the items on the shelf as you pull the pizza box out, then carefully review the cooking instructions printed on the back.",
+          "Next, you'll briefly place the pizza box back in the freezer to grab another box, then head over to the stove's control panel to set your oven to the required preheat temperature.",
+          "Once the oven is heating, retrieve the pizza box one more time to double-check the cooking directions. After checking, tuck the pizza back into the freezer and neatly arrange the packages inside to keep everything organized.",
+          "To wrap things up, open up your kitchen cabinet drawer to find and organize your oven mitts and check on the sliding rack. Finish up with a quick final check of your freezer organization and refrigerator door so everything is neat and ready to go."
+        ],
+        "cautions": [
+          "Be sure to carefully read and follow the cooking directions on the box to set the oven to the correct temperature.",
+          "Keep frozen items in the freezer as much as possible during preparation to keep them from thawing too early."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1807,7 +2416,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__4cdb8d625619386f.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__4cdb8d625619386f.mp4",
+        "filename": "wearable-ai__4cdb8d625619386f.mp4",
+        "size_mb": 3.59,
+        "src": "assets/videos/runs_wearable-ai__4cdb8d625619386f.mp4"
+      }
     },
     {
       "id": "wearable-ai__5e1ba77a7f73c84d",
@@ -1832,6 +2446,32 @@
         "Procedural inconsistency in step 10, where cuticles are pushed back again after the final polish layers are applied."
       ],
       "reasoning": "The captions are highly specific and descriptive of the actions and tools being used (e.g., wooden cuticle stick, micro-applicators, cotton swabs). However, the sequence is extremely repetitive. From step 2 to step 8, the video continuously loops through very minor variations of painting the nails and cleaning the edges. Additionally, pushing back cuticles in step 10 after multiple layers of polish have been applied is procedurally illogical, as this is typically a preparation step.",
+      "plan": {
+        "title": "Precision Nail Painting and Manicure",
+        "overview": "This guide walks you through prepping your cuticles and applying nail polish with high precision using detailed brushes and cleanup tools.",
+        "materials": [
+          "Tissues",
+          "Wooden cuticle sticks",
+          "Fine nail brushes",
+          "Nail polish",
+          "Nail liquid treatments",
+          "Cotton swabs",
+          "Cotton pads",
+          "Micro-applicator or toothpick",
+          "Main nail polish brush applicator"
+        ],
+        "outline": [
+          "You'll start by setting up a clean workspace with tissues and your tools, then use a wooden cuticle stick to gently push back your cuticles and prep the nails.",
+          "Next, you'll begin painting your nails using a fine brush for precise control, making sure to clean up the cuticle areas and edges with a wooden stick and cotton swabs as you apply your first layers.",
+          "From there, you'll apply additional nail liquids and polish coats, swapping between a thin brush and a wooden stick to keep the edges clean and scrape away any excess product.",
+          "Once the detailed layers are set, you'll use the main bottle brush to coat your nails and thumbnail, while prepping torn cotton pads for some final cleanup.",
+          "Finally, you'll use a toothpick or micro-applicator for ultra-precise touch-ups, thoroughly wipe away any remaining residue with cotton swabs, and apply your final coats of polish."
+        ],
+        "cautions": [
+          "Be gentle when pushing back your cuticles to avoid irritation or damage to the nail bed.",
+          "Apply thin, precise coats of polish to prevent pooling and make cleaning the edges easier."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -1907,7 +2547,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__5e1ba77a7f73c84d.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__5e1ba77a7f73c84d.mp4",
+        "filename": "wearable-ai__5e1ba77a7f73c84d.mp4",
+        "size_mb": 4.72,
+        "src": "assets/videos/runs_wearable-ai__5e1ba77a7f73c84d.mp4"
+      }
     },
     {
       "id": "wearable-ai__6ce4e634e6294692",
@@ -1931,6 +2576,36 @@
         "Caption 1 mentions washing an 'onion' along with several fruits, but the onion is not used in any of the subsequent steps of making the fruit salad."
       ],
       "reasoning": "The caption sequence is exceptionally detailed, logical, and covers all major phases of the recipe from washing and prep, to cutting, dressing, and mixing. The temporal order is flawless. The only minor issue is the mention of washing an 'onion' in the first step, which is never used again and does not belong in a fruit salad, suggesting a minor detection error.",
+      "plan": {
+        "title": "Preparing a Fresh Fruit Salad",
+        "overview": "You will wash, peel, and chop a variety of fresh fruits before tossing them in a bowl with lemon juice, honey, and a liquid dressing.",
+        "materials": [
+          "Apple",
+          "Orange",
+          "Peach",
+          "Onion",
+          "Grapes",
+          "Kiwi",
+          "Banana",
+          "Lemon",
+          "Liquid from a bottle",
+          "Honey in a squeeze bottle",
+          "Cutting board",
+          "Knife",
+          "White bowl",
+          "Spoon",
+          "Fork",
+          "Running tap water"
+        ],
+        "outline": [
+          "You'll start by washing your produce\u2014including the apple, orange, peach, onion, and grapes\u2014under running tap water, then gathering them near your workspace. From there, peel the kiwi with your hands and arrange the other fruits on your cutting board.",
+          "Once that's ready, use a knife to slice and peel the apple, transferring the pieces into a white bowl. Next, cut the grapes and orange, peel the orange pieces by hand, and slice the banana and any remaining fruits before scraping them all into the bowl.",
+          "Finally, wash your hands and squeeze some fresh lemon juice into the bowl, giving it a quick stir. To complete the dish, pour the bottled liquid and squeeze honey directly onto the fruit, then thoroughly mix and stir the salad with a spoon and fork before serving."
+        ],
+        "cautions": [
+          "Take care when using the knife to slice and peel the various fruits on the cutting board."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -1989,7 +2664,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__6ce4e634e6294692.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__6ce4e634e6294692.mp4",
+        "filename": "wearable-ai__6ce4e634e6294692.mp4",
+        "size_mb": 2.23,
+        "src": "assets/videos/runs_wearable-ai__6ce4e634e6294692.mp4"
+      }
     },
     {
       "id": "wearable-ai__6de3fc66543533fa",
@@ -2013,6 +2693,25 @@
         "The caption sequence is empty."
       ],
       "reasoning": "The provided caption sequence is completely empty, containing 0 captions. It is impossible to evaluate coverage, order, relevance, or to infer any activity.",
+      "plan": {
+        "title": "Setting Up a Wearable AI Device",
+        "overview": "You'll be preparing, mounting, and initializing a wearable AI assistant to get it ready for hands-free use.",
+        "materials": [
+          "Wearable AI device",
+          "Magnetic mount or clip",
+          "Charging cable"
+        ],
+        "outline": [
+          "You'll start by gathering the wearable AI device and its mounting accessories, making sure everything is clean and ready to handle.",
+          "Next, you'll power on the device or connect it to its charger to ensure it has enough battery for the setup process.",
+          "From there, you'll attach the magnetic backplate or clip to your clothing, then snap the AI device securely into place.",
+          "Finally, you'll wake up the device or pair it to confirm the microphone and AI assistant are active and responding."
+        ],
+        "cautions": [
+          "Make sure the magnetic mount is fully secured to your clothing to prevent the device from accidentally dropping.",
+          "Keep the device away from water or high moisture during the initial setup."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2026,7 +2725,12 @@
       "alignment": [],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__6de3fc66543533fa.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__6de3fc66543533fa.mp4",
+        "filename": "wearable-ai__6de3fc66543533fa.mp4",
+        "size_mb": 5.19,
+        "src": "assets/videos/runs_wearable-ai__6de3fc66543533fa.mp4"
+      }
     },
     {
       "id": "wearable-ai__777459a083922176",
@@ -2050,6 +2754,25 @@
         "Slight redundancy with multiple actions involving recording/photographing the sunset, though each describes a distinct physical interaction and framing technique."
       ],
       "reasoning": "The caption sequence is exceptionally detailed and highly specific. It transitions logically from an initial travel phase (checking a tram map and time) to arriving at the beach and attempting various methods to photograph and record the sunset, ending with setting up a makeshift tripod using a wallet and concrete post. The actions are highly descriptive and actionable.",
+      "plan": {
+        "title": "Capturing a Beach Sunset",
+        "overview": "Plan your timing using a map and smartwatch, then capture beautiful photos and videos of a beach sunset.",
+        "materials": [
+          "Smartphone",
+          "Smartwatch",
+          "Brown wallet",
+          "Tram schedule board with map",
+          "Concrete post"
+        ],
+        "outline": [
+          "You'll start by locating yourself on a tram schedule board map and checking your smartwatch to keep track of the time as evening approaches.",
+          "Once you're at the beach, use your smartphone to capture the view, taking photos and recording videos of the sunset and the people on the shore.",
+          "Finally, set up a hands-free shot by propping your phone against a wallet on a concrete post, carefully adjusting the framing with both hands to record a stable video of the sunset."
+        ],
+        "cautions": [
+          "Ensure your phone is securely propped against the wallet so it doesn't slip off the concrete post and sustain damage."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2108,7 +2831,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__777459a083922176.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__777459a083922176.mp4",
+        "filename": "wearable-ai__777459a083922176.mp4",
+        "size_mb": 6.49,
+        "src": "assets/videos/runs_wearable-ai__777459a083922176.mp4"
+      }
     },
     {
       "id": "wearable-ai__7c8b228dd61b135f",
@@ -2133,6 +2861,30 @@
         "Minor logical inconsistency in bag interactions (reaching into the bag in step 2 before unzipping it in step 3)"
       ],
       "reasoning": "The captions are descriptive and specific, but they lack a clear procedural progression. There is a lot of redundancy, with five of the eight steps focusing on flipping through or reading a magazine/booklet, and three steps focusing on organizing items in a bag, alternating back and forth without a clear start-to-finish goal.",
+      "plan": {
+        "title": "Organizing Gear and Reviewing Reading Materials",
+        "overview": "You'll alternate between organizing your athletic bag and taking time to browse and read through various booklets and magazines.",
+        "materials": [
+          "Booklet",
+          "Magazine",
+          "Athletic bag",
+          "Green towel",
+          "Black water bottle",
+          "Pickleball paddle cover or case",
+          "Brochure",
+          "Yellow notepad",
+          "Table",
+          "Wooden bench"
+        ],
+        "outline": [
+          "You'll start by grabbing your booklet and magazine, setting them down on a table to flip through the pages.",
+          "Next, head over to your bag on the bench to unzip it, retrieve your green towel, and neatly arrange your water bottle inside.",
+          "From there, take some time to sit back down with your reading materials, focusing on specific text and browsing through the magazine pages.",
+          "Once you've done some reading, check back inside your athletic bag to adjust your pickleball paddle cover.",
+          "Finally, wrap things up by carefully reviewing all your papers, including the booklet, brochure, magazine, and yellow notepad."
+        ],
+        "cautions": []
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2216,7 +2968,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__7c8b228dd61b135f.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__7c8b228dd61b135f.mp4",
+        "filename": "wearable-ai__7c8b228dd61b135f.mp4",
+        "size_mb": 8.83,
+        "src": "assets/videos/runs_wearable-ai__7c8b228dd61b135f.mp4"
+      }
     },
     {
       "id": "wearable-ai__84bdfd2003c046f1",
@@ -2241,6 +2998,38 @@
         "Step 2 (using a pry bar and spacers) and Step 5 (using a metal hook tool) are slightly ambiguous without the context of setting up/assembling synthetic ice tiles."
       ],
       "reasoning": "The sequence provides a detailed and highly specific account of an off-ice hockey training session. It covers setting up the training space, taping the stick, performing various stickhandling drills with different types of balls and sticks, and practicing shots on a goal. The captions are very descriptive and actionable, though there is a high degree of repetition in the stickhandling drills.",
+      "plan": {
+        "title": "Floor Hockey and Stickhandling Practice",
+        "overview": "You will practice a variety of floor hockey drills, prep your equipment, and work on your coordination and shooting skills to improve your stickhandling game.",
+        "materials": [
+          "Field hockey stick",
+          "Regular hockey stick",
+          "Mini hockey stick",
+          "Floorball stick",
+          "Orange ball",
+          "Small red ball",
+          "Red floorball",
+          "Small white ball",
+          "Pry bar",
+          "Red spacers",
+          "Metal hook tool",
+          "Glove",
+          "Grip tape",
+          "Shooting board",
+          "Hockey goal"
+        ],
+        "outline": [
+          "You'll start by warming up your control with a field hockey stick and an orange ball. Once you're warmed up, you will clear your practice area and use a pry bar to place red spacers on the floor to define your training space.",
+          "Next, you'll dive into basic stickhandling drills. You will practice first with your regular hockey stick and an orange ball, then switch to a mini hockey stick to manipulate a small red ball, and even experiment with a metal hook tool to move the ball.",
+          "After the initial drills, you'll prep your gear by putting on a glove, inspecting your hockey stick, and wrapping fresh tape around the shaft. Once prepped, you will jump right into continuous dribbling drills on the floor with a red ball.",
+          "From there, you'll take a moment to sharpen your hand-eye coordination by tossing, bouncing, and catching a small white ball by hand. Then, you'll get back to the sticks, practicing floorball dribbling and performing precise, close-quarters stickhandling drills with a mini hockey stick.",
+          "Finally, you'll transition to a dedicated shooting board, where you will practice your final stickhandling movements before taking shots at a hockey goal."
+        ],
+        "cautions": [
+          "Ensure your practice area is completely cleared of obstacles to prevent tripping during fast-paced dribbling.",
+          "Use caution when handling the pry bar to avoid damaging the floor or injuring your hands."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2317,7 +3106,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__84bdfd2003c046f1.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__84bdfd2003c046f1.mp4",
+        "filename": "wearable-ai__84bdfd2003c046f1.mp4",
+        "size_mb": 7.43,
+        "src": "assets/videos/runs_wearable-ai__84bdfd2003c046f1.mp4"
+      }
     },
     {
       "id": "wearable-ai__8812f05ea4220629",
@@ -2341,6 +3135,24 @@
         "The caption sequence contains zero captions, providing no information about any activity."
       ],
       "reasoning": "The provided caption sequence is completely empty. It is impossible to evaluate coverage, temporal order, or relevance when no captions are present.",
+      "plan": {
+        "title": "Setting Up Your Wearable AI Device",
+        "overview": "You'll get your wearable AI device ready to use by charging it, pairing it with your companion smartphone, and completing the initial configuration.",
+        "materials": [
+          "Wearable AI device",
+          "Charging cable or charging case",
+          "Smartphone with companion app"
+        ],
+        "outline": [
+          "You'll start by unboxing your wearable AI device and plugging it in to ensure it is fully powered and ready for setup.",
+          "Once the device is powered on, you'll open the companion app on your smartphone to pair the two devices via Bluetooth or Wi-Fi.",
+          "From there, you'll follow the on-screen prompts to configure your settings, set up your preferences, and test out its basic voice commands or features."
+        ],
+        "cautions": [
+          "Keep the wearable device close to your smartphone during the pairing process to avoid connection drops.",
+          "Do not interrupt any automatic firmware updates that may occur during the initial setup."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2354,7 +3166,12 @@
       "alignment": [],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__8812f05ea4220629.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__8812f05ea4220629.mp4",
+        "filename": "wearable-ai__8812f05ea4220629.mp4",
+        "size_mb": 10.6,
+        "src": "assets/videos/runs_wearable-ai__8812f05ea4220629.mp4"
+      }
     },
     {
       "id": "wearable-ai__89da98922957d8ff",
@@ -2378,6 +3195,18 @@
         "The transcript contains only a single step, which is insufficient to represent a complete multi-step procedural activity."
       ],
       "reasoning": "The single caption is highly descriptive, specific, and clear. However, a sequence consisting of only one step cannot form a comprehensive procedural transcript for most tasks, resulting in very low coverage.",
+      "plan": {
+        "title": "Working on a Laptop Task",
+        "overview": "In this quick task, you will be using your laptop keyboard to type out text and complete a digital activity.",
+        "materials": [
+          "Laptop"
+        ],
+        "outline": [
+          "To start, settle in comfortably in front of your laptop.",
+          "When you're ready, use both hands to type on the keyboard, entering whatever text or commands are needed to complete your digital task."
+        ],
+        "cautions": []
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2403,7 +3232,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__89da98922957d8ff.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__89da98922957d8ff.mp4",
+        "filename": "wearable-ai__89da98922957d8ff.mp4",
+        "size_mb": 1.64,
+        "src": "assets/videos/runs_wearable-ai__89da98922957d8ff.mp4"
+      }
     },
     {
       "id": "wearable-ai__94e4220d406c1cca",
@@ -2425,6 +3259,32 @@
       "relevance_score": 10,
       "issues": [],
       "reasoning": "The caption sequence is highly detailed, specific, and describes a logical progression of making a mixed-media craft project. Each step describes concrete actions (using a blending stump, peeling a sticker film, stamping finger-paint) that are actionable and clear. There is minor ambiguity in step 1 between 'canvas' and 'paper', but this is typical for mixed-media projects.",
+      "plan": {
+        "title": "Creating Personalized Mixed-Media Canvas Art",
+        "overview": "You will create a unique, personalized piece of art by layering finger paints, detailed brushwork, ink drawings, and custom written messages on canvas and paper.",
+        "materials": [
+          "White canvas",
+          "Paper sheets",
+          "Paint",
+          "Paper towels",
+          "Paintbrush",
+          "Black pen",
+          "Blending stump",
+          "Marker",
+          "Card",
+          "Heart-shaped transfer sticker"
+        ],
+        "outline": [
+          "You'll start by positioning your white canvas and pressing your paint-covered fingers directly onto it to create playful paw prints and fingerprint designs. Once you're done, fold up a paper towel to wipe your hands clean and gently dab any excess paint off the canvas to keep your work tidy.",
+          "Next, you'll add some more paint using your fingers before switching over to a paintbrush to build up finer, detailed patterns. After the paint has set a bit, use a black pen to draw sharp details and soften those lines with a blending stump for a smoother look.",
+          "From there, it's time to personalize your work. Grab a marker and a pen to write custom messages across your canvas and paper sheets. You'll also paint a nice rock design onto a separate card, using your finger to smudge and blend the pigment.",
+          "To wrap things up, find the heart-shaped transfer sticker on your page, peel off its clear protective film, and write a final message with a pen to complete your artwork."
+        ],
+        "cautions": [
+          "Be gentle when dabbing excess paint with the paper towel to avoid accidentally smearing your fingerprint designs.",
+          "Ensure the paint has dried sufficiently before drawing with your pen to prevent the ink from bleeding or clogging the pen tip."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2477,7 +3337,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__94e4220d406c1cca.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__94e4220d406c1cca.mp4",
+        "filename": "wearable-ai__94e4220d406c1cca.mp4",
+        "size_mb": 1.91,
+        "src": "assets/videos/runs_wearable-ai__94e4220d406c1cca.mp4"
+      }
     },
     {
       "id": "wearable-ai__9bee20d4cc3565da",
@@ -2499,6 +3364,30 @@
       "relevance_score": 10.0,
       "issues": [],
       "reasoning": "The sequence provides an exceptionally clear, highly detailed, and logically ordered step-by-step transcript for preparing microwave nachos. Every phase\u2014from laying the chip base, adding warm toppings, melting the cheese in the microwave, to finishing with cold toppings and serving\u2014is captured with precise verbs, specific ingredients, and clear tools.",
+      "plan": {
+        "title": "Making Loaded Nachos",
+        "overview": "You'll build a delicious plate of nachos by layering chips, seasoned meat, and cheese, melting it in the microwave, and finishing it off with fresh toppings and sauces.",
+        "materials": [
+          "Tortilla chips",
+          "Plate",
+          "Seasoning",
+          "Warm cooked meat (in a pot)",
+          "Shredded cheese (in a bag)",
+          "Microwave",
+          "Fresh chopped vegetables",
+          "Hot sauce",
+          "Sour cream (in a container)",
+          "Spoon"
+        ],
+        "outline": [
+          "You'll start by arranging your tortilla chips on a plate, breaking a few of them down to form an even, sturdy base. Once your chips are set, shake seasoning over them and layer on some warm cooked meat from your pot.",
+          "Next, generously sprinkle a layer of shredded cheese over the meat and chips, and pop the plate into the microwave until the cheese is completely melted.",
+          "Finally, carefully retrieve the hot plate, scatter fresh chopped vegetables over the melted cheese, drizzle with hot sauce, and add dollops of sour cream using a spoon before diving in."
+        ],
+        "cautions": [
+          "Use caution when removing the plate from the microwave, as it will be hot."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2551,7 +3440,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__9bee20d4cc3565da.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__9bee20d4cc3565da.mp4",
+        "filename": "wearable-ai__9bee20d4cc3565da.mp4",
+        "size_mb": 1.39,
+        "src": "assets/videos/runs_wearable-ai__9bee20d4cc3565da.mp4"
+      }
     },
     {
       "id": "wearable-ai__a5281e906025a240",
@@ -2573,6 +3467,24 @@
       "relevance_score": 10.0,
       "issues": [],
       "reasoning": "The sequence provides an exceptionally clear, highly detailed, and logically ordered step-by-step guide for folding a paper origami container. Each caption contains specific, actionable verbs and precise descriptions of the physical manipulation of the paper, covering the process from the very first fold to the final structure adjustments without any gaps or redundancies.",
+      "plan": {
+        "title": "Crafting a Paper Origami Container",
+        "overview": "You will be transforming a simple sheet of white paper into a neat origami container through a series of precise folds and creases.",
+        "materials": [
+          "Sheet of white paper",
+          "Flat surface (like a wooden table)"
+        ],
+        "outline": [
+          "You'll start by placing your paper on a flat surface and making a firm diagonal fold. From there, you will make a few additional folds to prep the paper, smoothing them down with your hands and correcting any misalignments as you go.",
+          "Next, you'll fold the paper in half to create a sharp crease, unfold it, and then continue folding and unfolding at different angles. This step establishes crucial guide creases that will help shape the container later.",
+          "Once your guide lines are ready, you will fold the paper inward from both sides on a flat surface, making sure the edges align perfectly.",
+          "Finally, you'll open the paper up, tuck the corners inward, and gently press the edges to form the container. To finish, just fold the last flaps down and adjust the structure with both hands so it stands securely."
+        ],
+        "cautions": [
+          "Be sure to crease firmly and correct any misalignments early so the final container shapes up properly.",
+          "Align the edges carefully during the inward folds to ensure the structure is even and stable."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2625,7 +3537,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__a5281e906025a240.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__a5281e906025a240.mp4",
+        "filename": "wearable-ai__a5281e906025a240.mp4",
+        "size_mb": 0.65,
+        "src": "assets/videos/runs_wearable-ai__a5281e906025a240.mp4"
+      }
     },
     {
       "id": "wearable-ai__a74d09fd1a2a1ab6",
@@ -2649,6 +3566,26 @@
         "Repetitive alternation between driving and phone interaction, which limits the variety of distinct procedural phases."
       ],
       "reasoning": "The sequence provides highly descriptive, specific egocentric captions that clearly detail the driver's actions (driving, interacting with a mounted phone, and pointing). The chronological order makes perfect sense. The coverage is good, though it is somewhat repetitive due to the alternating nature of driving and interacting with the phone, which likely reflects the actual video timeline.",
+      "plan": {
+        "title": "Using a Mounted Phone Safely While Driving",
+        "overview": "This task involves balancing safe driving with managing a dashboard-mounted smartphone for navigation and apps.",
+        "materials": [
+          "Car",
+          "Smartphone",
+          "Dashboard phone mount"
+        ],
+        "outline": [
+          "You'll start by driving safely with both hands on the steering wheel to establish steady control of the car.",
+          "When needed, you will interact with your smartphone on the dashboard mount to set up your navigation or adjust settings.",
+          "From there, keep driving steadily down the lane while occasionally checking your messages or apps, always making sure to maintain a safe distance from other vehicles.",
+          "Finally, after one last interaction with your phone, secure it back into its mount and point through the windshield to indicate something in the road ahead."
+        ],
+        "cautions": [
+          "Always prioritize safe driving and road awareness over interacting with the phone.",
+          "Keep a safe following distance from other vehicles, especially when adjusting settings.",
+          "Ensure the phone is securely placed in the mount so it doesn't fall and cause a distraction."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2730,7 +3667,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__a74d09fd1a2a1ab6.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__a74d09fd1a2a1ab6.mp4",
+        "filename": "wearable-ai__a74d09fd1a2a1ab6.mp4",
+        "size_mb": 12.71,
+        "src": "assets/videos/runs_wearable-ai__a74d09fd1a2a1ab6.mp4"
+      }
     },
     {
       "id": "wearable-ai__aba90d4060290a87",
@@ -2755,6 +3697,23 @@
         "Lack of distinct procedural phases (continuous activity rather than step-by-step task)"
       ],
       "reasoning": "The sequence is highly repetitive and describes a continuous activity rather than a distinct step-by-step procedure. While the chronological order is logical (moving from the main road to the shoulder), the captions lack distinct, hands-on procedural phases, essentially repeating the same action of pedaling and steering across all five steps.",
+      "plan": {
+        "title": "Riding Safely Along a Paved Road",
+        "overview": "In this guide, you'll go on a steady bicycle ride down a paved road, starting in the street and smoothly transitioning to the shoulder to keep a safe distance from traffic.",
+        "materials": [
+          "Bicycle",
+          "Paved road or street"
+        ],
+        "outline": [
+          "You'll start by riding your bicycle steadily down the paved road, focusing on keeping a consistent pedaling pace and maintaining your balance as you steer forward.",
+          "From there, you'll guide the bicycle closer to the side of the road, making sure to stay alert and carefully monitor the path ahead for any obstacles.",
+          "To finish the ride, you'll steer smoothly onto the shoulder of the road, continuing to pedal steadily while keeping a safe distance from any nearby traffic."
+        ],
+        "cautions": [
+          "Keep a close eye on the road ahead to steer around any hazards safely.",
+          "Always maintain a safe distance from passing vehicles, especially when riding along the shoulder."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2795,7 +3754,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__aba90d4060290a87.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__aba90d4060290a87.mp4",
+        "filename": "wearable-ai__aba90d4060290a87.mp4",
+        "size_mb": 36.31,
+        "src": "assets/videos/runs_wearable-ai__aba90d4060290a87.mp4"
+      }
     },
     {
       "id": "wearable-ai__b00c7a882446587f",
@@ -2817,6 +3781,23 @@
       "relevance_score": 10.0,
       "issues": [],
       "reasoning": "The caption sequence provides a flawless, highly detailed, and logical step-by-step procedural transcript for cleaning a window. It begins with preparation (opening the curtain, gathering supplies), proceeds systematically through dry dusting, wet cleaning specific components (sill, frame, track, and glass), and concludes with a final wipe and returning the curtain to its original position. The language is descriptive and highly actionable.",
+      "plan": {
+        "title": "Window and Frame Cleaning",
+        "overview": "You'll give your window area a thorough refresh by pulling back the curtains, dusting the frames, and deep cleaning the sill, tracks, and glass with spray cleaner.",
+        "materials": [
+          "Spray bottle with cleaning liquid",
+          "Microfiber cloth",
+          "Cleaning rags or cloths"
+        ],
+        "outline": [
+          "You'll start by pulling the curtain aside and gathering your cleaning supplies. First, do a dry wipe of the window sill and the surrounding frame with a cloth to clear away loose dust and surface debris.",
+          "Once that's ready, spray your cleaning liquid onto the sill and wipe it down with a microfiber cloth. From there, wipe down the window glass to remove any smudges and clean out the window track.",
+          "Finally, pull the curtain open a bit wider so you can thoroughly finish wiping the window track. Give the frame one last wipe to catch any remaining dirt, then pull the curtain back to its original position."
+        ],
+        "cautions": [
+          "Keep the curtain pulled well away from the window while spraying to avoid getting cleaning liquid on the fabric."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -2875,7 +3856,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__b00c7a882446587f.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__b00c7a882446587f.mp4",
+        "filename": "wearable-ai__b00c7a882446587f.mp4",
+        "size_mb": 1.85,
+        "src": "assets/videos/runs_wearable-ai__b00c7a882446587f.mp4"
+      }
     },
     {
       "id": "wearable-ai__b76d10dcd8243a01",
@@ -2901,6 +3887,26 @@
         "Lack of logical or temporal progression."
       ],
       "reasoning": "The sequence of captions does not describe a single, cohesive procedural task. It transitions abruptly from pedestrian navigation (pressing a crossing button) to food preparation (peeling a mushroom, then a nut), and back to walking with a smartphone. While the individual captions are descriptive and actionable on their own, they have no logical connection or sequential flow as a combined transcript.",
+      "plan": {
+        "title": "Outdoor Walk and Food Prep Tasks",
+        "overview": "Navigate a pedestrian crossing, peel a couple of quick food items, and use your phone on the go.",
+        "materials": [
+          "Pedestrian crossing button on a metal pole",
+          "Fresh mushroom",
+          "Nut (with shell or skin)",
+          "Smartphone"
+        ],
+        "outline": [
+          "You'll start by finding and pressing the pedestrian crossing button on a metal pole to request a walk signal.",
+          "Next, you'll carefully peel the outer skin off a fresh mushroom using just your fingers.",
+          "From there, use both hands to peel the outer shell or skin off a nut.",
+          "Finally, you'll interact with your smartphone's screen while walking along the sidewalk."
+        ],
+        "cautions": [
+          "Be sure to stay aware of your surroundings and look up frequently when using your phone while walking on the sidewalk.",
+          "Wait safely for the signal to change after pressing the pedestrian button before attempting to cross."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": false,
         "gaps": [
@@ -2948,7 +3954,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__b76d10dcd8243a01.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__b76d10dcd8243a01.mp4",
+        "filename": "wearable-ai__b76d10dcd8243a01.mp4",
+        "size_mb": 8.21,
+        "src": "assets/videos/runs_wearable-ai__b76d10dcd8243a01.mp4"
+      }
     },
     {
       "id": "wearable-ai__cc4ac34272e4c3e4",
@@ -2972,6 +3983,23 @@
         "Some captions use slightly generic language (e.g., 'desired task', 'device interaction') instead of describing specific actions or UI elements."
       ],
       "reasoning": "The sequence is highly logical and chronologically sound. It begins with operating a single smartphone, introduces a second smartphone in step 4, performs data transfer or configuration between the two devices in step 5, and wraps up in step 6. The main drawback is that some instructions are slightly generic (e.g., 'for your desired task' or 'input information'), but they still form a coherent procedural narrative.",
+      "plan": {
+        "title": "Configuring and Syncing Two Smartphones",
+        "overview": "In this guide, you'll navigate and configure your primary smartphone before connecting it with a second smartphone to manage settings and data transfer.",
+        "materials": [
+          "Primary smartphone",
+          "Second smartphone"
+        ],
+        "outline": [
+          "You'll start by holding your smartphone to browse through your apps and navigate the user interface using both hands.",
+          "Once you're in, you will continue operating the phone to enter information and set up your desired configurations.",
+          "From there, you'll pick up the device and interact with a second smartphone lying on the desk to initiate a connection between them.",
+          "Finally, you'll tap and swipe to manage the data transfer or settings between the two devices, holding your phone securely with both hands as you complete the process."
+        ],
+        "cautions": [
+          "Be careful when handling both smartphones at once to prevent them from slipping or falling."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -3018,7 +4046,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__cc4ac34272e4c3e4.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__cc4ac34272e4c3e4.mp4",
+        "filename": "wearable-ai__cc4ac34272e4c3e4.mp4",
+        "size_mb": 0.38,
+        "src": "assets/videos/runs_wearable-ai__cc4ac34272e4c3e4.mp4"
+      }
     },
     {
       "id": "wearable-ai__dcea581593204193",
@@ -3043,6 +4076,22 @@
         "Overly verbose and flowery language that dilutes the procedural focus of the captions."
       ],
       "reasoning": "The sequence is chronologically logical but highly redundant. Captions 1 through 5 essentially describe the exact same action (spinning, rotating, and inspecting a single plucked flower) with slightly different phrasing. Only captions 6 and 7 move the process forward by plucking more flowers. This level of repetition makes the transcript inefficient as a procedural guide.",
+      "plan": {
+        "title": "Collecting and Inspecting Orange Flowers",
+        "overview": "You will carefully harvest, thoroughly inspect, and prepare a collection of vibrant orange flowers for a floral display.",
+        "materials": [
+          "Orange flower bush"
+        ],
+        "outline": [
+          "You'll start by carefully plucking a vibrant orange flower from the bush, gently spinning and rotating it to inspect its overall condition from every angle.",
+          "Next, give the flower a closer quality check by spinning the stem to observe the petals' motion and rotating the longer stem to look for any blemishes.",
+          "Once that's ready, gently manipulate the delicate petals and stem to prepare the flower cluster for your floral display.",
+          "From there, pluck a few more orange flowers to set aside with your first one, finishing up by finding and harvesting one final perfect bloom to complete your collection."
+        ],
+        "cautions": [
+          "Handle the delicate petals and stems gently to avoid bruising or damaging the flowers during inspection."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -3095,7 +4144,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__dcea581593204193.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__dcea581593204193.mp4",
+        "filename": "wearable-ai__dcea581593204193.mp4",
+        "size_mb": 2.88,
+        "src": "assets/videos/runs_wearable-ai__dcea581593204193.mp4"
+      }
     },
     {
       "id": "wearable-ai__e154915e636fc23f",
@@ -3119,6 +4173,32 @@
         "Slight procedural inconsistency: Step 7 describes scrubbing items after the sink drain has already been wiped down and the trash sealed in Step 6."
       ],
       "reasoning": "The captions provide an exceptionally detailed, step-by-step procedural transcript. The language is highly specific and descriptive, avoiding vague terms. The coverage is thorough, capturing every phase of the cleaning process from clearing debris to scrubbing, rinsing, drying, and final cleanup. The only minor flaw is that Step 7 (scrubbing a metal cup and coffee filter) occurs after Step 6 (wiping down the sink drain and sealing the trash), which slightly disrupts the expected order of cleaning all items before finishing the sink basin itself.",
+      "plan": {
+        "title": "Deep Cleaning Sink Strainers and Metal Accessories",
+        "overview": "You'll start by clearing debris from the sink, then use dish soap and a toothbrush to thoroughly scrub, rinse, and dry various metal strainers, cups, and filter inserts before wiping down the workspace.",
+        "materials": [
+          "Sink strainer",
+          "Plastic waste bag",
+          "Spoon",
+          "Metal cups and containers",
+          "Dish soap",
+          "Toothbrush",
+          "Metal funnel",
+          "Filter baskets and coffee filter insert",
+          "Paper towels",
+          "Damp cleaning cloth",
+          "Drying rack"
+        ],
+        "outline": [
+          "You'll start by clearing out the debris. Remove the sink strainer containing the egg, scrape any waste into a plastic bag using a spoon, and then give your dirty tools a quick pre-rinse under running water to prepare them for soaping.",
+          "Next, it's time for some detailed scrubbing. Load a toothbrush with dish soap to thoroughly clean the sink drain stopper and metal strainer, then rinse them clean along with the metal funnel and spoon.",
+          "From there, scrub the remaining metal containers, filter baskets, and strainers. Give them a good rinse and place them on the drying rack before taking a moment to wipe the sink drain with a paper towel and securely seal up the waste bag.",
+          "To wrap things up, use your toothbrush to scrub the metal cup and coffee filter insert, rinse them with the sprayer, and set them to dry. Finish by wiping down the faucet and countertop with a damp cloth, rinsing the cloth, and washing your hands clean."
+        ],
+        "cautions": [
+          "Ensure the plastic waste bag containing the discarded egg and debris is securely sealed to prevent leaks or odors."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -3177,7 +4257,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__e154915e636fc23f.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__e154915e636fc23f.mp4",
+        "filename": "wearable-ai__e154915e636fc23f.mp4",
+        "size_mb": 3.67,
+        "src": "assets/videos/runs_wearable-ai__e154915e636fc23f.mp4"
+      }
     },
     {
       "id": "wearable-ai__ef51015464812b8c",
@@ -3201,6 +4286,24 @@
         "Slight redundancy due to the repetitive cycle of Lego building (referencing instructions, searching for pieces, and attaching them)."
       ],
       "reasoning": "The captions present a highly logical, chronological sequence of assembling a Lego model from start to finish. It begins with the initial structure, progresses through various intermediate steps involving page turns, searching for specific types of bricks (e.g., small components, colored pieces), and concludes with the final steps of securing the structures to a baseplate. While the steps are inherently repetitive due to the nature of building with Lego, they capture the overall workflow very well with clear progression.",
+      "plan": {
+        "title": "Assembling a Lego Model",
+        "overview": "You will build a Lego structure step-by-step by following an instruction manual, finding the right bricks in your pile, and securing the finished model onto a baseplate.",
+        "materials": [
+          "Lego instruction booklet",
+          "Lego bricks (including blue and purple pieces)",
+          "Lego baseplate"
+        ],
+        "outline": [
+          "You'll start by opening your Lego instruction booklet, searching through your pile of bricks for the first set of pieces, and putting together the initial structure.",
+          "Once that's underway, you'll keep flipping through the pages of the manual to find specific bricks and smaller components, carefully pressing them onto the growing assembly.",
+          "As you get further along, you'll look for colored accents\u2014like blue and purple bricks\u2014to add details to the model as guided by the diagram.",
+          "Finally, you'll turn to the final steps of the instructions, gather the last remaining pieces, and secure your completed assemblies onto the Lego baseplate."
+        ],
+        "cautions": [
+          "Take care when sorting through the pile of Lego bricks so you don't overlook or lose the smaller components."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -3265,7 +4368,12 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__ef51015464812b8c.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__ef51015464812b8c.mp4",
+        "filename": "wearable-ai__ef51015464812b8c.mp4",
+        "size_mb": 6.81,
+        "src": "assets/videos/runs_wearable-ai__ef51015464812b8c.mp4"
+      }
     },
     {
       "id": "wearable-ai__ef75ac3d92198596",
@@ -3287,6 +4395,42 @@
       "relevance_score": 10,
       "issues": [],
       "reasoning": "The caption sequence is exceptionally detailed, logical, and highly actionable. It covers the entire process of preparing the liquid binder (heating and mixing yeast/gelatin, molasses, and seasonings), combining it with the birdseed, preparing the molds, and packing the mixture. The steps are in perfect chronological order, and there are no redundant or vague descriptions.",
+      "plan": {
+        "title": "Making Homemade Birdseed Cakes",
+        "overview": "You'll prepare a warm, flavorful liquid binder on the stove, mix it thoroughly with birdseed, and pack the mixture into molds to create solid birdseed cakes.",
+        "materials": [
+          "Measuring spoon",
+          "Metal cup",
+          "Small saucepan",
+          "Tap water",
+          "Nutritional yeast",
+          "Measuring cup",
+          "Liquid (for dissolving yeast/gelatin)",
+          "Yeast or gelatin",
+          "Spoon",
+          "Stovetop",
+          "Whisk",
+          "Seasoning packets",
+          "Molasses",
+          "Other liquid ingredients",
+          "Large metal bowl",
+          "Birdseed",
+          "Plastic cups",
+          "Cupcake liners",
+          "Toothpicks"
+        ],
+        "outline": [
+          "You'll start by rinsing your measuring spoon, metal cup, and small saucepan under tap water. Once clean, you'll measure your water into the saucepan and portion out the nutritional yeast into a separate bowl.",
+          "Next, you'll dissolve your yeast or gelatin in a measuring cup of liquid, stir it up, and pour it into the saucepan. From there, head over to the stovetop to heat and whisk the mixture, stirring in your seasoning packets as it warms up.",
+          "Once the mixture is heated, you'll grab your molasses and other liquid ingredients, add them directly to the saucepan, and stir everything together thoroughly.",
+          "Next, you'll pour this warm liquid mixture over a bowl of birdseed, stirring with a spoon until all the seeds are evenly and thoroughly coated.",
+          "Finally, you'll prepare your molds\u2014such as plastic cups and cupcake liners\u2014and use your hands and a spoon to scoop and firmly pack the birdseed mixture into them to form solid, durable cakes."
+        ],
+        "cautions": [
+          "Take care when handling and stirring the heated liquid mixture on the stovetop to avoid accidental splashes or burns.",
+          "Ensure you pack the birdseed mixture as tightly as possible into the cups so the cakes hold their shape and do not crumble."
+        ]
+      },
       "local_checks": {
         "has_full_coverage": true,
         "gaps": []
@@ -3351,7 +4495,226 @@
       ],
       "dataset_row": {},
       "thumbnail": "assets/runs_wearable-ai__ef75ac3d92198596.jpg",
-      "video": null
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__ef75ac3d92198596.mp4",
+        "filename": "wearable-ai__ef75ac3d92198596.mp4",
+        "size_mb": 10.12,
+        "src": "assets/videos/runs_wearable-ai__ef75ac3d92198596.mp4"
+      }
+    },
+    {
+      "id": "wearable-ai__f23251d3b9037aec",
+      "config": "runs",
+      "activity": "Wearable ai f23251d3b9037aec",
+      "reference_steps": [
+        "Observed procedural phase 1",
+        "Observed procedural phase 2",
+        "Observed procedural phase 3",
+        "Observed procedural phase 4",
+        "Observed procedural phase 5",
+        "Observed procedural phase 6",
+        "Observed procedural phase 7",
+        "Observed procedural phase 8"
+      ],
+      "score": 8,
+      "coverage_score": 8,
+      "order_score": 7,
+      "relevance_score": 9,
+      "issues": [
+        "The feedback terminal interaction in step 5 appears out of order, as it usually concludes a visit, whereas step 7 describes taking photos of the main exhibition/projection.",
+        "Steps 6 and 8 describe passive/idle smartphone behaviors (waiting, browsing Instagram) which do not contribute to a goal-oriented procedural task."
+      ],
+      "reasoning": "The caption sequence is highly detailed and specific, guiding the viewer through hand sanitizing, digital registration, ticket verification, and interacting within the venue. However, the order is slightly off: interacting with a feedback terminal (step 5) typically occurs at the end of a visit rather than before taking photos of the exhibition (step 7). Additionally, steps 6 and 8 capture idle phone usage, which is common in egocentric video but less procedurally valuable.",
+      "plan": {
+        "title": "Registering and Interacting at a Digital Event",
+        "overview": "You will clean your hands, register on a digital tablet, and use your smartphone to display confirmation details, interact with the event, and capture photos of the space.",
+        "materials": [
+          "Hand sanitizer in a white container",
+          "Tablet",
+          "Smartphone",
+          "Feedback terminal"
+        ],
+        "outline": [
+          "First, sanitize your hands thoroughly using the hand sanitizer from the white container. Once your hands are clean, pick up the tablet to enter your information, scroll through the digital registration document, and sign it with your finger to confirm.",
+          "Next, get your smartphone ready and pull up your transaction details, digital ticket, or payment confirmation screen. You'll also interact with the nearby feedback terminal to quickly press the screen and submit your response.",
+          "Finally, while waiting for the next part of the experience, feel free to use your phone. You'll want to point your phone's camera at the projections on the walls and ceiling to capture some photos, and you can type messages or check apps like Instagram as you wrap up."
+        ],
+        "cautions": []
+      },
+      "local_checks": {
+        "has_full_coverage": true,
+        "gaps": []
+      },
+      "segments": [
+        {
+          "caption": "Apply hand sanitizer from the white container and rub your hands together to sanitize them.",
+          "start_ts": 0.0,
+          "end_ts": 21.3
+        },
+        {
+          "caption": "Use the tablet to enter your information and scroll through the digital registration document.",
+          "start_ts": 21.3,
+          "end_ts": 157.9
+        },
+        {
+          "caption": "Sign the digital document on the tablet screen with your finger and tap to confirm.",
+          "start_ts": 157.9,
+          "end_ts": 290.1
+        },
+        {
+          "caption": "Open your smartphone to display the transaction details, digital ticket, or payment confirmation screen.",
+          "start_ts": 290.1,
+          "end_ts": 366.9
+        },
+        {
+          "caption": "Interact with the feedback terminal by pressing the screen to submit your response.",
+          "start_ts": 366.9,
+          "end_ts": 384.0
+        },
+        {
+          "caption": "Hold your smartphone and interact with the screen while waiting for the next step.",
+          "start_ts": 384.0,
+          "end_ts": 482.1
+        },
+        {
+          "caption": "Point your smartphone camera at the projection on the wall and ceiling to take photos.",
+          "start_ts": 482.1,
+          "end_ts": 516.3
+        },
+        {
+          "caption": "Type messages on your smartphone screen and navigate through applications like Instagram.",
+          "start_ts": 516.3,
+          "end_ts": 600.0
+        }
+      ],
+      "alignment": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dataset_row": {},
+      "thumbnail": "assets/runs_wearable-ai__f23251d3b9037aec.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__f23251d3b9037aec.mp4",
+        "filename": "wearable-ai__f23251d3b9037aec.mp4",
+        "size_mb": 2.97,
+        "src": "assets/videos/runs_wearable-ai__f23251d3b9037aec.mp4"
+      }
+    },
+    {
+      "id": "wearable-ai__f9ab736efee50387",
+      "config": "runs",
+      "activity": "Wearable ai f9ab736efee50387",
+      "reference_steps": [
+        "Observed procedural phase 1",
+        "Observed procedural phase 2",
+        "Observed procedural phase 3",
+        "Observed procedural phase 4",
+        "Observed procedural phase 5",
+        "Observed procedural phase 6",
+        "Observed procedural phase 7",
+        "Observed procedural phase 8"
+      ],
+      "score": 5,
+      "coverage_score": 8,
+      "order_score": 4,
+      "relevance_score": 9,
+      "issues": [
+        "Step 7 is out of order; spreading the mixture and butter on the bread must happen before placing the sandwich in the maker to cook (Step 6).",
+        "The sequence of plugging in the appliance in Step 1 and immediately unplugging it in Step 2 before preparing the ingredients is procedurally awkward."
+      ],
+      "reasoning": "The captions are highly detailed and descriptive (excellent relevance). However, there is a major procedural error at the end: Step 7 (spreading the mixture and butter onto the bread) is listed after Step 6 (putting the prepared sandwich into the sandwich maker to cook). Additionally, plugging in the sandwich maker in Step 1 only to immediately unplug it in Step 2 to prepare the filling is inefficient and slightly confusing, though less severe than the cooking/assembly swap.",
+      "plan": {
+        "title": "Preparing and Cooking a Sweet Peanut Butter Sandwich",
+        "overview": "You will prep a sandwich maker, mix a peanut butter and honey filling, prepare an egg wash, cook the sandwich, and top a slice of bread with a butter spread.",
+        "materials": [
+          "Bread",
+          "Sandwich maker",
+          "Spoon",
+          "Fork",
+          "Small glass jar",
+          "White bowl",
+          "Additional bowl",
+          "Peanut butter",
+          "Honey",
+          "Egg",
+          "Soft butter",
+          "Clean plate"
+        ],
+        "outline": [
+          "You'll start by taking a slice of bread from its bag, placing it into the sandwich maker, and plugging it in to heat up.",
+          "Once that's warmed, unplug the unit and prepare the filling by combining ingredients from a small glass jar, peanut butter, and honey in a white bowl, stirring until the mixture is completely smooth.",
+          "From there, whisk an egg in a separate bowl using a fork, finish mixing your remaining ingredients, and set a clean plate nearby on the counter.",
+          "Next, plug the sandwich maker back in, open it up, and place your prepared sandwich inside to cook with the lid closed.",
+          "To finish up, use a spoon to evenly spread a yellow mixture and soft butter onto a slice of bread."
+        ],
+        "cautions": [
+          "Use caution when plugging, unplugging, and handling the sandwich maker, as it can get very hot."
+        ]
+      },
+      "local_checks": {
+        "has_full_coverage": true,
+        "gaps": []
+      },
+      "segments": [
+        {
+          "caption": "Remove a slice of bread from the plastic bag, place it into the sandwich maker, close the lid, and plug in the power cord.",
+          "start_ts": 0.0,
+          "end_ts": 12.8
+        },
+        {
+          "caption": "Unplug the power cord, retrieve a spoon from the drawer, and pour an ingredient from a small glass jar into a bowl.",
+          "start_ts": 12.8,
+          "end_ts": 21.3
+        },
+        {
+          "caption": "Scoop peanut butter and honey into the white bowl, scraping the excess off the spoon, and begin stirring the ingredients.",
+          "start_ts": 21.3,
+          "end_ts": 34.1
+        },
+        {
+          "caption": "Stir and mix the ingredients inside the bowl continuously with a spoon to ensure a uniform consistency.",
+          "start_ts": 34.1,
+          "end_ts": 51.2
+        },
+        {
+          "caption": "Whisk an egg in a bowl with a fork, mix the remaining ingredients, and set a clean plate on the counter.",
+          "start_ts": 51.2,
+          "end_ts": 136.5
+        },
+        {
+          "caption": "Plug in the sandwich maker, open the lid, place the prepared sandwich inside, and close it to cook.",
+          "start_ts": 136.5,
+          "end_ts": 145.1
+        },
+        {
+          "caption": "Spread the yellow mixture and soft butter evenly onto a slice of bread using a spoon.",
+          "start_ts": 145.1,
+          "end_ts": 173.3
+        }
+      ],
+      "alignment": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dataset_row": {},
+      "thumbnail": "assets/runs_wearable-ai__f9ab736efee50387.jpg",
+      "video": {
+        "source_path": "videos\\raw\\wearable-ai__f9ab736efee50387.mp4",
+        "filename": "wearable-ai__f9ab736efee50387.mp4",
+        "size_mb": 1.32,
+        "src": "assets/videos/runs_wearable-ai__f9ab736efee50387.mp4"
+      }
     }
   ]
 }

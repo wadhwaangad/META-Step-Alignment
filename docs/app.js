@@ -89,6 +89,7 @@ function renderDetail() {
       ${subscore("Relevance", item.relevance_score)}
     </div>
     ${renderIssues(item.issues)}
+    ${renderPlan(item.plan)}
     <h3>Grouped Transcript</h3>
     <div class="steps">
       ${segments.map((segment, index) => `
@@ -115,6 +116,32 @@ function renderVideo(item) {
         <span>${item.video.size_mb ?? "?"} MB</span>
       </div>
     </div>
+  `;
+}
+
+function renderPlan(plan) {
+  const outline = plan?.outline || plan?.plan_steps?.map(step => step.instruction) || [];
+  if (!plan || !outline.length) return "";
+  const materials = plan.materials?.length
+    ? `<div class="chips">${plan.materials.map(item => `<span class="chip">${escapeHtml(item)}</span>`).join("")}</div>`
+    : "";
+  const cautions = plan.cautions?.length
+    ? `<p class="issues">${plan.cautions.map(escapeHtml).join(" · ")}</p>`
+    : "";
+  return `
+    <section class="plan">
+      <div class="plan-panel">
+        <h3>${escapeHtml(plan.title || "Plan")}</h3>
+        <p>${escapeHtml(plan.overview || "")}</p>
+        ${materials}
+        ${cautions}
+        <ul class="plan-list">
+          ${outline.map(item => `
+            <li>${escapeHtml(item || "")}</li>
+          `).join("")}
+        </ul>
+      </div>
+    </section>
   `;
 }
 

@@ -162,6 +162,33 @@ video {
 }
 .step time { color: var(--accent-2); font-size: 12px; }
 .issues { color: var(--bad); }
+.plan {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+.plan-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0b0f15;
+  padding: 12px;
+}
+.plan-panel h3 {
+  margin-top: 0;
+}
+.plan-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 0;
+  list-style: none;
+}
+.plan-list li {
+  line-height: 1.45;
+  border-left: 3px solid var(--accent);
+  padding: 8px 10px;
+  background: var(--panel);
+  border-radius: 0 6px 6px 0;
+}
 pre {
   overflow: auto;
   background: #07090d;
