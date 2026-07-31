@@ -51,6 +51,7 @@ def run_pipeline(args) -> None:
             device=args.device,
         )
         np.savez_compressed(features_path, features=features)
+        clear_cuda_cache()
 
     expected_steps = len(metadata.steps)
     if getattr(args, "adaptive_steps", False):
@@ -71,34 +72,55 @@ def run_pipeline(args) -> None:
         segments = partition_dendrogram(dendrogram, frame_infos, target_count, args.min_segment_frames)
         write_json(segments_path, segments)
 
-    model_client = make_model_client(args, out_dir)
-
     captions_path = out_dir / "captions.json"
     if captions_path.exists() and not args.force:
         captions = _captions_from_json(read_json(captions_path))
     else:
-        captions = caption_segments_recursive(model_client, segments, args.caption_frames, args.max_caption_splits, dendrogram, frame_infos)
+        model_client = make_model_client(args, out_dir)
+        try:
+            captions = caption_segments_recursive(
+                model_client,
+                segments,
+                args.caption_frames,
+                args.max_caption_splits,
+                dendrogram,
+                frame_infos,
+            )
+        finally:
+            close_model_client(model_client)
         write_json(captions_path, captions)
 
     grouped_path = out_dir / "grouped_steps.json"
     if grouped_path.exists() and not args.force:
         grouped = _grouped_from_json(read_json(grouped_path))
     else:
-        grouped = model_client.group_steps(metadata, captions)
+        model_client = make_model_client(args, out_dir)
+        try:
+            grouped = model_client.group_steps(metadata, captions)
+        finally:
+            close_model_client(model_client)
         write_json(grouped_path, grouped)
 
     alignment_path = out_dir / "alignment.json"
     if alignment_path.exists() and not args.force:
         alignment = read_json(alignment_path)
     else:
-        alignment = model_client.align_steps(metadata, grouped, duration)
+        model_client = make_model_client(args, out_dir)
+        try:
+            alignment = model_client.align_steps(metadata, grouped, duration)
+        finally:
+            close_model_client(model_client)
         write_json(alignment_path, alignment)
 
     qa_path = out_dir / "qa.json"
     if qa_path.exists() and not args.force:
         qa = read_json(qa_path)
     else:
-        qa = model_client.score_coherence(metadata, grouped)
+        model_client = make_model_client(args, out_dir)
+        try:
+            qa = model_client.score_coherence(metadata, grouped)
+        finally:
+            close_model_client(model_client)
         qa["local_checks"] = local_checks(grouped, duration)
         qa["segmentation"] = {"expected_steps": expected_steps, "target_segments": target_count}
         write_json(qa_path, qa)
@@ -107,7 +129,11 @@ def run_pipeline(args) -> None:
     if plan_path.exists() and not args.force:
         plan = read_json(plan_path)
     else:
-        plan = model_client.summarize_plan(metadata, grouped)
+        model_client = make_model_client(args, out_dir)
+        try:
+            plan = model_client.summarize_plan(metadata, grouped)
+        finally:
+            close_model_client(model_client)
         write_json(plan_path, plan)
 
     rows = []
@@ -132,6 +158,29 @@ def run_pipeline(args) -> None:
             "segmentation": {"expected_steps": expected_steps, "target_segments": target_count},
         },
     )
+
+
+def close_model_client(model_client) -> None:
+    close = getattr(model_client, "close", None) or getattr(model_client, "unload", None)
+    if close is not None:
+        close()
+    else:
+        clear_cuda_cache()
+
+
+def clear_cuda_cache() -> None:
+    try:
+        import gc
+        import torch
+    except ImportError:
+        return
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        try:
+            torch.cuda.ipc_collect()
+        except Exception:
+            pass
 
 
 def caption_segments_recursive(

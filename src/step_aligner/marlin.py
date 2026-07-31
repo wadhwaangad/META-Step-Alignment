@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import gc
 import re
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,7 @@ class MarlinClient(GeminiClient):
         self.sleep = sleep
         self.segment_dir = Path(segment_dir)
         self.segment_dir.mkdir(parents=True, exist_ok=True)
+        self._device = device
 
         try:
             import torch
@@ -61,6 +63,8 @@ class MarlinClient(GeminiClient):
         return self._call_text_only(text, max_new_tokens=1536)
 
     def _call_text_only(self, prompt: str, max_new_tokens: int) -> str:
+        import torch
+
         messages = [{"role": "user", "content": [{"type": "text", "text": prompt}]}]
         inputs = self._processor.apply_chat_template(
             messages,
@@ -69,12 +73,17 @@ class MarlinClient(GeminiClient):
             return_tensors="pt",
             return_dict=True,
         ).to(self._model.device)
-        out = self._model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+        with torch.inference_mode():
+            out = self._model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False, use_cache=False)
         out = out[:, inputs["input_ids"].shape[1] :]
         text = self._processor.batch_decode(out, skip_special_tokens=True)[0]
+        del inputs, out
+        self._empty_cuda_cache()
         return strip_think(text).strip()
 
     def _call_image_sequence_text(self, frame_paths: list[Path], prompt: str, max_new_tokens: int) -> str:
+        import torch
+
         content: list[dict[str, str]] = []
         for frame_path in frame_paths:
             content.append({"type": "image", "image": str(frame_path)})
@@ -87,10 +96,33 @@ class MarlinClient(GeminiClient):
             return_tensors="pt",
             return_dict=True,
         ).to(self._model.device)
-        out = self._model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+        with torch.inference_mode():
+            out = self._model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False, use_cache=False)
         out = out[:, inputs["input_ids"].shape[1] :]
         text = self._processor.batch_decode(out, skip_special_tokens=True)[0]
+        del inputs, out
+        self._empty_cuda_cache()
         return strip_think(text).strip()
+
+    def close(self) -> None:
+        self._model = None
+        self._processor = None
+        self._empty_cuda_cache()
+
+    unload = close
+
+    def _empty_cuda_cache(self) -> None:
+        gc.collect()
+        try:
+            import torch
+        except ImportError:
+            return
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            try:
+                torch.cuda.ipc_collect()
+            except Exception:
+                pass
 
 
 def uniform_sample_paths(paths: list[Path], max_items: int) -> list[Path]:
