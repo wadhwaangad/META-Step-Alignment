@@ -23,141 +23,132 @@ def run_pipeline(args) -> None:
     metadata_path = Path(args.metadata)
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
+    model_client = None
 
-    metadata = load_metadata(metadata_path)
+    try:
+        metadata = load_metadata(metadata_path)
 
-    frames_json = out_dir / "frames.json"
-    if frames_json.exists() and not args.force:
-        frames_data = read_json(frames_json)
-        if args.resample_frames:
+        frames_json = out_dir / "frames.json"
+        if frames_json.exists() and not args.force:
+            frames_data = read_json(frames_json)
+            if args.resample_frames:
+                frame_infos, duration = sample_frames(video_path, out_dir / "frames", args.frame_stride, args.image_size)
+                write_json(frames_json, {"duration": duration, "frames": frame_infos})
+            else:
+                frame_infos, duration = _load_frames(frames_data)
+        else:
             frame_infos, duration = sample_frames(video_path, out_dir / "frames", args.frame_stride, args.image_size)
             write_json(frames_json, {"duration": duration, "frames": frame_infos})
+
+        features_path = out_dir / "features.npz"
+        if features_path.exists() and not args.force:
+            features = np.load(features_path)["features"]
         else:
-            frame_infos, duration = _load_frames(frames_data)
-    else:
-        frame_infos, duration = sample_frames(video_path, out_dir / "frames", args.frame_stride, args.image_size)
-        write_json(frames_json, {"duration": duration, "frames": frame_infos})
+            features = extract_features(
+                frame_infos,
+                backend=args.feature_backend,
+                vjepa_repo=args.vjepa_repo,
+                window_size=args.window_size,
+                window_stride=args.window_stride,
+                device=args.device,
+            )
+            np.savez_compressed(features_path, features=features)
+            clear_cuda_cache()
 
-    features_path = out_dir / "features.npz"
-    if features_path.exists() and not args.force:
-        features = np.load(features_path)["features"]
-    else:
-        features = extract_features(
-            frame_infos,
-            backend=args.feature_backend,
-            vjepa_repo=args.vjepa_repo,
-            window_size=args.window_size,
-            window_stride=args.window_stride,
-            device=args.device,
-        )
-        np.savez_compressed(features_path, features=features)
-        clear_cuda_cache()
+        expected_steps = len(metadata.steps)
+        if getattr(args, "adaptive_steps", False):
+            expected_steps = expected_steps_from_duration(duration, fallback=max(1, len(metadata.steps)))
+        target_count = target_segment_count(expected_steps, args.oversegment, len(frame_infos))
 
-    expected_steps = len(metadata.steps)
-    if getattr(args, "adaptive_steps", False):
-        expected_steps = expected_steps_from_duration(duration, fallback=max(1, len(metadata.steps)))
-    target_count = target_segment_count(expected_steps, args.oversegment, len(frame_infos))
+        dendrogram_path = out_dir / "dendrogram.json"
+        if dendrogram_path.exists() and not args.force:
+            dendrogram = read_json(dendrogram_path)
+        else:
+            dendrogram = build_temporal_dendrogram(features, frame_infos)
+            write_json(dendrogram_path, dendrogram)
 
-    dendrogram_path = out_dir / "dendrogram.json"
-    if dendrogram_path.exists() and not args.force:
-        dendrogram = read_json(dendrogram_path)
-    else:
-        dendrogram = build_temporal_dendrogram(features, frame_infos)
-        write_json(dendrogram_path, dendrogram)
+        segments_path = out_dir / "segments.json"
+        if segments_path.exists() and not args.force:
+            segments = _segments_from_json(read_json(segments_path))
+        else:
+            segments = partition_dendrogram(dendrogram, frame_infos, target_count, args.min_segment_frames)
+            write_json(segments_path, segments)
 
-    segments_path = out_dir / "segments.json"
-    if segments_path.exists() and not args.force:
-        segments = _segments_from_json(read_json(segments_path))
-    else:
-        segments = partition_dendrogram(dendrogram, frame_infos, target_count, args.min_segment_frames)
-        write_json(segments_path, segments)
+        def get_model_client():
+            nonlocal model_client
+            if model_client is None:
+                model_client = make_model_client(args, out_dir)
+            return model_client
 
-    captions_path = out_dir / "captions.json"
-    if captions_path.exists() and not args.force:
-        captions = _captions_from_json(read_json(captions_path))
-    else:
-        model_client = make_model_client(args, out_dir)
-        try:
+        captions_path = out_dir / "captions.json"
+        if captions_path.exists() and not args.force:
+            captions = _captions_from_json(read_json(captions_path))
+        else:
             captions = caption_segments_recursive(
-                model_client,
+                get_model_client(),
                 segments,
                 args.caption_frames,
                 args.max_caption_splits,
                 dendrogram,
                 frame_infos,
             )
-        finally:
-            close_model_client(model_client)
-        write_json(captions_path, captions)
+            write_json(captions_path, captions)
 
-    grouped_path = out_dir / "grouped_steps.json"
-    if grouped_path.exists() and not args.force:
-        grouped = _grouped_from_json(read_json(grouped_path))
-    else:
-        model_client = make_model_client(args, out_dir)
-        try:
-            grouped = model_client.group_steps(metadata, captions)
-        finally:
-            close_model_client(model_client)
-        write_json(grouped_path, grouped)
+        grouped_path = out_dir / "grouped_steps.json"
+        if grouped_path.exists() and not args.force:
+            grouped = _grouped_from_json(read_json(grouped_path))
+        else:
+            grouped = get_model_client().group_steps(metadata, captions)
+            write_json(grouped_path, grouped)
 
-    alignment_path = out_dir / "alignment.json"
-    if alignment_path.exists() and not args.force:
-        alignment = read_json(alignment_path)
-    else:
-        model_client = make_model_client(args, out_dir)
-        try:
-            alignment = model_client.align_steps(metadata, grouped, duration)
-        finally:
-            close_model_client(model_client)
-        write_json(alignment_path, alignment)
+        alignment_path = out_dir / "alignment.json"
+        if alignment_path.exists() and not args.force:
+            alignment = read_json(alignment_path)
+        else:
+            alignment = get_model_client().align_steps(metadata, grouped, duration)
+            write_json(alignment_path, alignment)
 
-    qa_path = out_dir / "qa.json"
-    if qa_path.exists() and not args.force:
-        qa = read_json(qa_path)
-    else:
-        model_client = make_model_client(args, out_dir)
-        try:
-            qa = model_client.score_coherence(metadata, grouped)
-        finally:
-            close_model_client(model_client)
-        qa["local_checks"] = local_checks(grouped, duration)
-        qa["segmentation"] = {"expected_steps": expected_steps, "target_segments": target_count}
-        write_json(qa_path, qa)
+        qa_path = out_dir / "qa.json"
+        if qa_path.exists() and not args.force:
+            qa = read_json(qa_path)
+        else:
+            qa = get_model_client().score_coherence(metadata, grouped)
+            qa["local_checks"] = local_checks(grouped, duration)
+            qa["segmentation"] = {"expected_steps": expected_steps, "target_segments": target_count}
+            write_json(qa_path, qa)
 
-    plan_path = out_dir / "plan.json"
-    if plan_path.exists() and not args.force:
-        plan = read_json(plan_path)
-    else:
-        model_client = make_model_client(args, out_dir)
-        try:
-            plan = model_client.summarize_plan(metadata, grouped)
-        finally:
-            close_model_client(model_client)
-        write_json(plan_path, plan)
+        plan_path = out_dir / "plan.json"
+        if plan_path.exists() and not args.force:
+            plan = read_json(plan_path)
+        else:
+            plan = get_model_client().summarize_plan(metadata, grouped)
+            write_json(plan_path, plan)
 
-    rows = []
-    for idx, item in enumerate(grouped):
-        rows.append(
+        rows = []
+        for idx, item in enumerate(grouped):
+            rows.append(
+                {
+                    "start_ts": item.start_ts,
+                    "end_ts": item.end_ts,
+                    "caption": item.caption,
+                    "step_index": alignment[idx] if idx < len(alignment) else None,
+                }
+            )
+        write_jsonl(out_dir / "transcript.jsonl", rows)
+        write_json(
+            out_dir / "run_summary.json",
             {
-                "start_ts": item.start_ts,
-                "end_ts": item.end_ts,
-                "caption": item.caption,
-                "step_index": alignment[idx] if idx < len(alignment) else None,
-            }
+                "video": str(video_path),
+                "metadata": str(metadata_path),
+                "out": str(out_dir),
+                "qa": qa,
+                "plan": plan,
+                "segmentation": {"expected_steps": expected_steps, "target_segments": target_count},
+            },
         )
-    write_jsonl(out_dir / "transcript.jsonl", rows)
-    write_json(
-        out_dir / "run_summary.json",
-        {
-            "video": str(video_path),
-            "metadata": str(metadata_path),
-            "out": str(out_dir),
-            "qa": qa,
-            "plan": plan,
-            "segmentation": {"expected_steps": expected_steps, "target_segments": target_count},
-        },
-    )
+    finally:
+        if model_client is not None:
+            close_model_client(model_client)
 
 
 def close_model_client(model_client) -> None:

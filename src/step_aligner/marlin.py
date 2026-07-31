@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from .gemini import GeminiClient, VLM_PROMPT
-from .models import CaptionedSegment, Segment
+from .models import CaptionedSegment, GroupedStep, Metadata, Segment
 
 
 class MarlinClient(GeminiClient):
@@ -61,6 +61,56 @@ class MarlinClient(GeminiClient):
     def _call_text(self, input_parts: list[dict[str, Any]]) -> str:
         text = "\n".join(str(part.get("text", "")) for part in input_parts if part.get("type") == "text")
         return self._call_text_only(text, max_new_tokens=1536)
+
+    def group_steps(self, metadata: Metadata, captions: list[CaptionedSegment]) -> list[GroupedStep]:
+        try:
+            return super().group_steps(metadata, captions)
+        except Exception as exc:
+            print(f"[marlin-fallback] grouping used caption groups because Marlin did not return JSON: {exc}", flush=True)
+            return fallback_group_steps(captions)
+
+    def align_steps(self, metadata: Metadata, grouped: list[GroupedStep], video_duration: float) -> list[int]:
+        try:
+            return super().align_steps(metadata, grouped, video_duration)
+        except Exception as exc:
+            print(f"[marlin-fallback] alignment used chronological order because Marlin did not return JSON: {exc}", flush=True)
+            return list(range(1, len(grouped) + 1))
+
+    def score_coherence(self, metadata: Metadata, grouped: list[GroupedStep]) -> dict[str, Any]:
+        try:
+            return super().score_coherence(metadata, grouped)
+        except Exception as exc:
+            print(f"[marlin-fallback] QA used local heuristic because Marlin did not return JSON: {exc}", flush=True)
+            captions = [item.caption.strip() for item in grouped if item.caption.strip()]
+            vague_count = sum(1 for text in captions if len(text.split()) < 5 or text.lower() in {"no active task", "unknown"})
+            coverage = 8.0 if len(captions) >= 3 else max(3.0, float(len(captions) * 2))
+            relevance = max(3.0, 8.0 - vague_count)
+            order = 8.0
+            score = round((coverage + order + relevance) / 3.0, 2)
+            return {
+                "score": score,
+                "coverage_score": coverage,
+                "order_score": order,
+                "relevance_score": relevance,
+                "reasoning": "Marlin did not return parseable JSON for QA, so this score was estimated from caption count, order, and specificity.",
+                "issues": ["QA used a local fallback rather than a model-generated JSON evaluation."],
+            }
+
+    def summarize_plan(self, metadata: Metadata, grouped: list[GroupedStep]) -> dict[str, Any]:
+        try:
+            return super().summarize_plan(metadata, grouped)
+        except Exception as exc:
+            print(f"[marlin-fallback] plan used local outline because Marlin did not return JSON: {exc}", flush=True)
+            outline = [conversationalize(item.caption) for item in grouped[:6] if item.caption.strip()]
+            if not outline:
+                outline = ["You'll move through the visible task phases in order, using the transcript as the main guide."]
+            return {
+                "title": metadata.activity,
+                "overview": "You'll work through the main visible phases in the same order they appear in the video.",
+                "materials": [],
+                "outline": outline,
+                "cautions": [],
+            }
 
     def _call_text_only(self, prompt: str, max_new_tokens: int) -> str:
         import torch
@@ -132,6 +182,24 @@ def uniform_sample_paths(paths: list[Path], max_items: int) -> list[Path]:
         return [paths[len(paths) // 2]]
     idxs = [round(i * (len(paths) - 1) / (max_items - 1)) for i in range(max_items)]
     return [paths[idx] for idx in idxs]
+
+
+def fallback_group_steps(captions: list[CaptionedSegment]) -> list[GroupedStep]:
+    grouped: list[GroupedStep] = []
+    for item in captions:
+        caption = " ".join(item.caption.split())
+        if not caption:
+            caption = "Continue the visible task activity."
+        grouped.append(GroupedStep(caption=caption, start_ts=item.start_ts, end_ts=item.end_ts))
+    return grouped
+
+
+def conversationalize(caption: str) -> str:
+    caption = " ".join(caption.strip().split())
+    if not caption:
+        return "You'll continue through the next visible phase of the task."
+    first = caption[:1].lower() + caption[1:]
+    return f"You'll {first}" if not first.lower().startswith(("you'll", "you will")) else caption
 
 
 def strip_think(text: str) -> str:
