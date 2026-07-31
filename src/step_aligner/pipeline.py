@@ -11,8 +11,8 @@ from .cluster import (
     partition_dendrogram,
     target_segment_count,
 )
+from .clients import make_model_client
 from .features import extract_features
-from .gemini import GeminiClient
 from .io import load_metadata, read_json, write_json, write_jsonl
 from .models import CaptionedSegment, GroupedStep, Segment
 from .video import sample_frames
@@ -71,34 +71,34 @@ def run_pipeline(args) -> None:
         segments = partition_dendrogram(dendrogram, frame_infos, target_count, args.min_segment_frames)
         write_json(segments_path, segments)
 
-    gemini = GeminiClient(args.gemini_model)
+    model_client = make_model_client(args, out_dir)
 
     captions_path = out_dir / "captions.json"
     if captions_path.exists() and not args.force:
         captions = _captions_from_json(read_json(captions_path))
     else:
-        captions = caption_segments_recursive(gemini, segments, args.caption_frames, args.max_caption_splits, dendrogram, frame_infos)
+        captions = caption_segments_recursive(model_client, segments, args.caption_frames, args.max_caption_splits, dendrogram, frame_infos)
         write_json(captions_path, captions)
 
     grouped_path = out_dir / "grouped_steps.json"
     if grouped_path.exists() and not args.force:
         grouped = _grouped_from_json(read_json(grouped_path))
     else:
-        grouped = gemini.group_steps(metadata, captions)
+        grouped = model_client.group_steps(metadata, captions)
         write_json(grouped_path, grouped)
 
     alignment_path = out_dir / "alignment.json"
     if alignment_path.exists() and not args.force:
         alignment = read_json(alignment_path)
     else:
-        alignment = gemini.align_steps(metadata, grouped, duration)
+        alignment = model_client.align_steps(metadata, grouped, duration)
         write_json(alignment_path, alignment)
 
     qa_path = out_dir / "qa.json"
     if qa_path.exists() and not args.force:
         qa = read_json(qa_path)
     else:
-        qa = gemini.score_coherence(metadata, grouped)
+        qa = model_client.score_coherence(metadata, grouped)
         qa["local_checks"] = local_checks(grouped, duration)
         qa["segmentation"] = {"expected_steps": expected_steps, "target_segments": target_count}
         write_json(qa_path, qa)
@@ -107,7 +107,7 @@ def run_pipeline(args) -> None:
     if plan_path.exists() and not args.force:
         plan = read_json(plan_path)
     else:
-        plan = gemini.summarize_plan(metadata, grouped)
+        plan = model_client.summarize_plan(metadata, grouped)
         write_json(plan_path, plan)
 
     rows = []
@@ -135,7 +135,7 @@ def run_pipeline(args) -> None:
 
 
 def caption_segments_recursive(
-    gemini: GeminiClient,
+    gemini,
     segments: list[Segment],
     caption_frames: int,
     max_splits: int,
