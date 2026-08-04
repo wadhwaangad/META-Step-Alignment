@@ -1,0 +1,2 @@
+[console_scripts]
+step-align = step_aligner.cli:main

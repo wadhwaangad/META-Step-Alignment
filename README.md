@@ -2,7 +2,7 @@
 
 Local-friendly replication of the seven-stage step alignment pipeline for an 8 GB VRAM GPU.
 
-This implementation keeps the expensive language/vision-language stages on Gemini and runs only visual feature extraction locally. It is designed to be resumable: every stage writes cached artifacts under the chosen output directory.
+This implementation uses Gemini by default for language/vision-language stages and can alternatively use Molmo 2 through OpenRouter. Visual feature extraction runs locally. It is designed to be resumable: every stage writes cached artifacts under the chosen output directory.
 
 ## What It Builds
 
@@ -43,6 +43,15 @@ Set your API key:
 
 ```powershell
 $env:GEMINI_API_KEY="your_key_here"
+```
+
+## Molmo 2 via OpenRouter
+
+The optional Molmo backend uses OpenRouter and leaves the Gemini backend unchanged:
+
+```powershell
+$env:OPENROUTER_API_KEY="your_key_here"
+step-align run --model-backend molmo --molmo-model allenai/molmo-2-8b ...
 ```
 
 ## Video Metadata

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "step-aligner"
 version = "0.1.0"
-description = "Local-friendly procedural video step alignment pipeline using small visual embeddings and Gemini."
+description = "Local-friendly procedural video step alignment pipeline using small visual embeddings and Gemini or Molmo 2 via OpenRouter."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

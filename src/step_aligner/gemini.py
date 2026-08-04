@@ -178,34 +178,31 @@ Output ONLY a JSON object:
         steps_text = "\n".join(
             f"{i + 1}. [{item.start_ts:.1f}-{item.end_ts:.1f}s] {item.caption}" for i, item in enumerate(grouped)
         )
-        prompt = f"""You are converting ground-truth procedural video steps into a conversational user-facing task outline.
+        prompt = f"""Create a simple, practical plan for this task based on the observed steps.
 
-Treat the provided steps as the authoritative evidence for what happens in the task. Your job is to summarize them into a friendly, practical overview someone can read before starting. This should feel like a helpful person explaining the flow of the task, not a rigid numbered instruction manual.
-
-ACTIVITY TITLE:
+Activity:
 {metadata.activity}
 
-GROUND-TRUTH STEPS, IN ORDER:
+Observed task steps:
 {steps_text}
 
-INSTRUCTIONS:
-- Preserve the broad order and essential actions from the ground-truth steps.
-- Summarize into a general outline, not a step-by-step procedure.
-- Use a conversational, reassuring tone. It should sound natural, like: "You'll start by...", "Once that's ready...", "From there...".
-- Keep the outline practical and grounded in the observed steps.
-- Use enough detail to explain the task flow, but avoid frame-by-frame detail.
-- If tools, ingredients, containers, or materials are clearly implied, list them.
-- If safety or quality cautions are clearly implied, list them; otherwise use an empty array.
-- Do not invent objects, tools, ingredients, temperatures, measurements, or timing that are not supported by the steps.
-- The outline should usually contain 3-6 short paragraphs or bullets, each describing a phase of the task.
+Write as if you are giving someone a quick overview before they begin. Keep it general and focused on the main phases of the task, not every small action or detail.
 
-Output ONLY this JSON object:
+Guidelines:
+- Use a friendly, direct tone.
+- Describe the natural flow of the task in 3-6 short points.
+- Keep only the key actions and decisions.
+- Do not repeat timestamps, measurements, or overly specific motions unless essential.
+- Mention materials or cautions only when clearly supported by the steps.
+- Do not invent details.
+
+Output only this JSON object:
 {{
   "title": "short task title",
-  "overview": "one conversational sentence describing the overall task flow",
-  "materials": ["item/tool/material", ...],
-  "outline": ["conversational phase summary", ...],
-  "cautions": ["caution", ...]
+  "overview": "one-sentence summary of the task",
+  "materials": ["item", "..."],
+  "outline": ["main phase 1", "main phase 2", "..."],
+  "cautions": ["optional caution", "..."]
 }}"""
         return dict(_parse_json(self._call_text([{"type": "text", "text": prompt}])))
 

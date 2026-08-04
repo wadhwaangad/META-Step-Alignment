@@ -1,0 +1,7 @@
+{
+  "video_id": "captaincook4d__10_6",
+  "video_path": "videos\\raw\\captaincook4d__10_6.mp4",
+  "run_dir": "runs_molmo_test\\captaincook4d__10_6",
+  "error": "Molmo request failed after 4 attempts: HTTP Error 404: Not Found",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\wadhw\\Desktop\\step-aligner\\src\\step_aligner\\folder.py\", line 53, in run_video_folder\n    run_pipeline(pipeline_args)\n  File \"C:\\Users\\wadhw\\Desktop\\step-aligner\\src\\step_aligner\\pipeline.py\", line 87, in run_pipeline\n    captions = caption_segments_recursive(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\wadhw\\Desktop\\step-aligner\\src\\step_aligner\\pipeline.py\", line 220, in caption_segments_recursive\n    visit(segment, 0)\n  File \"C:\\Users\\wadhw\\Desktop\\step-aligner\\src\\step_aligner\\pipeline.py\", line 190, in visit\n    captioned = gemini.caption_segment(segment, caption_frames)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\wadhw\\Desktop\\step-aligner\\src\\step_aligner\\gemini.py\", line 42, in caption_segment\n    text = self._call_text(parts).strip()\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\wadhw\\Desktop\\step-aligner\\src\\step_aligner\\molmo.py\", line 77, in _call_text\n    raise RuntimeError(f\"Molmo request failed after {self.retries} attempts: {last_error}\")\nRuntimeError: Molmo request failed after 4 attempts: HTTP Error 404: Not Found\n"
+}

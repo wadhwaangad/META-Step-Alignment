@@ -113,6 +113,8 @@ def _pipeline_args_from_dataset_args(args, video_path: Path, metadata_path: Path
     pipeline_args.oversegment = args.oversegment
     pipeline_args.min_segment_frames = args.min_segment_frames
     pipeline_args.gemini_model = args.gemini_model
+    pipeline_args.model_backend = args.model_backend
+    pipeline_args.molmo_model = args.molmo_model
     pipeline_args.caption_frames = args.caption_frames
     pipeline_args.max_caption_splits = args.max_caption_splits
     return pipeline_args
