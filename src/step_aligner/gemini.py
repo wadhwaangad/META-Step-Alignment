@@ -189,8 +189,20 @@ Observed task steps:
 The source video shows the original, valid action sequence. Construct exactly one Ego-CoMist-style counterfactual scenario: state an alternative instruction the assistant could have given, treat the observed action in one supported step as the user's resulting mistake, and provide the assistant's corrective feedback at the first observable mismatch. Do not claim the source video actually contains an error.
 
 Guidelines:
-- Use one error type from: measurement_quantity, preparation_method, technique_manner, object_selection, timing, physical_condition.
-- Choose only an error type that is visibly grounded in an observed step. The counterfactual instruction must be feasible with the objects and actions visible in the video.
+- Choose exactly one primary error type from this holistic taxonomy: omission, addition_insertion, ordering_sequencing, substitution_method_modification, object_selection, technique_manner, measurement_quantity, timing_temporal_execution, temperature_physical_condition, slip_accidental.
+- Treat corrective_recovery as the requested action after feedback, not as a mistake type.
+- Choose only an error type whose counterfactual mismatch is visibly grounded in the observed video. The counterfactual instruction must be feasible with the objects and actions visible in the video.
+- Apply these category-specific observability rules:
+  - measurement_quantity: the video must show a countable, measurable, or proportion-based action.
+  - substitution_method_modification: the video must show a distinct tool, method, or preparatory approach.
+  - object_selection: the video must show a distinct object, part, or ingredient being selected or used.
+  - technique_manner: the video must show a distinct orientation, grip, motion, alignment, force, placement, or resulting physical state.
+  - timing_temporal_execution: the video must show a clear start/end event and support the relevant duration boundary.
+  - temperature_physical_condition: the video must show a heat, temperature, appliance-setting, or material-condition cue.
+  - addition_insertion: the video must show an extra, visibly distinct action that the counterfactual instruction excludes.
+  - omission: use only when the video clearly shows the user moving past a required action without performing it.
+  - ordering_sequencing: use only when two distinct, visibly identifiable procedural steps can be counterfactually ordered differently.
+  - slip_accidental: use only for a naturally observable drop, spill, repeat, or unintended event; never fabricate a slip from a clean action.
 - Make the counterfactual instruction materially different from the observed action, but plausible for the task.
 - `observed_action` must describe what the video actually shows; `description` must explain why it conflicts with the counterfactual instruction.
 - Make `feedback` concise, direct, and actionable. It must tell the user what to do instead.
@@ -201,6 +213,7 @@ Guidelines:
 
 Output only this JSON object:
 {{
+  "taxonomy_version": 2,
   "title": "short task title",
   "overview": "one-sentence summary of the correct task flow",
   "materials": ["item", "..."],

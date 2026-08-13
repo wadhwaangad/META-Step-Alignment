@@ -243,6 +243,8 @@ def is_synthetic_counterfactual_plan(plan: object) -> bool:
     mistake = plan.get("mistake")
     correction = plan.get("correction")
     return (
+        plan.get("taxonomy_version") == 2
+        and
         isinstance(plan.get("counterfactual_instruction"), str)
         and isinstance(mistake, dict)
         and isinstance(correction, dict)

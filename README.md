@@ -255,8 +255,11 @@ After each folder run, the dark GitHub Pages site is rebuilt in `docs/`.
 
 Each generated `plan.json` now contains one visually grounded, synthetic counterfactual interaction in addition to the correct task steps. The source video is not edited and is not asserted to contain a real mistake. Instead, the plan records an alternative instruction, the observed action that would violate it, and the assistant's corrective feedback:
 
+The synthetic mistake is selected from the project taxonomy: omission, addition/insertion, ordering/sequencing, substitution/method modification, object selection, technique/manner, measurement/quantity, timing/temporal execution, temperature/physical condition, or slip/accidental. Corrective/recovery is represented as the requested action after feedback rather than as an error type.
+
 ```json
 {
+  "taxonomy_version": 2,
   "counterfactual_instruction": "Use the smaller fastener for this connection.",
   "mistake": {
     "type": "object_selection",
