@@ -250,6 +250,27 @@ step-align run-folder --metadata-source default
 ```
 
 After each folder run, the dark GitHub Pages site is rebuilt in `docs/`.
+
+## Synthetic mistake plans
+
+Each generated `plan.json` now contains one visually grounded, synthetic counterfactual interaction in addition to the correct task steps. The source video is not edited and is not asserted to contain a real mistake. Instead, the plan records an alternative instruction, the observed action that would violate it, and the assistant's corrective feedback:
+
+```json
+{
+  "counterfactual_instruction": "Use the smaller fastener for this connection.",
+  "mistake": {
+    "type": "object_selection",
+    "step_index": 3,
+    "observed_action": "The person selects the longer fastener.",
+    "description": "That choice conflicts with the counterfactual instruction."
+  },
+  "correction": {
+    "feedback": "Stop here and use the smaller fastener for this connection.",
+    "recovery": "Set the long fastener aside, select the smaller one, and continue."
+  },
+  "steps": ["...correct task steps..."]
+}
+```
 ## Built-In Local Video Folder
 
 This repo can process your own local videos without the Facebook dataset.

@@ -178,7 +178,7 @@ Output ONLY a JSON object:
         steps_text = "\n".join(
             f"{i + 1}. [{item.start_ts:.1f}-{item.end_ts:.1f}s] {item.caption}" for i, item in enumerate(grouped)
         )
-        prompt = f"""Create a simple, practical plan for this task based on the observed steps.
+        prompt = f"""Create a user-facing synthetic counterfactual plan for this task based on the observed steps.
 
 Activity:
 {metadata.activity}
@@ -186,22 +186,36 @@ Activity:
 Observed task steps:
 {steps_text}
 
-Write as if you are giving someone a quick overview before they begin. Keep it general and focused on the main phases of the task, not every small action or detail.
+The source video shows the original, valid action sequence. Construct exactly one Ego-CoMist-style counterfactual scenario: state an alternative instruction the assistant could have given, treat the observed action in one supported step as the user's resulting mistake, and provide the assistant's corrective feedback at the first observable mismatch. Do not claim the source video actually contains an error.
 
 Guidelines:
-- Use a friendly, direct tone.
-- Describe the natural flow of the task in 3-6 short points.
-- Keep only the key actions and decisions.
-- Do not repeat timestamps, measurements, or overly specific motions unless essential.
+- Use one error type from: measurement_quantity, preparation_method, technique_manner, object_selection, timing, physical_condition.
+- Choose only an error type that is visibly grounded in an observed step. The counterfactual instruction must be feasible with the objects and actions visible in the video.
+- Make the counterfactual instruction materially different from the observed action, but plausible for the task.
+- `observed_action` must describe what the video actually shows; `description` must explain why it conflicts with the counterfactual instruction.
+- Make `feedback` concise, direct, and actionable. It must tell the user what to do instead.
+- Set `step_index` to the 1-based observed-step number where the mismatch first becomes apparent.
+- Provide 3-6 short `steps` describing the correct underlying task flow. These should be the original intended actions, not the counterfactual instruction.
+- Do not invent measurements, tools, ingredients, hazards, or recovery footage that are not supported by the steps.
 - Mention materials or cautions only when clearly supported by the steps.
-- Do not invent details.
 
 Output only this JSON object:
 {{
   "title": "short task title",
-  "overview": "one-sentence summary of the task",
+  "overview": "one-sentence summary of the correct task flow",
   "materials": ["item", "..."],
-  "outline": ["main phase 1", "main phase 2", "..."],
+  "counterfactual_instruction": "the instruction initially given to the user",
+  "mistake": {{
+    "type": "one allowed error type",
+    "step_index": 1,
+    "observed_action": "what is visibly done in the source video",
+    "description": "why the observed action violates the counterfactual instruction"
+  }},
+  "correction": {{
+    "feedback": "proactive assistant correction",
+    "recovery": "the next correct action the user should take"
+  }},
+  "steps": ["correct task step 1", "correct task step 2", "..."],
   "cautions": ["optional caution", "..."]
 }}"""
         return dict(_parse_json(self._call_text([{"type": "text", "text": prompt}])))

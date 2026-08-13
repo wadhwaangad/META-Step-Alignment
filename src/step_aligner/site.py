@@ -333,6 +333,20 @@ video {
   background: var(--panel);
   border-radius: 0 6px 6px 0;
 }
+.counterfactual {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+.scenario-card {
+  border-left: 3px solid var(--accent-2);
+  padding: 10px 12px;
+  background: var(--panel);
+  border-radius: 0 6px 6px 0;
+}
+.scenario-card strong { display: block; margin-bottom: 3px; }
+.scenario-card.mistake { border-left-color: var(--bad); }
+.scenario-card.correction { border-left-color: var(--accent); }
 pre {
   overflow: auto;
   background: #07090d;
@@ -471,13 +485,21 @@ function renderVideo(item) {
 }
 
 function renderPlan(plan) {
-  const outline = plan?.outline || plan?.plan_steps?.map(step => step.instruction) || [];
-  if (!plan || !outline.length) return "";
+  const steps = plan?.steps || plan?.outline || plan?.plan_steps?.map(step => step.instruction) || [];
+  if (!plan || !steps.length) return "";
   const materials = plan.materials?.length
     ? `<div class="chips">${plan.materials.map(item => `<span class="chip">${escapeHtml(item)}</span>`).join("")}</div>`
     : "";
   const cautions = plan.cautions?.length
     ? `<p class="issues">${plan.cautions.map(escapeHtml).join(" · ")}</p>`
+    : "";
+  const mistake = plan.mistake;
+  const scenario = plan.counterfactual_instruction && mistake && plan.correction ? `
+    <div class="counterfactual">
+      <div class="scenario-card"><strong>Instruction given</strong>${escapeHtml(plan.counterfactual_instruction)}</div>
+      <div class="scenario-card mistake"><strong>Synthetic mistake${mistake.type ? ` · ${escapeHtml(formatErrorType(mistake.type))}` : ""}</strong>${escapeHtml(mistake.observed_action || mistake.description || "")}${mistake.description && mistake.observed_action ? `<p>${escapeHtml(mistake.description)}</p>` : ""}</div>
+      <div class="scenario-card correction"><strong>Assistant correction</strong>${escapeHtml(plan.correction.feedback || "")}${plan.correction.recovery ? `<p>${escapeHtml(plan.correction.recovery)}</p>` : ""}</div>
+    </div>`
     : "";
   return `
     <section class="plan">
@@ -485,15 +507,20 @@ function renderPlan(plan) {
         <h3>${escapeHtml(plan.title || "Plan")}</h3>
         <p>${escapeHtml(plan.overview || "")}</p>
         ${materials}
+        ${scenario}
         ${cautions}
         <ul class="plan-list">
-          ${outline.map(item => `
+          ${steps.map(item => `
             <li>${escapeHtml(item || "")}</li>
           `).join("")}
         </ul>
       </div>
     </section>
   `;
+}
+
+function formatErrorType(value) {
+  return String(value).replaceAll("_", " ");
 }
 
 function subscore(label, value) {

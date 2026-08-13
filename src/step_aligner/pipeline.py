@@ -120,6 +120,9 @@ def run_pipeline(args) -> None:
         plan_path = out_dir / "plan.json"
         if plan_path.exists() and not args.force:
             plan = read_json(plan_path)
+            if not is_synthetic_counterfactual_plan(plan):
+                plan = get_model_client().summarize_plan(metadata, grouped)
+                write_json(plan_path, plan)
         else:
             plan = get_model_client().summarize_plan(metadata, grouped)
             write_json(plan_path, plan)
@@ -231,6 +234,20 @@ def local_checks(grouped: list[GroupedStep], duration: float) -> dict[str, objec
     if duration and previous < duration - 0.5:
         gaps.append({"start_ts": previous, "end_ts": duration})
     return {"has_full_coverage": len(gaps) == 0, "gaps": gaps}
+
+
+def is_synthetic_counterfactual_plan(plan: object) -> bool:
+    """Return whether a cached plan uses the current user-facing interaction schema."""
+    if not isinstance(plan, dict):
+        return False
+    mistake = plan.get("mistake")
+    correction = plan.get("correction")
+    return (
+        isinstance(plan.get("counterfactual_instruction"), str)
+        and isinstance(mistake, dict)
+        and isinstance(correction, dict)
+        and isinstance(plan.get("steps"), list)
+    )
 
 
 def _load_frames(data):
